@@ -93,7 +93,7 @@
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
         "silk_edge_clearance": "ignore",
-        "silk_over_copper": "warning",
+        "silk_over_copper": "ignore",
         "silk_overlap": "ignore",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
@@ -616,6 +616,10 @@
     [
       "73f3d429-a0b7-4265-ba46-4445bae0de3d",
       "fe_ctl"
+    ],
+    [
+      "39acc7d1-a995-4616-8037-aaf3c117cf9c",
+      "sheet60F7998F"
     ],
     [
       "00000000-0000-0000-0000-00006086f2e3",

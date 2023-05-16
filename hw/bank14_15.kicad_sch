@@ -1541,10 +1541,6 @@
     (stroke (width 0) (type default))
     (uuid 34e0613e-1be7-44af-9c1f-2438c3c70a72)
   )
-  (wire (pts (xy 231.14 90.17) (xy 229.87 90.17))
-    (stroke (width 0) (type default))
-    (uuid 3706d216-8ac7-446f-83ab-fbcb36d58764)
-  )
   (wire (pts (xy 64.77 34.29) (xy 67.31 34.29))
     (stroke (width 0) (type default))
     (uuid 37dc84a3-8cb1-4382-9333-3ae2c387c834)
@@ -1573,7 +1569,7 @@
     (stroke (width 0) (type default))
     (uuid 5ed2d123-ea44-431d-8979-ddd0c638fec8)
   )
-  (wire (pts (xy 240.03 90.17) (xy 236.22 90.17))
+  (wire (pts (xy 229.87 90.17) (xy 240.03 90.17))
     (stroke (width 0) (type default))
     (uuid 5f9f0fd5-b52d-4d8d-8157-bef9629f0164)
   )
@@ -3266,37 +3262,6 @@
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/27cc8612-21b5-4a6c-80ae-cd0836a5c2c4/3a56c443-70de-4e54-a6cb-56b00baa10da"
           (reference "C128") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R_Small") (at 233.68 90.17 270) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 7c6c661c-2633-451a-a024-dd1367546364)
-    (property "Reference" "R18" (at 237.49 88.9 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "50" (at 245.11 88.9 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 233.68 90.17 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 233.68 90.17 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 5bd0333d-0f24-4432-b260-0187f25e32ce))
-    (pin "2" (uuid dcd81a42-8f56-4973-a468-9420c70dfaef))
-    (instances
-      (project "ecevr-proto"
-        (path "/0333b818-5fb1-4de6-9929-c91b1fef8666/00000000-0000-0000-0000-0000620d1e32/00000000-0000-0000-0000-0000622d3d90"
-          (reference "R18") (unit 1)
-        )
-      )
-      (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/27cc8612-21b5-4a6c-80ae-cd0836a5c2c4/3a56c443-70de-4e54-a6cb-56b00baa10da"
-          (reference "R105") (unit 1)
         )
       )
     )
