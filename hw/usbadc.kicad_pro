@@ -442,7 +442,7 @@
         "clearance": 0.1,
         "diff_pair_gap": 0.127,
         "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.127,
+        "diff_pair_width": 0.1524,
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
@@ -493,6 +493,40 @@
         "clearance": 0.1,
         "diff_pair_gap": 0.127,
         "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.1524,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "jlc7628_50_100",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.3493,
+        "via_diameter": 0.45,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.1,
+        "diff_pair_gap": 0.127,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.21082,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "jlc7628_50_90",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.3493,
+        "via_diameter": 0.45,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.1,
+        "diff_pair_gap": 0.127,
+        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.102,
         "line_style": 0,
         "microvia_diameter": 0.3,
@@ -528,7 +562,36 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "jlc7628_50_90",
+        "pattern": "*USB_REF_CLK"
+      },
+      {
+        "netclass": "jlc7628_50_90",
+        "pattern": "*USBin_*"
+      },
+      {
+        "netclass": "jlc7628_50_100",
+        "pattern": "*CLK_OUT"
+      },
+      {
+        "netclass": "jlc7628_50_100",
+        "pattern": "*-(U7-OUT*)"
+      },
+      {
+        "netclass": "jlc7628_50_100",
+        "pattern": "*PLL_O3_*"
+      },
+      {
+        "netclass": "jlc7628_50_100",
+        "pattern": "*ADC_CLK_*"
+      },
+      {
+        "netclass": "jlc7628_50_100",
+        "pattern": "*L11P_*SRCC_15"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
