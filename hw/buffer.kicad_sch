@@ -2639,7 +2639,7 @@
     (property "Reference" "R33" (at 58.5216 55.88 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "1k2" (at 60.833 55.88 90)
+    (property "Value" "1k" (at 60.833 55.88 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 63.5 55.88 0)
