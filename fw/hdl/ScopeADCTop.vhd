@@ -83,7 +83,7 @@ architecture rtl of ScopeADCTop is
    constant DLY_REF_CLK_FREQ_C : real    := 195.0E6;
 
    constant ADC_BITS_C         : natural := 8;
-   constant MEM_DEPTH_C        : natural := 64*1024;
+   constant MEM_DEPTH_C        : natural := 16*1024;
 
    signal ulpiIb               : UlpiIbType := ULPI_IB_INIT_C;
    signal ulpiOb               : UlpiObType := ULPI_OB_INIT_C;
@@ -132,6 +132,8 @@ architecture rtl of ScopeADCTop is
    signal blnk                 : std_logic    := '0';
 
    signal pllClkBuf            : std_logic;
+   signal cfgMClk              : std_logic;
+   signal cfgMClkBuf           : std_logic;
 
    signal ulpiRstTimer         : signed(16 downto 0) := '0' & x"ffff";
 
@@ -145,6 +147,10 @@ architecture rtl of ScopeADCTop is
    signal stp_t                : std_logic := '0';
    
    signal dlyRefClk            : std_logic;
+
+   signal prgPAck              : std_logic;
+   signal eos                  : std_logic;
+   signal usrCClk              : std_logic := '0';
 
    component ila_0 is
       port (
@@ -160,8 +166,12 @@ architecture rtl of ScopeADCTop is
       );
    end component ila_0;
 
-   signal trg                  : std_logic := '1';
+   signal trg                  : std_logic := '0';
    signal trgack               : std_logic := '0';
+
+   constant GEN_FIFO_ILA_C     : std_logic := '0';
+   constant GEN_RST_ILA_C      : std_logic := '0';
+   signal phas                 : std_logic := not GEN_RST_ILA_C;
 
 begin
 
@@ -204,19 +214,25 @@ begin
    P_ULPI_RST : process ( pllClkBuf ) is
    begin
       if ( rising_edge( pllClkBuf ) ) then
-         if ( ulpiRstTimer >= 0 and trgack = '1' ) then
+         if ( ulpiRstTimer >= 0 and phas = '1' ) then
             ulpiRstTimer <= ulpiRstTimer - 1;
          end if;
+         trgack <= '0';
          if ( trg = '1' ) then
+            if ( phas = '1' ) then
+               ulpiRstTimer <= ( ulpiRstTimer'left => '0', others => '1' );
+            end if;
+            phas   <= not phas;
             trgack <= '1';
          end if;
       end if;
    end process P_ULPI_RST;
 
-   led(led'left downto 1) <= (others => '0');
+   led(led'left downto 3) <= (others => '0');
    led(0)                 <= blnk;
+   led(1)                 <= usbMMCMLocked;
 
-   G_ILAS : if ( false ) generate
+   G_RST_ILA : if ( GEN_RST_ILA_C = '1' ) generate
 
    U_ILA_RST : ila_0
       port map (
@@ -231,6 +247,10 @@ begin
          trig_out_ack                => trgack
       );
 
+   end generate G_RST_ILA;
+
+   G_FIFO_ILA : if ( GEN_FIFO_ILA_C = '1' ) generate
+
    U_ILA_FIFO : ila_0
       port map (
          clk                         => ulpiClkDly,
@@ -244,7 +264,7 @@ begin
          probe0(63 downto 26)        => (others => '0')
       );
 
-   end generate G_ILAS;
+   end generate G_FIFO_ILA;
 
 
    U_USB_DEV : entity work.Usb2ExampleDev
@@ -426,6 +446,8 @@ begin
    acmFifoInpWen <= fifoWVld;
    fifoWRdy      <= not acmFifoInpFull;
 
+   adcDDRLoc <= (adcDatDDR(adcDatDDR'left downto adcDatDDR'left - ADC_BITS_C + 1) & adcDORDDR);
+
    U_CMD_WRAPPER : entity work.CommandWrapper
       generic map (
          I2C_SCL_G                => BB_I2C_SCL_C,
@@ -461,6 +483,27 @@ begin
          dlyRefClk                => dlyRefClk
       );
 
-   adcDDRLoc <= (adcDatDDR(adcDatDDR'left downto adcDatDDR'left - ADC_BITS_C + 1) & adcDORDDR);
+   U_STARTUP : component STARTUPE2
+      generic map (
+        PROG_USR => "FALSE",   -- Activate program event security feature. Requires encrypted bitstreams.
+        SIM_CCLK_FREQ => 0.0   -- Set the Configuration Clock Frequency(ns) for simulation.
+      )
+      port map (
+        CFGCLK     => open,    -- 1-bit output: Configuration main clock output
+        CFGMCLK    => cfgMClk, -- 1-bit output: Configuration internal oscillator clock output
+        EOS        => eos,     -- 1-bit output: Active high output signal indicating the End Of Startup.
+        PREQ       => prgPAck, -- 1-bit output: PROGRAM request to fabric output
+        CLK        => '0',     -- 1-bit input: User start-up clock input
+        GSR        => '0',     -- 1-bit input: Global Set/Reset input (GSR cannot be used for the port name)
+        GTS        => '0',     -- 1-bit input: Global 3-state input (GTS cannot be used for the port name)
+        KEYCLEARB  => '1',     -- 1-bit input: Clear AES Decrypter Key input from Battery-Backed RAM (BBRAM)
+        PACK       => prgPAck, -- 1-bit input: PROGRAM acknowledge input
+        USRCCLKO   => usrCClk, -- 1-bit input: User CCLK input
+        USRCCLKTS  => '0',     -- 1-bit input: User CCLK 3-state enable input
+        USRDONEO   => '1',     -- 1-bit input: User DONE pin output control
+        USRDONETS  => '0'      -- 1-bit input: User DONE 3-state enable output
+      );
+
+   U_BUF_CFGCLK : BUFG port map ( I => cfgMClk,  O => cfgMClkBuf );
 
 end architecture rtl;
