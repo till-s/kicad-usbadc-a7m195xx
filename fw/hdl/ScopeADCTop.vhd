@@ -129,7 +129,8 @@ architecture rtl of ScopeADCTop is
    signal bbo                  : std_logic_vector(7 downto 0) := (others => '1');
 
    signal cnt                  : integer      := -1;
-   signal blnk                 : std_logic    := '0';
+   signal usbBlnk              : std_logic    := '0';
+   signal adcBlnk              : std_logic    := '0';
 
    signal pllClkBuf            : std_logic;
    signal cfgMClk              : std_logic;
@@ -147,6 +148,8 @@ architecture rtl of ScopeADCTop is
    signal stp_t                : std_logic := '0';
    
    signal dlyRefClk            : std_logic;
+   signal smplClk              : std_logic;
+   signal smplClkCnt           : signed(31 downto 0) := (others => '1');
 
    signal prgPAck              : std_logic;
    signal eos                  : std_logic;
@@ -192,10 +195,10 @@ begin
    begin
       if ( rising_edge( ulpiClkDly ) ) then
          if ( cnt < 0 ) then
-            blnk <= not blnk;
-            cnt  <= 30000000;
+            usbBlnk <= not usbBlnk;
+            cnt     <= 30000000;
          else
-            cnt  <= cnt - 1;
+            cnt     <= cnt - 1;
          end if;
          if ( usb2RstTimer( usb2RstTimer'left ) = '1' ) then
             usb2RstTimer <= usb2RstTimer - 1;
@@ -228,9 +231,13 @@ begin
       end if;
    end process P_ULPI_RST;
 
-   led(led'left downto 3) <= (others => '0');
-   led(0)                 <= blnk;
-   led(1)                 <= usbMMCMLocked;
+   P_MAP_LED : process ( usbBlnk, adcBlnk, usbMMCMLocked ) is
+   begin
+      led    <= (others => '0');
+      led(0) <= usbBlnk;
+      led(1) <= usbMMCMLocked;
+      led(3) <= adcBlnk;
+   end process P_MAP_LED;
 
    G_RST_ILA : if ( GEN_RST_ILA_C = '1' ) generate
 
@@ -323,13 +330,13 @@ begin
       P_CS_MUX : process ( bbo, subCmdBB, adcSDIO ) is
       begin
          adcCSb  <= '1';
-         pgaCSb  <= (others => '1');
+         pgaCSb  <= (others => '0'); -- drivers invert
          adcSDIO <= 'Z';
 
-         pgaSClk <= bbo(BB_SPI_SCK_C);
+         pgaSClk <= not bbo(BB_SPI_SCK_C); -- drivers invert
          adcSClk <= bbo(BB_SPI_SCK_C);
 
-         pgaSDat <= bbo(BB_SPI_MSO_C);
+         pgaSDat <= not bbo(BB_SPI_MSO_C); -- drivers invert
 
          bbi(BB_SPI_MSI_C) <= '0';
 
@@ -340,9 +347,9 @@ begin
             end if;
             bbi(BB_SPI_MSI_C) <= adcSDIO;
          elsif ( subCmdBB = CMD_BB_SPI_VGA_C ) then
-            pgaCSb(0)         <= bbo(BB_SPI_CSb_C);
+            pgaCSb(0)         <= not bbo(BB_SPI_CSb_C);
          elsif ( subCmdBB = CMD_BB_SPI_VGB_C ) then
-            pgaCSb(1)         <= bbo(BB_SPI_CSb_C);
+            pgaCSb(1)         <= not bbo(BB_SPI_CSb_C);
          end if;
       end process P_CS_MUX;
 
@@ -458,7 +465,8 @@ begin
          MEM_DEPTH_G              => MEM_DEPTH_C,
          DDR_TYPE_G               => "IDDR",
          DLY_REF_MHZ_G            => (DLY_REF_CLK_FREQ_C/1.0E6),
-         IDELAY_TAPS_G            => IDELAY_TAPS_C
+         IDELAY_TAPS_G            => IDELAY_TAPS_C,
+         INVERT_POL_CHB_G         => true
       )
       port map (
          clk                      => acmFifoClk,
@@ -477,7 +485,7 @@ begin
 
          adcClk                   => adcDClk,
          adcDataDDR               => adcDDRLoc,
-         smplClk                  => open,
+         smplClk                  => smplClk,
          adcDcmLocked             => adcDcmLocked,
 
          dlyRefClk                => dlyRefClk
@@ -505,5 +513,17 @@ begin
       );
 
    U_BUF_CFGCLK : BUFG port map ( I => cfgMClk,  O => cfgMClkBuf );
+
+   P_SMP_CNT : process ( smplClk ) is
+   begin
+      if ( rising_edge( smplClk ) ) then
+         if ( smplClkCnt < 0 ) then
+            smplClkCnt <= to_signed( 100000000/2 - 2, smplClkCnt'length );
+            adcBlnk    <= not adcBlnk;
+         else
+            smplClkCnt <= smplClkCnt - 1;
+         end if;
+      end if;
+   end process P_SMP_CNT;
 
 end architecture rtl;
