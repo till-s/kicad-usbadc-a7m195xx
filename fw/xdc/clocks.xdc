@@ -20,6 +20,10 @@ set_multicycle_path -from [get_clocks ulpiClk] 2
 # is in-principle OK but may result in a bit of driver fighting.
 set_multicycle_path -hold -from [get_clocks ulpiClk] -to [get_clocks ulpiClk] 1
 
+# configuration clock 65MHz typ with 50% tolerance; DS181 also says the
+# max CC rate is 100Mhz
+create_clock -period 10 -name cfgMClk [get_pins *U_STARTUP/CFGMCLK]
+
 # 130MHz
 #set adcPeriod   7.69
 # 120MHz

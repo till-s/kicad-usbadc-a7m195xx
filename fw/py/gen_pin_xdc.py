@@ -73,7 +73,12 @@ schema = {
                            {"name": "IO_L4N_T0_35"},
                            {"name": "IO_L4P_T0_35"},
                            {"name": "IO_L8N_T1_AD14N_35"}
-                         ]
+                         ],
+   "spiMOSI"           : {"name": "IO_L1P_T0_D00_MOSI_14"},
+   "spiMISO"           : {"name": "IO_L1N_T0_D01_DIN_14"},
+   "spiWPb"            : {"name": "IO_L2P_T0_D02_14"},
+   "spiRSTb"           : {"name": "IO_L2N_T0_D03_14"},
+   "spiCSb"            : {"name": "IO_L6P_T0_FCS_B_14"}
 }
 
 class Mapping:

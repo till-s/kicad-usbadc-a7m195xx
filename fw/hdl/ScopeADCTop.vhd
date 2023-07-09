@@ -9,10 +9,13 @@ use     work.UlpiPkg.all;
 use     work.Usb2Pkg.all;
 use     work.Usb2AppCfgPkg.all;
 use     work.CommandMuxPkg.all;
+use     work.SpiMonPkg.all;
 
 entity ScopeADCTop is
    generic (
-      SPEED_GRADE_G            : natural range 1 to 3 := 1
+      SPEED_GRADE_G            : natural range 1 to 3 := 1;
+      -- currently unused; use a package file instead
+      GIT_HASH_G               : std_logic_vector(31 downto 0) := x"0000_0000"
    );
    port (
       ulpiClk                  : inout std_logic;
@@ -43,7 +46,13 @@ entity ScopeADCTop is
       pgaSDat                  : out   std_logic := '0';
       pgaCSb                   : out   std_logic_vector(1 downto 0) := (others => '1');
 
-      pllClk                   : in    std_logic
+      pllClk                   : in    std_logic;
+
+      spiMOSI                  : out   std_logic;
+      spiMISO                  : in    std_logic;
+      spiWPb                   : out   std_logic := 'Z'; -- also SDO2
+      spiRSTb                  : in    std_logic := 'Z'; -- also SDO3
+      spiCSb                   : out   std_logic
    );
 
    attribute PULLTYPE          : string;
@@ -81,6 +90,7 @@ architecture rtl of ScopeADCTop is
    constant ULPI_CLK_FREQ_C    : real    := 60.0E6;
    constant ACM_CLK_FREQ_C     : real    := ULPI_CLK_FREQ_C;
    constant DLY_REF_CLK_FREQ_C : real    := 195.0E6;
+   constant SPI_CLK_FREQ_C     : real    := 30.0E6;
 
    constant ADC_BITS_C         : natural := 8;
    constant MEM_DEPTH_C        : natural := 16*1024;
@@ -111,6 +121,8 @@ architecture rtl of ScopeADCTop is
    signal acmFifoLocal         : std_logic    := '1';
 
    signal usbMMCMLocked        : std_logic;
+   signal spiSClk              : std_logic;
+   signal usrCClkInit          : signed(3 downto 0) := ( 3 => '0', others => '1' );
 
    signal subCmdBB             : SubCommandBBType;
 
@@ -131,6 +143,7 @@ architecture rtl of ScopeADCTop is
    signal cnt                  : integer      := -1;
    signal usbBlnk              : std_logic    := '0';
    signal adcBlnk              : std_logic    := '0';
+   signal adcBlnkLoc           : std_logic    := '0';
 
    signal pllClkBuf            : std_logic;
    signal cfgMClk              : std_logic;
@@ -231,12 +244,12 @@ begin
       end if;
    end process P_ULPI_RST;
 
-   P_MAP_LED : process ( usbBlnk, adcBlnk, usbMMCMLocked ) is
+   P_MAP_LED : process ( usbBlnk, adcBlnkLoc, usbMMCMLocked ) is
    begin
       led    <= (others => '0');
       led(0) <= usbBlnk;
       led(1) <= usbMMCMLocked;
-      led(3) <= adcBlnk;
+      led(3) <= adcBlnkLoc;
    end process P_MAP_LED;
 
    G_RST_ILA : if ( GEN_RST_ILA_C = '1' ) generate
@@ -327,16 +340,19 @@ begin
       bbi(BB_I2C_SCL_C) <= i2cScl;
       i2cScl            <= 'Z' when bbo(BB_I2C_SCL_C) = '1' else '0';
 
-      P_CS_MUX : process ( bbo, subCmdBB, adcSDIO ) is
+      P_CS_MUX : process ( bbo, subCmdBB, adcSDIO, spiMISO ) is
       begin
          adcCSb  <= '1';
+--         spiCSb  <= '1';
          pgaCSb  <= (others => '0'); -- drivers invert
          adcSDIO <= 'Z';
 
          pgaSClk <= not bbo(BB_SPI_SCK_C); -- drivers invert
          adcSClk <= bbo(BB_SPI_SCK_C);
+--         spiSClk <= bbo(BB_SPI_SCK_C);
 
          pgaSDat <= not bbo(BB_SPI_MSO_C); -- drivers invert
+--         spiMOSI <= bbo(BB_SPI_MSO_C);
 
          bbi(BB_SPI_MSI_C) <= '0';
 
@@ -350,6 +366,9 @@ begin
             pgaCSb(0)         <= not bbo(BB_SPI_CSb_C);
          elsif ( subCmdBB = CMD_BB_SPI_VGB_C ) then
             pgaCSb(1)         <= not bbo(BB_SPI_CSb_C);
+         elsif ( subCmdBB = CMD_BB_SPI_ROM_C ) then
+--            spiCSb            <= bbo(BB_SPI_CSb_C);
+            bbi(BB_SPI_MSI_C) <= spiMISO;
          end if;
       end process P_CS_MUX;
 
@@ -460,6 +479,7 @@ begin
          I2C_SCL_G                => BB_I2C_SCL_C,
          BBO_INIT_G               => BB_INIT_C,
          FIFO_FREQ_G              => ACM_CLK_FREQ_C,
+         SPI_FREQ_G               => SPI_CLK_FREQ_C,
          ADC_FREQ_G               => ADC_FREQ_C,
          ADC_BITS_G               => ADC_BITS_C,
          MEM_DEPTH_G              => MEM_DEPTH_C,
@@ -483,6 +503,11 @@ begin
          bbi                      => bbi,
          subCmdBB                 => subCmdBB,
 
+         spiSClk                  => spiSClk,
+         spiMOSI                  => spiMOSI,
+         spiMISO                  => spiMISO,
+         spiCSb                   => spiCSb,
+
          adcClk                   => adcDClk,
          adcDataDDR               => adcDDRLoc,
          smplClk                  => smplClk,
@@ -490,6 +515,181 @@ begin
 
          dlyRefClk                => dlyRefClk
       );
+
+B_SINI : block is
+   signal supIlaTrg    : std_logic := '1';
+   signal supIlaTrgAck : std_logic := '0';
+begin
+   -- must drive usrCClk for a few cycles to switch STARTUPE2 so that
+   -- it actually routes our clock through (see. UG470)
+   P_USR_CC_INIT : process ( cfgMClk ) is
+   begin
+      if ( rising_edge( cfgMClk ) ) then
+         if ( (supIlaTrg and eos and not usrCClkInit(usrCClkInit'left)) = '1' ) then
+            usrCClkInit <= usrCClkInit - 1;
+         end if;
+      end if;
+   end process P_USR_CC_INIT;
+
+   supIlaTrgAck <= usrCClkInit( usrCClkInit'left );
+
+   -- usrCClkInit halts all-one so  y xnor usrCClkInit(0) eventually = y
+   usrCClk <= spiSClk xnor usrCClkInit(0);
+
+   G_SPIMON : if ( false ) generate
+
+      type RegType is record
+         sr      : std_logic_vector(7 downto 0);
+         state   : std_logic;
+         cnt     : unsigned(2 downto 0);
+         cmd     : std_logic;
+         idx     : integer range -32768 to 32767;
+         nbits   : unsigned(31 downto 0);
+      end record RegType;
+
+      constant REG_INIT_C : RegType := (
+         sr      => (others => '0'),
+         state   => '0',
+         cnt     => (others => '0'),
+         cmd     => '0',
+         idx     => 0,
+         nbits   => (others => '0')
+      );
+
+      signal r        : RegType   := REG_INIT_C;
+      signal rin      : RegType   := REG_INIT_C;
+      signal idxDbg   : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(r.idx, 16));
+      signal lcsb     : std_logic := '1';
+
+      signal err      : std_logic;
+      signal spiCSbDbg: std_logic;
+
+      signal exp      : std_logic;
+      signal got      : std_logic;
+   begin
+
+      spiCSbDbg <= bbo(BB_SPI_CSb_C);
+      got       <= bbo(BB_SPI_MSO_C);
+      exp       <= EXPECTED_C( r.idx );
+
+      U_ILA : ila_0
+         port map (
+            clk                  => ulpiClkDly,
+            probe0( 7 downto  0) => r.sr,
+            probe0(10 downto  8) => std_logic_vector(r.cnt),
+            probe0(11          ) => lcsb,
+            probe0(12          ) => r.cmd,
+            probe0(13          ) => r.state,
+            probe0(14          ) => err,
+            probe0(15          ) => exp,
+            probe0(31 downto 16) => idxDbg,
+            probe0(39 downto 32) => bbo,
+            probe0(40          ) => got,
+            probe0(63 downto 41) => (others => '0'),
+
+            probe1(31 downto  0) => std_logic_vector(r.nbits),
+            probe1(63 downto 32) => (others => '0')
+         );
+
+
+      P_CMB : process ( r, bbo, lcsb, spiCSbDbg, got, exp ) is
+         variable v   : RegType;
+      begin
+         v      := r;
+         err    <= '0';
+         if ( spiCSbDbg = '0' ) then
+            v.sr  := r.sr(v.sr'left - 1 downto 0) & got;
+            v.cnt := r.cnt + 1;
+            if ( lcsb = '1' ) then
+               -- CS just asserted
+               v.cnt   := to_unsigned(1, v.cnt'length);
+               v.cmd   := '1';
+               v.state := '0';
+            end if;
+            if ( v.state = '1' ) then
+               v.nbits := r.nbits + 1;
+               if ( r.idx >= EXPECTED_C'length ) then
+                  err <= '1';
+               else
+                  if ( exp /= got ) then
+                     err <= '1';
+                  end if;
+                  v.idx := r.idx + 1;
+               end if;
+            end if;
+            if ( r.cnt = 7 ) then
+               -- a byte complete
+               v.cmd := '0';
+               if ( r.cmd = '1' ) then
+                  -- new command byte
+                  if ( v.sr = x"02" ) then
+                     v.state := '1';
+                     v.idx   := -16;
+                  end if;
+               end if;
+            end if;
+         else
+            v.cnt := (others => '0');
+            v.cmd := '1';
+            if ( lcsb = '1' ) then
+               -- CS just deasserted
+               v.state := '0';
+            end if;
+         end if;
+
+         rin <= v;
+      end process P_CMB;
+
+      U_BUF : BUFG port map ( I => spiSClk, O => usrCClk );
+
+      P_CSb : process ( usrCClk, spiCSbDbg ) is
+      begin
+        if ( spiCSbDbg = '1' ) then
+           lcsb <= '1';
+        elsif ( rising_edge( usrCClk ) ) then
+           lcsb <= '0';
+        end if;
+      end process P_CSb;
+
+    
+      P_SEQ : process ( usrCClk ) is
+      begin
+         if ( rising_edge( usrCClk ) ) then
+            r <= rin;
+         end if;
+      end process P_SEQ;
+
+   end generate G_SPIMON;
+
+   G_SUP_ILA : if ( false ) generate
+
+   U_ILA_SUP : ila_0
+      port map (
+         clk                         => cfgMClk,
+         probe0(usrCClkInit'range)   => std_logic_vector(usrCClkInit),
+         probe0(usrCClkInit'length)  => eos,
+         probe0(usrCClkInit'length + 1) => usrCClk,
+         probe0(63 downto usrCClkInit'length + 2) => (others => '0'),
+
+         trig_out                    => supIlaTrg,
+         trig_out_ack                => supIlaTrgAck
+      );
+
+   end generate G_SUP_ILA;
+end block B_SINI;
+
+   U_MBT : entity work.Usb2MboxSync
+      generic map (
+         DWIDTH_A2B_G => 1,
+         OUTREG_A2B_G => true
+      )    
+      port map (
+         clkA     => smplClk,
+         dinA(0)  => adcBlnk,
+         clkB     => ulpiClkDly,
+         douB(0)  => adcBlnkLoc
+      );
+
 
    U_STARTUP : component STARTUPE2
       generic map (
