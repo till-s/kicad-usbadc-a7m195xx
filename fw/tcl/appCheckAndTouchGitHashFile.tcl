@@ -11,7 +11,6 @@ proc getGitHash {} {
 proc appCheckAndTouchGitHashFile { fn board_version } {
 
   set git_hash [getGitHash]
-  set git_hash "abercaber"
 
   if { ! [file exists "${fn}"] || ( [exec sh -c "grep -q '${git_hash}' '${fn}'; echo \$?"] != 0 ) } {
     set fp [open "${fn}" w+]
