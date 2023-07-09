@@ -14,8 +14,8 @@ use     work.SpiMonPkg.all;
 entity ScopeADCTop is
    generic (
       SPEED_GRADE_G            : natural range 1 to 3 := 1;
-      -- currently unused; use a package file instead
-      GIT_HASH_G               : std_logic_vector(31 downto 0) := x"0000_0000"
+      GIT_HASH_G               : std_logic_vector(31 downto 0) := x"0000_0000";
+      BOARD_VERSION_G          : std_logic_vector( 7 downto 0) := x"01"
    );
    port (
       ulpiClk                  : inout std_logic;
@@ -486,7 +486,9 @@ begin
          DDR_TYPE_G               => "IDDR",
          DLY_REF_MHZ_G            => (DLY_REF_CLK_FREQ_C/1.0E6),
          IDELAY_TAPS_G            => IDELAY_TAPS_C,
-         INVERT_POL_CHB_G         => true
+         INVERT_POL_CHB_G         => true,
+         GIT_VERSION_G            => GIT_HASH_G,
+         BOARD_VERSION_G          => BOARD_VERSION_G
       )
       port map (
          clk                      => acmFifoClk,

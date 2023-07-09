@@ -13,4 +13,7 @@ lappend genericArgList "GIT_HASH_G=32'h${git_hash}"
 
 set_property generic ${genericArgList} [current_fileset]
 
-appCheckAndTouchGitHashFile  "${origin_dir}/../hdl/GitVersionPkg.vhd" "01"
+# Must not use tcl_pre to generate version file; vivado
+# checks dependencies before running this script and the
+# synthesis goes out of date as soon as we touch the GitVersionPkg.vhd :-(
+# appCheckAndTouchGitHashFile  "${origin_dir}/../hdl/GitVersionPkg.vhd" "01"
