@@ -1,0 +1,8 @@
+[submodule "fw/modules/mecatica-usb"]
+	path = fw/modules/mecatica-usb
+	url = ../mecatica-usb
+[submodule "fw/modules/usbadc-support"]
+	path = fw/modules/usbadc-support
+	url = ../usbadc-support
+[submodule "modules/usbadc-support/"]
+	branch = a7_port
