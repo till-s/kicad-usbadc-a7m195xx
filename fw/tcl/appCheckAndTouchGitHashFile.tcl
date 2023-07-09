@@ -19,7 +19,7 @@ proc appCheckAndTouchGitHashFile { fn board_version } {
     puts $fp "use     ieee.std_logic_1164.all;"
     puts $fp "package GitVersionPkg is"
     puts $fp "   constant GIT_VERSION_C   : std_logic_vector(31 downto 0) := x\"${git_hash}\";"
-    puts $fp "   constant BOARD_VERSION_C : std_logic_vector(31 downto 0) := x\"${board_version}\";"
+    puts $fp "   constant BOARD_VERSION_C : std_logic_vector( 7 downto 0) := x\"${board_version}\";"
     puts $fp "end package GitVersionPkg;"
     close $fp
   }
