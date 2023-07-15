@@ -8,6 +8,7 @@ use     unisim.vcomponents.all;
 use     work.UlpiPkg.all;
 use     work.Usb2Pkg.all;
 use     work.Usb2AppCfgPkg.all;
+use     work.BasicPkg.all;
 use     work.CommandMuxPkg.all;
 use     work.SpiMonPkg.all;
 
@@ -170,6 +171,11 @@ architecture rtl of ScopeADCTop is
 
 
    signal extTrg               : std_logic := '0';
+
+   signal pgaCSbLoc            : std_logic_vector(pgaCSb'range) := (others => '1');
+   signal pgaMOSILoc           : std_logic;
+   signal pgaMISOLoc           : std_logic_vector(pgaCSb'range);
+   signal pgaSClkLoc           : std_logic;
 
    component ila_0 is
       port (
@@ -343,21 +349,27 @@ begin
       bbi(BB_I2C_SCL_C) <= i2cScl;
       i2cScl            <= 'Z' when bbo(BB_I2C_SCL_C) = '1' else '0';
 
-      P_CS_MUX : process ( bbo, subCmdBB, adcSDIO, spiMISO ) is
+      -- write to device only if T is deasserted
+      pgaCSb(0)         <= not (pgaCSBLoc(0) or bbo(BB_SPI_T_C));  -- drivers invert
+      pgaCSb(1)         <= not (pgaCSBLoc(1) or bbo(BB_SPI_T_C));  -- drivers invert
+      pgaSClk           <= not pgaSClkLoc; -- drivers invert
+      pgaSDat           <= not pgaMOSILoc; -- drivers invert
+
+      P_CS_MUX : process ( bbo, subCmdBB, adcSDIO, spiMISO, pgaMISOLoc ) is
       begin
-         adcCSb  <= '1';
---         spiCSb  <= '1';
-         pgaCSb  <= (others => '0'); -- drivers invert
-         adcSDIO <= 'Z';
+         adcCSb         <= '1';
+--         spiCSb         <= '1';
+         pgaCSbLoc      <= (others => '1');
+         adcSDIO        <= 'Z';
 
-         pgaSClk <= not bbo(BB_SPI_SCK_C); -- drivers invert
-         adcSClk <= bbo(BB_SPI_SCK_C);
---         spiSClk <= bbo(BB_SPI_SCK_C);
+         pgaSClkLoc     <= bbo(BB_SPI_SCK_C);
+         adcSClk        <= bbo(BB_SPI_SCK_C);
+--         spiSClk        <= bbo(BB_SPI_SCK_C);
 
-         pgaSDat <= not bbo(BB_SPI_MSO_C); -- drivers invert
---         spiMOSI <= bbo(BB_SPI_MSO_C);
+         pgaMOSILoc     <= bbo(BB_SPI_MSO_C);
+--         spiMOSI        <= bbo(BB_SPI_MSO_C);
 
-         bbi(BB_SPI_MSI_C) <= '0';
+         bbi(BB_SPI_MSI_C)               <= '0';
 
          if    ( subCmdBB = CMD_BB_SPI_ADC_C ) then
             adcCSb      <= bbo(BB_SPI_CSb_C);
@@ -366,9 +378,11 @@ begin
             end if;
             bbi(BB_SPI_MSI_C) <= adcSDIO;
          elsif ( subCmdBB = CMD_BB_SPI_VGA_C ) then
-            pgaCSb(0)         <= not bbo(BB_SPI_CSb_C);
+            pgaCSbLoc(0)      <= bbo(BB_SPI_CSb_C);
+            bbi(BB_SPI_MSI_C) <= pgaMISOLoc(0);
          elsif ( subCmdBB = CMD_BB_SPI_VGB_C ) then
-            pgaCSb(1)         <= not bbo(BB_SPI_CSb_C);
+            pgaCSbLoc(1)      <= bbo(BB_SPI_CSb_C);
+            bbi(BB_SPI_MSI_C) <= pgaMISOLoc(1);
          elsif ( subCmdBB = CMD_BB_SPI_ROM_C ) then
 --            spiCSb            <= bbo(BB_SPI_CSb_C);
             bbi(BB_SPI_MSI_C) <= spiMISO;
@@ -376,6 +390,44 @@ begin
       end process P_CS_MUX;
 
    end block B_BUFS;
+
+   B_PGA_SHADOW : block is
+      constant PGA_REG_INI_C   : Slv8Type := x"00";
+      signal pgaShadowReg      : Slv8Array( pgaCSb'range ) := ( others => PGA_REG_INI_C );
+   begin
+      G_REG : for inst in pgaShadowReg'range generate
+         signal rs             : std_logic;
+         signal ws             : std_logic;
+         signal shiftRegData   : std_logic_vector(7 downto 0);
+      begin
+         U_REG : entity work.SpiReg
+            generic map (
+               INIT_VAL_G => PGA_REG_INI_C
+            )
+            port map (
+               clk        => acmFifoClk,
+               sclk       => pgaSClkLoc,
+               scsb       => pgaCSbLoc(inst),
+               mosi       => pgaMOSILoc,
+               miso       => pgaMISOLoc(inst),
+               data_inp   => pgaShadowReg(inst),
+               rs         => rs,
+               data_out   => shiftRegData,
+               ws         => ws
+            );
+
+         P_REG : process ( acmFifoClk ) is
+         begin
+            if ( rising_edge( acmFifoClk ) ) then
+               -- no reset; we can't reset the hardware reg we are shadowing
+               if ( ( ws and not bbo(BB_SPI_T_C) ) = '1' ) then
+                  pgaShadowReg(inst) <= shiftRegData;
+               end if;
+            end if;
+         end process P_REG;
+         
+      end generate G_REG;
+   end block B_PGA_SHADOW;
 
    B_MMCM : block is
 
