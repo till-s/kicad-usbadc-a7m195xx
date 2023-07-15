@@ -168,6 +168,9 @@ architecture rtl of ScopeADCTop is
    signal eos                  : std_logic;
    signal usrCClk              : std_logic := '0';
 
+
+   signal extTrg               : std_logic := '0';
+
    component ila_0 is
       port (
          clk             : in  std_logic;
@@ -514,6 +517,7 @@ begin
          adcDataDDR               => adcDDRLoc,
          smplClk                  => smplClk,
          adcDcmLocked             => adcDcmLocked,
+         extTrg                   => extTrg,
 
          dlyRefClk                => dlyRefClk
       );
