@@ -396,6 +396,17 @@ begin
       signal pgaShadowReg      : Slv8Array( pgaCSb'range ) := ( others => PGA_REG_INI_C );
       signal isWrite           : std_logic := '0';
    begin
+
+      P_T_DELAY : process ( acmFifoClk ) is
+      begin
+         if ( rising_edge( acmFifoClk ) ) then
+            -- ws is asserted once CSb is high again - the SPI_T bit
+            -- may turn on the same cycle; thus we register it
+            isWrite <= not bbo(BB_SPI_T_C);
+         end if;
+      end process P_REG;
+ 
+
       G_REG : for inst in pgaShadowReg'range generate
          signal rs             : std_logic;
          signal ws             : std_logic;
@@ -421,10 +432,6 @@ begin
          begin
             if ( rising_edge( acmFifoClk ) ) then
                -- no reset; we can't reset the hardware reg we are shadowing
-
-               -- ws is asserted once CSb is high again - the SPI_T bit
-               -- may turn on the same cycle; thus we register it
-               isWrite <= not bbo(BB_SPI_T_C);
                if ( ( ws and isWrite ) = '1' ) then
                   pgaShadowReg(inst) <= shiftRegData;
                end if;
