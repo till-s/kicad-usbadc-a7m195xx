@@ -404,8 +404,7 @@ begin
             -- may turn on the same cycle; thus we register it
             isWrite <= not bbo(BB_SPI_T_C);
          end if;
-      end process P_REG;
- 
+      end process P_T_DELAY;
 
       G_REG : for inst in pgaShadowReg'range generate
          signal rs             : std_logic;
