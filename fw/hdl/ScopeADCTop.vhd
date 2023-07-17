@@ -358,16 +358,16 @@ begin
       P_CS_MUX : process ( bbo, subCmdBB, adcSDIO, spiMISO, pgaMISOLoc ) is
       begin
          adcCSb         <= '1';
---         spiCSb         <= '1';
+         spiCSb         <= '1';
          pgaCSbLoc      <= (others => '1');
          adcSDIO        <= 'Z';
 
          pgaSClkLoc     <= bbo(BB_SPI_SCK_C);
          adcSClk        <= bbo(BB_SPI_SCK_C);
---         spiSClk        <= bbo(BB_SPI_SCK_C);
+         spiSClk        <= bbo(BB_SPI_SCK_C);
 
          pgaMOSILoc     <= bbo(BB_SPI_MSO_C);
---         spiMOSI        <= bbo(BB_SPI_MSO_C);
+         spiMOSI        <= bbo(BB_SPI_MSO_C);
 
          bbi(BB_SPI_MSI_C)               <= '0';
 
@@ -384,7 +384,7 @@ begin
             pgaCSbLoc(1)      <= bbo(BB_SPI_CSb_C);
             bbi(BB_SPI_MSI_C) <= pgaMISOLoc(1);
          elsif ( subCmdBB = CMD_BB_SPI_ROM_C ) then
---            spiCSb            <= bbo(BB_SPI_CSb_C);
+            spiCSb            <= bbo(BB_SPI_CSb_C);
             bbi(BB_SPI_MSI_C) <= spiMISO;
          end if;
       end process P_CS_MUX;
@@ -571,10 +571,10 @@ begin
          bbi                      => bbi,
          subCmdBB                 => subCmdBB,
 
-         spiSClk                  => spiSClk,
-         spiMOSI                  => spiMOSI,
-         spiMISO                  => spiMISO,
-         spiCSb                   => spiCSb,
+         spiSClk                  => open,
+         spiMOSI                  => open,
+         spiMISO                  => open,
+         spiCSb                   => open,
 
          adcClk                   => adcDClk,
          adcDataDDR               => adcDDRLoc,
