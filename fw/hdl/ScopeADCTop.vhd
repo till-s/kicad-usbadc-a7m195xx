@@ -96,6 +96,19 @@ architecture rtl of ScopeADCTop is
    constant ADC_BITS_C         : natural := 8;
    constant MEM_DEPTH_C        : natural := 16*1024;
 
+
+   function BB_DELAY_ARRAY_F   return NaturalArray is
+      variable v : NaturalArray( 0 to 2**SubCommandBBType'length - 1 ) := (others => 1);
+   begin
+      v( to_integer( unsigned( CMD_BB_NONE_C    ) ) ) := 0;
+      v( to_integer( unsigned( CMD_BB_SPI_PGA_C ) ) ) := 20;
+      -- SPI can't make timing at the fastest bit-bang rate. Mostly due to the hefty
+      -- delay through STARTUPE2 and the flash device output delay.
+      return v;
+   end function BB_DELAY_ARRAY_F;
+
+   constant BB_DELAY_ARRAY_C   : NaturalArray := BB_DELAY_ARRAY_F;
+
    signal ulpiIb               : UlpiIbType := ULPI_IB_INIT_C;
    signal ulpiOb               : UlpiObType := ULPI_OB_INIT_C;
 
@@ -137,7 +150,7 @@ architecture rtl of ScopeADCTop is
    -- extra bit is DOR / overflow
    signal adcDDRLoc            : std_logic_vector(ADC_BITS_C downto 0) := (others => '0');
    signal adcDcmLocked         : std_logic    := '0';
-   
+
    signal bbi                  : std_logic_vector(7 downto 0) := (others => '1');
    signal bbo                  : std_logic_vector(7 downto 0) := (others => '1');
 
@@ -160,7 +173,7 @@ architecture rtl of ScopeADCTop is
 
    signal stp_i                : std_logic;
    signal stp_t                : std_logic := '0';
-   
+
    signal dlyRefClk            : std_logic;
    signal smplClk              : std_logic;
    signal smplClkCnt           : signed(31 downto 0) := (others => '1');
@@ -172,10 +185,12 @@ architecture rtl of ScopeADCTop is
 
    signal extTrg               : std_logic := '0';
 
-   signal pgaCSbLoc            : std_logic_vector(pgaCSb'range) := (others => '1');
+   signal pgaCSbLocIb          : std_logic;
+   signal pgaCSbLocOb          : std_logic_vector(pgaCSb'range) := (others => '1');
    signal pgaMOSILoc           : std_logic;
-   signal pgaMISOLoc           : std_logic_vector(pgaCSb'range);
-   signal pgaSClkLoc           : std_logic;
+   signal pgaMISOLoc           : std_logic;
+   signal pgaSClkLocIb         : std_logic;
+   signal pgaSClkLocOb         : std_logic_vector(pgaCSb'range);
 
    component ila_0 is
       port (
@@ -350,19 +365,24 @@ begin
       i2cScl            <= 'Z' when bbo(BB_I2C_SCL_C) = '1' else '0';
 
       -- write to device only if T is deasserted
-      pgaCSb(0)         <= not (pgaCSBLoc(0) or bbo(BB_SPI_T_C));  -- drivers invert
-      pgaCSb(1)         <= not (pgaCSBLoc(1) or bbo(BB_SPI_T_C));  -- drivers invert
-      pgaSClk           <= not pgaSClkLoc; -- drivers invert
+      pgaCSb(0)         <= not pgaCSBLocOb(0);  -- drivers invert
+      pgaCSb(1)         <= not pgaCSBLocOb(1);  -- drivers invert
+      -- the pgaSClkLocOb signals are gated; the muxed chip-selects (pgaCSBLocOb)
+      -- are asserted early (while a preceding SCLK on the input of the shadow registers may
+      -- still be active).
+      -- Since we have only a single physical line we or the two gated clocks together.
+      -- We MUST NOT use the pgaSClkIb (ungated).
+      pgaSClk           <= not (pgaSClkLocOb(0) or pgaSClkLocOb(1)); -- drivers invert
       pgaSDat           <= not pgaMOSILoc; -- drivers invert
 
       P_CS_MUX : process ( bbo, subCmdBB, adcSDIO, spiMISO, pgaMISOLoc ) is
       begin
          adcCSb         <= '1';
          spiCSb         <= '1';
-         pgaCSbLoc      <= (others => '1');
+         pgaCSbLocIb    <= '1';
          adcSDIO        <= 'Z';
 
-         pgaSClkLoc     <= bbo(BB_SPI_SCK_C);
+         pgaSClkLocIb   <= bbo(BB_SPI_SCK_C);
          adcSClk        <= bbo(BB_SPI_SCK_C);
          spiSClk        <= bbo(BB_SPI_SCK_C);
 
@@ -377,12 +397,9 @@ begin
                adcSDIO  <= bbo(BB_SPI_MSO_C);
             end if;
             bbi(BB_SPI_MSI_C) <= adcSDIO;
-         elsif ( subCmdBB = CMD_BB_SPI_VGA_C ) then
-            pgaCSbLoc(0)      <= bbo(BB_SPI_CSb_C);
-            bbi(BB_SPI_MSI_C) <= pgaMISOLoc(0);
-         elsif ( subCmdBB = CMD_BB_SPI_VGB_C ) then
-            pgaCSbLoc(1)      <= bbo(BB_SPI_CSb_C);
-            bbi(BB_SPI_MSI_C) <= pgaMISOLoc(1);
+         elsif ( subCmdBB = CMD_BB_SPI_PGA_C ) then
+            pgaCSbLocIb       <= bbo(BB_SPI_CSb_C);
+            bbi(BB_SPI_MSI_C) <= pgaMISOLoc;
          elsif ( subCmdBB = CMD_BB_SPI_ROM_C ) then
             spiCSb            <= bbo(BB_SPI_CSb_C);
             bbi(BB_SPI_MSI_C) <= spiMISO;
@@ -391,54 +408,26 @@ begin
 
    end block B_BUFS;
 
-   B_PGA_SHADOW : block is
-      constant PGA_REG_INI_C   : Slv8Type  := x"00";
-      signal pgaShadowReg      : Slv8Array( pgaCSb'range ) := ( others => PGA_REG_INI_C );
-      signal isWrite           : std_logic := '0';
-   begin
+   U_PGA_REGS : entity work.SpiShadowReg
+      generic map (
+         NUM_REGS_G => 2,
+         REG_INIT_G => (
+            0 => x"00",
+            1 => x"00"
+         )
+      )
+      port map (
+         clk               => acmFifoClk,
+         -- resetting this does not reset the actual hardware we are caching
+         -- rst               => acmFifoRst,
+         sclkIb            => pgaSClkLocIb,
+         scsbIb            => pgaCSbLocIb,
+         mosiIb            => pgaMOSILoc,
+         misoIb            => pgaMISOLoc,
 
-      P_T_DELAY : process ( acmFifoClk ) is
-      begin
-         if ( rising_edge( acmFifoClk ) ) then
-            -- ws is asserted once CSb is high again - the SPI_T bit
-            -- may turn on the same cycle; thus we register it
-            isWrite <= not bbo(BB_SPI_T_C);
-         end if;
-      end process P_T_DELAY;
-
-      G_REG : for inst in pgaShadowReg'range generate
-         signal rs             : std_logic;
-         signal ws             : std_logic;
-         signal shiftRegData   : std_logic_vector(7 downto 0);
-      begin
-         U_REG : entity work.SpiReg
-            generic map (
-               INIT_VAL_G => PGA_REG_INI_C
-            )
-            port map (
-               clk        => acmFifoClk,
-               sclk       => pgaSClkLoc,
-               scsb       => pgaCSbLoc(inst),
-               mosi       => pgaMOSILoc,
-               miso       => pgaMISOLoc(inst),
-               data_inp   => pgaShadowReg(inst),
-               rs         => rs,
-               data_out   => shiftRegData,
-               ws         => ws
-            );
-
-         P_REG : process ( acmFifoClk ) is
-         begin
-            if ( rising_edge( acmFifoClk ) ) then
-               -- no reset; we can't reset the hardware reg we are shadowing
-               if ( ( ws and isWrite ) = '1' ) then
-                  pgaShadowReg(inst) <= shiftRegData;
-               end if;
-            end if;
-         end process P_REG;
-         
-      end generate G_REG;
-   end block B_PGA_SHADOW;
+         sclkOb            => pgaSClkLocOb,
+         scsbOb            => pgaCSbLocOb
+      );
 
    B_MMCM : block is
 
@@ -554,7 +543,8 @@ begin
          IDELAY_TAPS_G            => IDELAY_TAPS_C,
          INVERT_POL_CHB_G         => true,
          GIT_VERSION_G            => GIT_HASH_G,
-         BOARD_VERSION_G          => BOARD_VERSION_G
+         BOARD_VERSION_G          => BOARD_VERSION_G,
+         BB_DELAY_ARRAY_G         => BB_DELAY_ARRAY_C
       )
       port map (
          clk                      => acmFifoClk,
@@ -605,128 +595,23 @@ begin
    -- usrCClkInit halts all-one so  y xnor usrCClkInit(0) eventually = y
    usrCClk <= spiSClk xnor usrCClkInit(0);
 
-   G_SPIMON : if ( false ) generate
+   G_SPIMON : if ( true ) generate
 
-      type RegType is record
-         sr      : std_logic_vector(7 downto 0);
-         state   : std_logic;
-         cnt     : unsigned(2 downto 0);
-         cmd     : std_logic;
-         idx     : integer range -32768 to 32767;
-         nbits   : unsigned(31 downto 0);
-      end record RegType;
-
-      constant REG_INIT_C : RegType := (
-         sr      => (others => '0'),
-         state   => '0',
-         cnt     => (others => '0'),
-         cmd     => '0',
-         idx     => 0,
-         nbits   => (others => '0')
-      );
-
-      signal r        : RegType   := REG_INIT_C;
-      signal rin      : RegType   := REG_INIT_C;
-      signal idxDbg   : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(r.idx, 16));
-      signal lcsb     : std_logic := '1';
-
-      signal err      : std_logic;
-      signal spiCSbDbg: std_logic;
-
-      signal exp      : std_logic;
-      signal got      : std_logic;
    begin
-
-      spiCSbDbg <= bbo(BB_SPI_CSb_C);
-      got       <= bbo(BB_SPI_MSO_C);
-      exp       <= EXPECTED_C( r.idx );
 
       U_ILA : ila_0
          port map (
             clk                  => ulpiClkDly,
-            probe0( 7 downto  0) => r.sr,
-            probe0(10 downto  8) => std_logic_vector(r.cnt),
-            probe0(11          ) => lcsb,
-            probe0(12          ) => r.cmd,
-            probe0(13          ) => r.state,
-            probe0(14          ) => err,
-            probe0(15          ) => exp,
-            probe0(31 downto 16) => idxDbg,
-            probe0(39 downto 32) => bbo,
-            probe0(40          ) => got,
-            probe0(63 downto 41) => (others => '0'),
+            probe0( 7 downto  0) => bbo,
+            probe0(           8) => pgaCSbLocIb,
+            probe0(10 downto  9) => pgaCSbLocOb,
+            probe0(11          ) => pgaMOSILoc,
+            probe0(12          ) => pgaMISOLoc,
+            probe0(13          ) => pgaSClkLocIb,
+            probe0(15 downto 14) => pgaSClkLocOb,
+            probe0(63 downto 16) => (others => '0')
 
-            probe1(31 downto  0) => std_logic_vector(r.nbits),
-            probe1(63 downto 32) => (others => '0')
          );
-
-
-      P_CMB : process ( r, bbo, lcsb, spiCSbDbg, got, exp ) is
-         variable v   : RegType;
-      begin
-         v      := r;
-         err    <= '0';
-         if ( spiCSbDbg = '0' ) then
-            v.sr  := r.sr(v.sr'left - 1 downto 0) & got;
-            v.cnt := r.cnt + 1;
-            if ( lcsb = '1' ) then
-               -- CS just asserted
-               v.cnt   := to_unsigned(1, v.cnt'length);
-               v.cmd   := '1';
-               v.state := '0';
-            end if;
-            if ( v.state = '1' ) then
-               v.nbits := r.nbits + 1;
-               if ( r.idx >= EXPECTED_C'length ) then
-                  err <= '1';
-               else
-                  if ( exp /= got ) then
-                     err <= '1';
-                  end if;
-                  v.idx := r.idx + 1;
-               end if;
-            end if;
-            if ( r.cnt = 7 ) then
-               -- a byte complete
-               v.cmd := '0';
-               if ( r.cmd = '1' ) then
-                  -- new command byte
-                  if ( v.sr = x"02" ) then
-                     v.state := '1';
-                     v.idx   := -16;
-                  end if;
-               end if;
-            end if;
-         else
-            v.cnt := (others => '0');
-            v.cmd := '1';
-            if ( lcsb = '1' ) then
-               -- CS just deasserted
-               v.state := '0';
-            end if;
-         end if;
-
-         rin <= v;
-      end process P_CMB;
-
-      U_BUF : BUFG port map ( I => spiSClk, O => usrCClk );
-
-      P_CSb : process ( usrCClk, spiCSbDbg ) is
-      begin
-        if ( spiCSbDbg = '1' ) then
-           lcsb <= '1';
-        elsif ( rising_edge( usrCClk ) ) then
-           lcsb <= '0';
-        end if;
-      end process P_CSb;
-
-    
-      P_SEQ : process ( usrCClk ) is
-      begin
-         if ( rising_edge( usrCClk ) ) then
-            r <= rin;
-         end if;
-      end process P_SEQ;
 
    end generate G_SPIMON;
 
@@ -751,7 +636,7 @@ end block B_SINI;
       generic map (
          DWIDTH_A2B_G => 1,
          OUTREG_A2B_G => true
-      )    
+      )
       port map (
          clkA     => smplClk,
          dinA(0)  => adcBlnk,
