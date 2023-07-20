@@ -94,7 +94,7 @@ architecture rtl of ScopeADCTop is
    constant SPI_CLK_FREQ_C     : real    := 30.0E6;
 
    constant ADC_BITS_C         : natural := 8;
-   constant MEM_DEPTH_C        : natural := 16*1024;
+   constant MEM_DEPTH_C        : natural := 64*1024;
 
 
    function BB_DELAY_ARRAY_F   return NaturalArray is
