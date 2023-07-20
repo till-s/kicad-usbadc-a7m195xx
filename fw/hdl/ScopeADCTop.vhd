@@ -582,13 +582,11 @@ begin
    P_USR_CC_INIT : process ( cfgMClk ) is
    begin
       if ( rising_edge( cfgMClk ) ) then
-         if ( (supIlaTrg and eos and not usrCClkInit(usrCClkInit'left)) = '1' ) then
+         if ( (eos and not usrCClkInit(usrCClkInit'left)) = '1' ) then
             usrCClkInit <= usrCClkInit - 1;
          end if;
       end if;
    end process P_USR_CC_INIT;
-
-   supIlaTrgAck <= usrCClkInit( usrCClkInit'left );
 
    -- usrCClkInit halts all-one so  y xnor usrCClkInit(0) eventually = y
    usrCClk      <= spiSClk xnor usrCClkInit(0);
