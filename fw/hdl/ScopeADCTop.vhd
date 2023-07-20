@@ -310,7 +310,6 @@ begin
 
    end generate G_FIFO_ILA;
 
-
    U_USB_DEV : entity work.Usb2ExampleDev
       generic map (
          ULPI_CLK_MODE_INP_G       => false,
@@ -578,10 +577,6 @@ begin
          dlyRefClk                => dlyRefClk
       );
 
-B_SINI : block is
-   signal supIlaTrg    : std_logic := '1';
-   signal supIlaTrgAck : std_logic := '0';
-begin
    -- must drive usrCClk for a few cycles to switch STARTUPE2 so that
    -- it actually routes our clock through (see. UG470)
    P_USR_CC_INIT : process ( cfgMClk ) is
@@ -596,44 +591,7 @@ begin
    supIlaTrgAck <= usrCClkInit( usrCClkInit'left );
 
    -- usrCClkInit halts all-one so  y xnor usrCClkInit(0) eventually = y
-   usrCClk <= spiSClk xnor usrCClkInit(0);
-
-   G_SPIMON : if ( true ) generate
-
-   begin
-
-      U_ILA : ila_0
-         port map (
-            clk                  => ulpiClkDly,
-            probe0( 7 downto  0) => bbo,
-            probe0(           8) => pgaCSbLocIb,
-            probe0(10 downto  9) => pgaCSbLocOb,
-            probe0(11          ) => pgaMOSILoc,
-            probe0(12          ) => pgaMISOLoc,
-            probe0(13          ) => pgaSClkLocIb,
-            probe0(15 downto 14) => pgaSClkLocOb,
-            probe0(63 downto 16) => (others => '0')
-
-         );
-
-   end generate G_SPIMON;
-
-   G_SUP_ILA : if ( false ) generate
-
-   U_ILA_SUP : ila_0
-      port map (
-         clk                         => cfgMClk,
-         probe0(usrCClkInit'range)   => std_logic_vector(usrCClkInit),
-         probe0(usrCClkInit'length)  => eos,
-         probe0(usrCClkInit'length + 1) => usrCClk,
-         probe0(63 downto usrCClkInit'length + 2) => (others => '0'),
-
-         trig_out                    => supIlaTrg,
-         trig_out_ack                => supIlaTrgAck
-      );
-
-   end generate G_SUP_ILA;
-end block B_SINI;
+   usrCClk      <= spiSClk xnor usrCClkInit(0);
 
    U_MBT : entity work.Usb2MboxSync
       generic map (
