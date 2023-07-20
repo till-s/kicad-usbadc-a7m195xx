@@ -541,7 +541,10 @@ begin
          DDR_TYPE_G               => "IDDR",
          DLY_REF_MHZ_G            => (DLY_REF_CLK_FREQ_C/1.0E6),
          IDELAY_TAPS_G            => IDELAY_TAPS_C,
-         INVERT_POL_CHB_G         => true,
+         -- watch out in the schematics - there is a pol. swap
+         -- in the connection of the ad8370 output pins to the
+         -- sheet output pins. A has an odd number of inversions.
+         INVERT_POL_CHA_G         => true,
          GIT_VERSION_G            => GIT_HASH_G,
          BOARD_VERSION_G          => BOARD_VERSION_G,
          BB_DELAY_ARRAY_G         => BB_DELAY_ARRAY_C
