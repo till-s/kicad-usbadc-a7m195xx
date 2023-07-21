@@ -101,7 +101,9 @@ architecture rtl of ScopeADCTop is
       variable v : NaturalArray( 0 to 2**SubCommandBBType'length - 1 ) := (others => 1);
    begin
       v( to_integer( unsigned( CMD_BB_NONE_C    ) ) ) := 0;
-      v( to_integer( unsigned( CMD_BB_SPI_PGA_C ) ) ) := 20;
+      -- 10k pulldowns make the PGA level shifters really slow; measured time
+      -- constant for HI-LO transition (at shifter output) ~330ns!
+      v( to_integer( unsigned( CMD_BB_SPI_PGA_C ) ) ) := 200;
       -- SPI can't make timing at the fastest bit-bang rate. Mostly due to the hefty
       -- delay through STARTUPE2 and the flash device output delay.
       return v;
