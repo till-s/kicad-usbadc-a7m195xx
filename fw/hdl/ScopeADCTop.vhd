@@ -11,6 +11,7 @@ use     work.Usb2AppCfgPkg.all;
 use     work.BasicPkg.all;
 use     work.CommandMuxPkg.all;
 use     work.SpiMonPkg.all;
+use     work.AcqCtlPkg.all;
 
 entity ScopeADCTop is
    generic (
@@ -152,6 +153,7 @@ architecture rtl of ScopeADCTop is
    -- extra bit is DOR / overflow
    signal adcDDRLoc            : std_logic_vector(ADC_BITS_C downto 0) := (others => '0');
    signal adcDcmLocked         : std_logic    := '0';
+   signal adcStatus            : std_logic_vector(7 downto 0);
 
    signal bbi                  : std_logic_vector(7 downto 0) := (others => '1');
    signal bbo                  : std_logic_vector(7 downto 0) := (others => '1');
@@ -193,6 +195,25 @@ architecture rtl of ScopeADCTop is
    signal pgaMISOLoc           : std_logic;
    signal pgaSClkLocIb         : std_logic;
    signal pgaSClkLocOb         : std_logic_vector(pgaCSb'range);
+
+   signal regRDat              : std_logic_vector(7 downto 0) := (others => '0');
+   signal regWDat              : std_logic_vector(7 downto 0);
+   signal regAddr              : unsigned(7 downto 0);
+   signal regRdnw              : std_logic;
+   signal regVld               : std_logic;
+   signal regRdy               : std_logic := '0';
+   signal regErr               : std_logic := '1';
+
+   type RegType is record
+      led    : std_logic_vector(led'range);
+   end record RegType;
+
+   constant REG_INIT_C : RegType := (
+      led    => (others => '0')
+   );
+
+   signal regs                 : RegType := REG_INIT_C;
+   signal regsIn               : RegType;
 
    component ila_0 is
       port (
@@ -270,13 +291,100 @@ begin
       end if;
    end process P_ULPI_RST;
 
-   P_MAP_LED : process ( usbBlnk, adcBlnkLoc, usbMMCMLocked ) is
+   B_REGS : block is
    begin
-      led    <= (others => '0');
-      led(0) <= usbBlnk;
-      led(1) <= usbMMCMLocked;
-      led(3) <= adcBlnkLoc;
-   end process P_MAP_LED;
+      P_COMB : process (regs, regVld, regRdnw, regAddr, regWDat) is
+         variable v : RegType;
+      begin
+         v       := regs;
+         regRdy  <= '1';
+         regErr  <= '1';
+         regRDat <= (others => '0');
+         if     ( regAddr = 0 ) then
+            -- front LEDs
+            regRDat <= '0' & regs.led(5 downto 3) & '0' & regs.led(8 downto 6);
+            regErr  <= '0';
+            if ( (regVld and not regRdnw) = '1' ) then
+               v.led(5 downto 3) := regWDat(6 downto 4);
+               v.led(8 downto 6) := regWDat(2 downto 0);
+            end if;
+         elsif  ( regAddr = 1 ) then
+            -- rear  LEDs
+            regRDat <= regs.led(12 downto 9) & '0' & regs.led(2 downto 0);
+            regErr  <= '0';
+            if ( (regVld and not regRdnw) = '1' ) then
+               v.led(12 downto 9) := regWDat(7 downto 4);
+               v.led( 2 downto 0) := regWDat(2 downto 0);
+            end if;
+         end if;
+
+         regsIn  <= v;
+      end process P_COMB;
+
+      P_SEQ : process ( acmFifoClk ) is
+      begin
+         if ( rising_edge( acmFifoClk ) ) then
+            if ( acmFifoRst = '1' ) then
+               regs <= REG_INIT_C;
+            else
+               regs <= regsIn;
+            end if;
+         end if;
+      end process P_SEQ;
+   end block B_REGS;
+
+   B_LEDS : block is
+      signal isTriggeredAny, isTriggeredA, isTriggeredB : std_logic;
+   begin
+
+      U_FLICKER : entity work.Flicker
+         generic map (
+            CLOCK_FREQ_G => ACM_CLK_FREQ_C
+         )
+         port map (
+            clk          => acmFifoClk,
+            rst          => acmFifoRst,
+            datInp       => adcStatus(ACQ_STA_HALTD_C),
+            datOut       => isTriggeredAny
+         );
+
+      isTriggeredA   <= isTriggeredAny and not adcStatus(ACQ_STA_SRC_B_C);
+      isTriggeredB   <= isTriggeredAny and not adcStatus(ACQ_STA_SRC_A_C);
+
+      P_MAP_LED : process (
+         usbBlnk,
+         adcBlnkLoc,
+         usbMMCMLocked,
+         adcStatus,
+         isTriggeredA,
+         isTriggeredB,
+         regs
+      ) is
+         variable v : std_logic_vector(led'range);
+      begin
+         v     := (others => '0');
+         v( 0) := usbBlnk;                      -- front-right, Red
+         v( 1) := usbMMCMLocked;                -- front-right, Green
+         v( 2) := '0';                          -- front-right, Blue
+
+         v( 3) := adcStatus(ACQ_STA_OVR_A_C);   -- CHA,         Red
+         v( 4) := isTriggeredA;                 -- CHA,         Green
+         v( 5) := '0';                          -- CHA,         Blue
+
+         v( 6) := adcStatus(ACQ_STA_OVR_A_C);   -- CHB,         Red
+         v( 7) := isTriggeredB;                 -- CHB,         Green
+         v( 8) := '0';                          -- CHB,         Blue
+
+         v( 9) := '0';                          -- front-left,  Red
+         v(10) := '0';                          -- front-left,  Green
+         v(11) := '0';                          -- front-left,  Blue
+
+         v(12) := adcBlnkLoc;                   -- front-left, single
+
+         led   <= v or regs.led;
+      end process P_MAP_LED;
+
+   end block B_LEDS;
 
    G_RST_ILA : if ( GEN_RST_ILA_C = '1' ) generate
 
@@ -564,6 +672,16 @@ begin
          bbo                      => bbo,
          bbi                      => bbi,
          subCmdBB                 => subCmdBB,
+
+         regRDat                  => regRDat,
+         regWDat                  => regWDat,
+         regAddr                  => regAddr,
+         regRdnw                  => regRdnw,
+         regVld                   => regVld,
+         regRdy                   => regRdy,
+         regErr                   => regErr,
+
+         adcStatus                => adcStatus,
 
          spiSClk                  => open,
          spiMOSI                  => open,
