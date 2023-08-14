@@ -372,6 +372,7 @@ begin
          adcStatus,
          isTriggeredA,
          isTriggeredB,
+         isTriggeredE,
          regs
       ) is
          variable v : std_logic_vector(led'range);
