@@ -205,15 +205,18 @@ architecture rtl of ScopeADCTop is
    signal regErr               : std_logic := '1';
 
    type RegType is record
-      led    : std_logic_vector(led'range);
+      led         : std_logic_vector(led'range);
+      isTriggered : std_logic;
    end record RegType;
 
    constant REG_INIT_C : RegType := (
-      led    => (others => '0')
+      led         => (others => '0'),
+      isTriggered => '0'
    );
 
-   signal regs                 : RegType := REG_INIT_C;
+   signal regs                 : RegType   := REG_INIT_C;
    signal regsIn               : RegType;
+   signal isTriggeredLoc       : std_logic := '0';
 
    component ila_0 is
       port (
@@ -296,10 +299,11 @@ begin
       P_COMB : process (regs, regVld, regRdnw, regAddr, regWDat) is
          variable v : RegType;
       begin
-         v       := regs;
-         regRdy  <= '1';
-         regErr  <= '1';
-         regRDat <= (others => '0');
+         v              := regs;
+         regRdy         <= '1';
+         regErr         <= '1';
+         regRDat        <= (others => '0');
+         isTriggeredLoc <= regs.isTriggered;
          if     ( regAddr = 0 ) then
             -- front LEDs
             regRDat <= '0' & regs.led(5 downto 3) & '0' & regs.led(8 downto 6);
@@ -315,6 +319,15 @@ begin
             if ( (regVld and not regRdnw) = '1' ) then
                v.led(12 downto 9) := regWDat(7 downto 4);
                v.led( 2 downto 0) := regWDat(2 downto 0);
+            end if;
+         elsif  ( regAddr = 1 ) then
+            regRDat(0) <= regs.isTriggered;
+            if ( (regVld and not regRdnw) = '1' ) then
+               v.isTriggered      := regWDat(0);
+               -- writing a one when bit is already active causes a flicker
+               if ( ( v.isTriggered and regs.isTriggered ) = '1' ) then
+                  isTriggeredLoc <= '0';
+               end if;
             end if;
          end if;
 
@@ -334,7 +347,7 @@ begin
    end block B_REGS;
 
    B_LEDS : block is
-      signal isTriggeredAny, isTriggeredA, isTriggeredB : std_logic;
+      signal isTriggeredAny, isTriggeredA, isTriggeredB, isTriggeredE : std_logic;
    begin
 
       U_FLICKER : entity work.Flicker
@@ -344,12 +357,13 @@ begin
          port map (
             clk          => acmFifoClk,
             rst          => acmFifoRst,
-            datInp       => adcStatus(ACQ_STA_HALTD_C),
+            datInp       => isTriggeredLoc,
             datOut       => isTriggeredAny
          );
 
-      isTriggeredA   <= isTriggeredAny and not adcStatus(ACQ_STA_SRC_B_C);
-      isTriggeredB   <= isTriggeredAny and not adcStatus(ACQ_STA_SRC_A_C);
+      isTriggeredA   <= isTriggeredAny and adcStatus(ACQ_STA_SRC_A_C);
+      isTriggeredB   <= isTriggeredAny and adcStatus(ACQ_STA_SRC_B_C);
+      isTriggeredE   <= isTriggeredAny and not adcStatus(ACQ_STA_SRC_A_C) and not adcStatus(ACQ_STA_SRC_B_C);
 
       P_MAP_LED : process (
          usbBlnk,
@@ -376,7 +390,7 @@ begin
          v( 8) := '0';                          -- CHB,         Blue
 
          v( 9) := '0';                          -- front-left,  Red
-         v(10) := '0';                          -- front-left,  Green
+         v(10) := isTriggeredE;                 -- front-left,  Green
          v(11) := '0';                          -- front-left,  Blue
 
          v(12) := adcBlnkLoc;                   -- front-left, single
