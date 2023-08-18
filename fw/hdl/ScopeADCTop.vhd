@@ -301,13 +301,12 @@ begin
       begin
          v              := regs;
          regRdy         <= '1';
-         regErr         <= '1';
+         regErr         <= '0';
          regRDat        <= (others => '0');
          isTriggeredLoc <= regs.isTriggered;
          if     ( regAddr = 0 ) then
             -- front LEDs
             regRDat <= '0' & regs.led(5 downto 3) & '0' & regs.led(8 downto 6);
-            regErr  <= '0';
             if ( (regVld and not regRdnw) = '1' ) then
                v.led(5 downto 3) := regWDat(6 downto 4);
                v.led(8 downto 6) := regWDat(2 downto 0);
@@ -315,7 +314,6 @@ begin
          elsif  ( regAddr = 1 ) then
             -- rear  LEDs
             regRDat <= regs.led(12 downto 9) & '0' & regs.led(2 downto 0);
-            regErr  <= '0';
             if ( (regVld and not regRdnw) = '1' ) then
                v.led(12 downto 9) := regWDat(7 downto 4);
                v.led( 2 downto 0) := regWDat(2 downto 0);
@@ -329,6 +327,8 @@ begin
                   isTriggeredLoc <= '0';
                end if;
             end if;
+         else
+            regErr <= '1';
          end if;
 
          regsIn  <= v;
