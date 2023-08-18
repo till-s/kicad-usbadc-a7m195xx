@@ -378,8 +378,8 @@ begin
          variable v : std_logic_vector(led'range);
       begin
          v     := (others => '0');
-         v( 0) := usbBlnk;                      -- front-right, Red
-         v( 1) := usbMMCMLocked;                -- front-right, Green
+         v( 0) := '0';                          -- front-right, Red
+         v( 1) := isTriggeredE;                 -- front-right, Green
          v( 2) := '0';                          -- front-right, Blue
 
          v( 3) := adcStatus(ACQ_STA_OVR_A_C);   -- CHA,         Red
@@ -390,8 +390,8 @@ begin
          v( 7) := isTriggeredB;                 -- CHB,         Green
          v( 8) := '0';                          -- CHB,         Blue
 
-         v( 9) := '0';                          -- front-left,  Red
-         v(10) := isTriggeredE;                 -- front-left,  Green
+         v( 9) := usbBlnk;                      -- front-left,  Red
+         v(10) := usbMMCMLocked;                -- front-left,  Green
          v(11) := '0';                          -- front-left,  Blue
 
          v(12) := adcBlnkLoc;                   -- front-left, single
