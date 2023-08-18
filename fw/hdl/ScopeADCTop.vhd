@@ -320,7 +320,7 @@ begin
                v.led(12 downto 9) := regWDat(7 downto 4);
                v.led( 2 downto 0) := regWDat(2 downto 0);
             end if;
-         elsif  ( regAddr = 1 ) then
+         elsif  ( regAddr = 2 ) then
             regRDat(0) <= regs.isTriggered;
             if ( (regVld and not regRdnw) = '1' ) then
                v.isTriggered      := regWDat(0);
