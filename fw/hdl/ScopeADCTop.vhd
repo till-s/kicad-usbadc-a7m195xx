@@ -139,6 +139,9 @@ architecture rtl of ScopeADCTop is
 
    signal usbMMCMLocked        : std_logic;
    signal spiSClk              : std_logic;
+   signal spiSClkCtl           : std_logic    := '0';
+   signal spiMOSICtl           : std_logic    := '0';
+   signal spiCSbCtl            : std_logic    := '1';
    signal usrCClkInit          : signed(3 downto 0) := ( 3 => '0', others => '1' );
 
    signal subCmdBB             : SubCommandBBType;
@@ -499,19 +502,20 @@ begin
       pgaSClk           <= not (pgaSClkLocOb(0) or pgaSClkLocOb(1)); -- drivers invert
       pgaSDat           <= not pgaMOSILoc; -- drivers invert
 
-      P_CS_MUX : process ( bbo, subCmdBB, adcSDIO, spiMISO, pgaMISOLoc ) is
+      P_CS_MUX : process ( bbo, subCmdBB, adcSDIO, spiMISO, pgaMISOLoc, spiSClkCtl, spiMOSICtl, spiCSbCtl ) is
+         variable spiCSbLoc : std_logic;
       begin
          adcCSb         <= '1';
-         spiCSb         <= '1';
+         spiCSbLoc      := spiCSbCtl;
          pgaCSbLocIb    <= '1';
          adcSDIO        <= 'Z';
 
          pgaSClkLocIb   <= bbo(BB_SPI_SCK_C);
          adcSClk        <= bbo(BB_SPI_SCK_C);
-         spiSClk        <= bbo(BB_SPI_SCK_C);
+         spiSClk        <= bbo(BB_SPI_SCK_C) or spiSClkCtl;
 
          pgaMOSILoc     <= bbo(BB_SPI_MSO_C);
-         spiMOSI        <= bbo(BB_SPI_MSO_C);
+         spiMOSI        <= bbo(BB_SPI_MSO_C) or spiMOSICtl;
 
          bbi(BB_SPI_MSI_C)               <= '0';
 
@@ -525,9 +529,10 @@ begin
             pgaCSbLocIb       <= bbo(BB_SPI_CSb_C);
             bbi(BB_SPI_MSI_C) <= pgaMISOLoc;
          elsif ( subCmdBB = CMD_BB_SPI_ROM_C ) then
-            spiCSb            <= bbo(BB_SPI_CSb_C);
+            spiCSbLoc         := bbo(BB_SPI_CSb_C) and spiCSbCtl;
             bbi(BB_SPI_MSI_C) <= spiMISO;
          end if;
+         spiCSb <= spiCSbLoc;
       end process P_CS_MUX;
 
    end block B_BUFS;
@@ -671,7 +676,8 @@ begin
          INVERT_POL_CHA_G         => true,
          GIT_VERSION_G            => GIT_HASH_G,
          BOARD_VERSION_G          => BOARD_VERSION_G,
-         BB_DELAY_ARRAY_G         => BB_DELAY_ARRAY_C
+         BB_DELAY_ARRAY_G         => BB_DELAY_ARRAY_C,
+         HAVE_SPI_CMD_G           => true
       )
       port map (
          clk                      => acmFifoClk,
@@ -698,10 +704,10 @@ begin
 
          adcStatus                => adcStatus,
 
-         spiSClk                  => open,
-         spiMOSI                  => open,
-         spiMISO                  => open,
-         spiCSb                   => open,
+         spiSClk                  => spiSClkCtl,
+         spiMOSI                  => spiMOSICtl,
+         spiMISO                  => spiMISO,
+         spiCSb                   => spiCSbCtl,
 
          adcClk                   => adcDClk,
          adcDataDDR               => adcDDRLoc,
