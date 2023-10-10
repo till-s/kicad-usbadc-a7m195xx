@@ -178,7 +178,6 @@ architecture rtl of ScopeADCTop is
    signal ulpiRst              : std_logic := '0';
    signal ulpiForceStp         : std_logic := '0';
 
-   signal stp_i                : std_logic;
    signal stp_t                : std_logic := '0';
 
    signal dlyRefClk            : std_logic;
@@ -412,7 +411,7 @@ begin
          probe0(ulpiRstTimer'range)  => std_logic_vector(ulpiRstTimer),
          probe0(ulpiRstTimer'length) => ulpiClk_i,
          probe0(ulpiRstTimer'length + 1) => ulpiIb.dir,
-         probe0(ulpiRstTimer'length + 2) => stp_i,
+         probe0(ulpiRstTimer'length + 2) => ulpiIb.stp,
          probe0(63 downto ulpiRstTimer'length + 3) => (others => '0'),
 
          trig_out                    => trg,
@@ -480,7 +479,7 @@ begin
       ulpiIb.dir        <= ulpiDir;
       ulpiIb.nxt        <= ulpiNxt;
 
-      stp_i             <= ulpiStp;
+      ulpiIb.stp        <= ulpiStp;
       ulpiStp           <= 'Z' when stp_t = '1' else ulpiOb.stp;
 
       ulpiIb.dat        <= ulpiDat;
