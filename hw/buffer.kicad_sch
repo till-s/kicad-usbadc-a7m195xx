@@ -3308,7 +3308,7 @@
     (property "Reference" "U14" (at 55.88 85.09 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "CPC1017N" (at 50.8 80.01 90)
+    (property "Value" "AQY225R2S" (at 50.8 80.01 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "Package_SO:SOP-4_3.8x4.1mm_P2.54mm" (at 71.12 81.28 0)
