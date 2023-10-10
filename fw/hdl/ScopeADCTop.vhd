@@ -65,6 +65,12 @@ end entity ScopeADCTop;
 
 architecture rtl of ScopeADCTop is
 
+   attribute MARK_DEBUG        : string;
+
+   constant GEN_FIFO_ILA_C     : std_logic := '0';
+   constant MARK_DEBUG_FIFO_C  : string    := "TRUE";
+   constant GEN_RST_ILA_C      : std_logic := '0';
+
    -- for speed grade 1; 120MHz works with IDELAY_TAPS => 18
    constant ADC_FREQ_C         : real    := 120.0E6;
    constant IDELAY_TAPS_C      : natural := 18;
@@ -114,6 +120,7 @@ architecture rtl of ScopeADCTop is
 
    signal ulpiIb               : UlpiIbType := ULPI_IB_INIT_C;
    signal ulpiOb               : UlpiObType := ULPI_OB_INIT_C;
+   signal ulpiRx               : UlpiRxType;
 
    signal ulpiClkDly           : std_logic;
 
@@ -126,11 +133,17 @@ architecture rtl of ScopeADCTop is
    signal acmFifoRst           : std_logic    := '0';
 
    signal acmFifoOutDat        : Usb2ByteType;
+   attribute MARK_DEBUG of       acmFifoOutDat        : signal is MARK_DEBUG_FIFO_C;
    signal acmFifoOutEmpty      : std_logic;
+   attribute MARK_DEBUG of       acmFifoOutEmpty      : signal is MARK_DEBUG_FIFO_C;
    signal acmFifoOutRen        : std_logic    := '1';
+   attribute MARK_DEBUG of       acmFifoOutRen        : signal is MARK_DEBUG_FIFO_C;
    signal acmFifoInpDat        : Usb2ByteType := (others => '0');
+   attribute MARK_DEBUG of       acmFifoInpDat        : signal is MARK_DEBUG_FIFO_C;
    signal acmFifoInpFull       : std_logic;
+   attribute MARK_DEBUG of       acmFifoInpFull       : signal is MARK_DEBUG_FIFO_C;
    signal acmFifoInpWen        : std_logic    := '0';
+   attribute MARK_DEBUG of       acmFifoInpWen        : signal is MARK_DEBUG_FIFO_C;
 
    signal acmFifoInpMinFill    : unsigned(LD_FIFO_INP_C - 1 downto 0) := (others=> '0');
    signal acmFifoInpTimer      : unsigned(32 - 1 downto 0) := (others=> '0');
@@ -237,8 +250,6 @@ architecture rtl of ScopeADCTop is
    signal trg                  : std_logic := '0';
    signal trgack               : std_logic := '0';
 
-   constant GEN_FIFO_ILA_C     : std_logic := '0';
-   constant GEN_RST_ILA_C      : std_logic := '0';
    signal phas                 : std_logic := not GEN_RST_ILA_C;
 
 begin
@@ -445,10 +456,10 @@ begin
          LD_ACM_FIFO_DEPTH_INP_G   => LD_FIFO_INP_C,
          LD_ACM_FIFO_DEPTH_OUT_G   => LD_FIFO_OUT_C,
          CDC_ACM_ASYNC_G           => false,
-         MARK_DEBUG_ULPI_IO_G      => false,
+         MARK_DEBUG_ULPI_IO_G      => true,
          MARK_DEBUG_PKT_TX_G       => false,
          MARK_DEBUG_PKT_RX_G       => false,
-         MARK_DEBUG_PKT_PROC_G     => false
+         MARK_DEBUG_PKT_PROC_G     => true
       )
       port map (
          usb2Clk                   => usb2Clk,
@@ -456,6 +467,7 @@ begin
          ulpiRst                   => ulpiRst,
          ulpiIb                    => ulpiIb,
          ulpiOb                    => ulpiOb,
+         ulpiRx                    => ulpiRx,
          ulpiForceStp              => ulpiForceStp,
 
          usb2HiSpeedEn             => '1',
