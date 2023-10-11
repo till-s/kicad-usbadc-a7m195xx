@@ -456,10 +456,10 @@ begin
          LD_ACM_FIFO_DEPTH_INP_G   => LD_FIFO_INP_C,
          LD_ACM_FIFO_DEPTH_OUT_G   => LD_FIFO_OUT_C,
          CDC_ACM_ASYNC_G           => false,
-         MARK_DEBUG_ULPI_IO_G      => true,
+         MARK_DEBUG_ULPI_IO_G      => false,
          MARK_DEBUG_PKT_TX_G       => false,
          MARK_DEBUG_PKT_RX_G       => false,
-         MARK_DEBUG_PKT_PROC_G     => true
+         MARK_DEBUG_PKT_PROC_G     => false
       )
       port map (
          usb2Clk                   => usb2Clk,
