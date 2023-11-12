@@ -168,6 +168,8 @@ architecture rtl of ScopeADCTop is
 
    -- extra bit is DOR / overflow
    signal adcDDRLoc            : std_logic_vector(ADC_BITS_C downto 0) := (others => '0');
+   signal adcDataA             : std_logic_vector(ADC_BITS_C downto 0) := (others => '0');
+   signal adcDataB             : std_logic_vector(ADC_BITS_C downto 0) := (others => '0');
    signal adcDcmLocked         : std_logic    := '0';
    signal adcStatus            : std_logic_vector(7 downto 0);
 
@@ -669,6 +671,30 @@ begin
 
    adcDDRLoc <= (adcDatDDR(adcDatDDR'left downto adcDatDDR'left - ADC_BITS_C + 1) & adcDORDDR);
 
+   U_ADC_DDR     : entity work.MaxADCXilDDR
+      generic map (
+         ADC_CLOCK_FREQ_G         => ADC_FREQ_C,
+         ADC_BITS_G               => ADC_BITS_C,
+         DLY_REF_MHZ_G            => (DLY_REF_CLK_FREQ_C/1.0E6),
+         DDR_TYPE_G               => "IDDR",
+         IDELAY_TAPS_G            => IDELAY_TAPS_C,
+         -- watch out in the schematics - there is a pol. swap
+         -- in the connection of the ad8370 output pins to the
+         -- sheet output pins. A has an odd number of inversions.
+         INVERT_POL_CHA_G         => true
+      )
+      port map (
+         adcClkInp                => adcDClk,
+         adcClkOut                => smplClk,
+         -- bit 0 is the DOR (overrange) bit
+         adcDataDDR               => adcDDRLoc,
+         adcDataA                 => adcDataA,
+         adcDataB                 => adcDataB,
+         pllLocked                => adcDcmLocked,
+         pllRst                   => '0',
+         dlyRefClk                => dlyRefClk
+      );
+
    U_CMD_WRAPPER : entity work.CommandWrapper
       generic map (
          I2C_SCL_G                => BB_I2C_SCL_C,
@@ -678,13 +704,6 @@ begin
          ADC_FREQ_G               => ADC_FREQ_C,
          ADC_BITS_G               => ADC_BITS_C,
          MEM_DEPTH_G              => MEM_DEPTH_C,
-         DDR_TYPE_G               => "IDDR",
-         DLY_REF_MHZ_G            => (DLY_REF_CLK_FREQ_C/1.0E6),
-         IDELAY_TAPS_G            => IDELAY_TAPS_C,
-         -- watch out in the schematics - there is a pol. swap
-         -- in the connection of the ad8370 output pins to the
-         -- sheet output pins. A has an odd number of inversions.
-         INVERT_POL_CHA_G         => true,
          GIT_VERSION_G            => GIT_HASH_G,
          BOARD_VERSION_G          => BOARD_VERSION_G,
          BB_DELAY_ARRAY_G         => BB_DELAY_ARRAY_C,
@@ -720,13 +739,10 @@ begin
          spiMISO                  => spiMISO,
          spiCSb                   => spiCSbCtl,
 
-         adcClk                   => adcDClk,
-         adcDataDDR               => adcDDRLoc,
-         smplClk                  => smplClk,
-         adcDcmLocked             => adcDcmLocked,
-         extTrg                   => extTrg,
-
-         dlyRefClk                => dlyRefClk
+         adcClk                   => smplClk,
+         adcDataA                 => adcDataA,
+         adcDataB                 => adcDataB,
+         extTrg                   => extTrg
       );
 
    -- must drive usrCClk for a few cycles to switch STARTUPE2 so that
