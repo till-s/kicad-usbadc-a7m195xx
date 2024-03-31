@@ -402,7 +402,7 @@ begin
          v( 4) := isTriggeredA;                 -- CHA,         Green
          v( 5) := '0';                          -- CHA,         Blue
 
-         v( 6) := adcStatus(ACQ_STA_OVR_A_C);   -- CHB,         Red
+         v( 6) := adcStatus(ACQ_STA_OVR_B_C);   -- CHB,         Red
          v( 7) := isTriggeredB;                 -- CHB,         Green
          v( 8) := '0';                          -- CHB,         Blue
 
