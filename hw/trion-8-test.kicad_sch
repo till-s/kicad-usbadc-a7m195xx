@@ -164,7 +164,7 @@
     (property "Sheetname" "Power" (at 96.52 107.8734 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Sheetfile" "power.kicad_sch" (at 96.52 144.0946 0)
+    (property "Sheetfile" "power_1.kicad_sch" (at 96.52 144.0946 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
     (instances
