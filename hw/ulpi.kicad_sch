@@ -1971,7 +1971,7 @@
   (symbol (lib_id "power:+3V3") (at 232.41 33.02 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 05bbc4fa-98af-4ea7-a189-309e657367b0)
-    (property "Reference" "#PWR0109" (at 232.41 36.83 0)
+    (property "Reference" "#PWR01023" (at 232.41 36.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 232.41 28.8869 0)
@@ -1987,7 +1987,7 @@
     (instances
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "#PWR0109") (unit 1)
+          (reference "#PWR01023") (unit 1)
         )
       )
     )
@@ -2024,7 +2024,7 @@
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "R49") (unit 1)
+          (reference "R1015") (unit 1)
         )
       )
       (project "usb_if"
@@ -2038,7 +2038,7 @@
   (symbol (lib_id "Device:Crystal_GND24") (at 106.68 149.86 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2c3b9155-6a5c-453e-ac0c-66787e91bd5a)
-    (property "Reference" "Y1" (at 116.8906 145.8428 0)
+    (property "Reference" "Y1001" (at 116.8906 145.8428 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "26MHz" (at 116.8906 148.267 0)
@@ -2063,7 +2063,7 @@
     (instances
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "Y1") (unit 1)
+          (reference "Y1001") (unit 1)
         )
       )
     )
@@ -2100,7 +2100,7 @@
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "C49") (unit 1)
+          (reference "C1028") (unit 1)
         )
       )
       (project "ulpi-test"
@@ -2119,7 +2119,7 @@
   (symbol (lib_id "Device:R_Small") (at 33.02 151.13 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3da939f4-d205-4c95-8726-58b58295b29b)
-    (property "Reference" "R50" (at 31.5214 149.9179 0)
+    (property "Reference" "R1020" (at 31.5214 149.9179 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1M" (at 31.5214 152.3421 0)
@@ -2136,7 +2136,7 @@
     (instances
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "R50") (unit 1)
+          (reference "R1020") (unit 1)
         )
       )
     )
@@ -2145,7 +2145,7 @@
   (symbol (lib_id "Device:C_Small") (at 38.1 151.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3f35b25b-2d72-4f1d-a302-eea7090e787c)
-    (property "Reference" "C54" (at 40.4241 149.9242 0)
+    (property "Reference" "C1032" (at 40.4241 149.9242 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10n" (at 40.4241 152.3484 0)
@@ -2168,7 +2168,7 @@
     (instances
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "C54") (unit 1)
+          (reference "C1032") (unit 1)
         )
       )
     )
@@ -2204,7 +2204,7 @@
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "#PWR087") (unit 1)
+          (reference "#PWR01029") (unit 1)
         )
       )
       (project "usb_if"
@@ -2245,7 +2245,7 @@
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "#PWR086") (unit 1)
+          (reference "#PWR01028") (unit 1)
         )
       )
       (project "usb_if"
@@ -2259,7 +2259,7 @@
   (symbol (lib_id "power:GND") (at 113.03 158.75 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 461724b5-1efb-4057-bd15-861d6928a518)
-    (property "Reference" "#PWR095" (at 113.03 165.1 0)
+    (property "Reference" "#PWR01034" (at 113.03 165.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 113.03 162.8831 0)
@@ -2275,7 +2275,7 @@
     (instances
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "#PWR095") (unit 1)
+          (reference "#PWR01034") (unit 1)
         )
       )
     )
@@ -2284,7 +2284,7 @@
   (symbol (lib_id "power:GND") (at 100.33 158.75 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 471aeda9-b9d6-4f79-8db4-7ea3132e9902)
-    (property "Reference" "#PWR094" (at 100.33 165.1 0)
+    (property "Reference" "#PWR01033" (at 100.33 165.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 100.33 162.8831 0)
@@ -2300,7 +2300,7 @@
     (instances
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "#PWR094") (unit 1)
+          (reference "#PWR01033") (unit 1)
         )
       )
     )
@@ -2340,7 +2340,7 @@
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "C48") (unit 1)
+          (reference "C1031") (unit 1)
         )
       )
       (project "usb_if"
@@ -2385,7 +2385,7 @@
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "C51") (unit 1)
+          (reference "C1030") (unit 1)
         )
       )
       (project "usb_if"
@@ -2426,7 +2426,7 @@
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "#PWR092") (unit 1)
+          (reference "#PWR01036") (unit 1)
         )
       )
       (project "usb_if"
@@ -2467,7 +2467,7 @@
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "#PWR085") (unit 1)
+          (reference "#PWR01032") (unit 1)
         )
       )
       (project "usb_if"
@@ -2481,7 +2481,7 @@
   (symbol (lib_id "FPGA_Efinix_Trion:T8Q144xx") (at 232.41 48.26 0) (unit 5)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 75296b0e-de53-404e-ae64-5a334a2a1336)
-    (property "Reference" "U8" (at 232.41 60.1401 0)
+    (property "Reference" "U1002" (at 232.41 60.1401 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "T20Q144xx" (at 232.41 62.5643 0)
@@ -2646,7 +2646,7 @@
     (instances
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "U8") (unit 5)
+          (reference "U1002") (unit 5)
         )
       )
     )
@@ -2706,7 +2706,7 @@
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "U10") (unit 1)
+          (reference "U1003") (unit 1)
         )
       )
       (project "usb_if"
@@ -2720,7 +2720,7 @@
   (symbol (lib_id "power:GND") (at 38.1 153.67 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7bd7c143-9fe2-4524-8835-8f95c1cfae34)
-    (property "Reference" "#PWR096" (at 38.1 160.02 0)
+    (property "Reference" "#PWR01031" (at 38.1 160.02 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 38.1 157.8031 0)
@@ -2736,7 +2736,7 @@
     (instances
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "#PWR096") (unit 1)
+          (reference "#PWR01031") (unit 1)
         )
       )
     )
@@ -2745,7 +2745,7 @@
   (symbol (lib_id "Device:C_Small") (at 113.03 153.67 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 828ac177-dfed-476e-92cc-ffbd5e3bfda1)
-    (property "Reference" "C53" (at 115.3541 152.4642 0)
+    (property "Reference" "C1034" (at 115.3541 152.4642 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10p" (at 115.3541 154.8884 0)
@@ -2768,7 +2768,7 @@
     (instances
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "C53") (unit 1)
+          (reference "C1034") (unit 1)
         )
       )
     )
@@ -2777,7 +2777,7 @@
   (symbol (lib_id "Device:C_Small") (at 100.33 153.67 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 831f33de-886e-4e5a-b60f-29ad1a1a03e6)
-    (property "Reference" "C52" (at 98.0059 152.4642 0)
+    (property "Reference" "C1033" (at 98.0059 152.4642 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10p" (at 98.0059 154.8884 0)
@@ -2800,7 +2800,7 @@
     (instances
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "C52") (unit 1)
+          (reference "C1033") (unit 1)
         )
       )
     )
@@ -2809,7 +2809,7 @@
   (symbol (lib_id "power:+3V3") (at 220.98 22.86 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a4590103-3b18-45c8-858b-441622d58863)
-    (property "Reference" "#PWR0131" (at 220.98 26.67 0)
+    (property "Reference" "#PWR01021" (at 220.98 26.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 220.98 18.7269 0)
@@ -2825,7 +2825,7 @@
     (instances
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "#PWR0131") (unit 1)
+          (reference "#PWR01021") (unit 1)
         )
       )
     )
@@ -2862,7 +2862,7 @@
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "C50") (unit 1)
+          (reference "C1029") (unit 1)
         )
       )
       (project "ulpi-test"
@@ -2909,7 +2909,7 @@
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "R45") (unit 1)
+          (reference "R1017") (unit 1)
         )
       )
       (project "usb_if"
@@ -2950,7 +2950,7 @@
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "#PWR090") (unit 1)
+          (reference "#PWR01035") (unit 1)
         )
       )
       (project "usb_if"
@@ -2964,7 +2964,7 @@
   (symbol (lib_id "power:+5V") (at 85.09 110.49 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bbfd99a6-99e8-4aac-8f6e-16587fa26f0a)
-    (property "Reference" "#PWR024" (at 85.09 114.3 0)
+    (property "Reference" "#PWR01026" (at 85.09 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 85.471 106.0958 0)
@@ -2980,7 +2980,7 @@
     (instances
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "#PWR024") (unit 1)
+          (reference "#PWR01026") (unit 1)
         )
       )
     )
@@ -3017,7 +3017,7 @@
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "R48") (unit 1)
+          (reference "R1014") (unit 1)
         )
       )
       (project "usb_if"
@@ -3059,7 +3059,7 @@
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "R47") (unit 1)
+          (reference "R1021") (unit 1)
         )
       )
       (project "usb_if"
@@ -3100,7 +3100,7 @@
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "#PWR089") (unit 1)
+          (reference "#PWR01027") (unit 1)
         )
       )
       (project "usb_if"
@@ -3141,7 +3141,7 @@
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "#PWR091") (unit 1)
+          (reference "#PWR01024") (unit 1)
         )
       )
       (project "usb_if"
@@ -3183,7 +3183,7 @@
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "R46") (unit 1)
+          (reference "R1018") (unit 1)
         )
       )
       (project "usb_if"
@@ -3197,7 +3197,7 @@
   (symbol (lib_id "power:GND") (at 220.98 27.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d49690cb-9f1f-45fb-8ff8-86436f7f9d6b)
-    (property "Reference" "#PWR0132" (at 220.98 34.29 0)
+    (property "Reference" "#PWR01022" (at 220.98 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 220.98 32.0731 0)
@@ -3213,7 +3213,7 @@
     (instances
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "#PWR0132") (unit 1)
+          (reference "#PWR01022") (unit 1)
         )
       )
     )
@@ -3222,7 +3222,7 @@
   (symbol (lib_id "Device:R_Small") (at 127 146.05 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d49b47f2-164d-44a7-8fc0-5d568d0b274d)
-    (property "Reference" "R73" (at 125.73 144.78 0)
+    (property "Reference" "R1019" (at 125.73 144.78 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1M" (at 125.73 147.32 0)
@@ -3239,7 +3239,7 @@
     (instances
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "R73") (unit 1)
+          (reference "R1019") (unit 1)
         )
       )
     )
@@ -3248,7 +3248,7 @@
   (symbol (lib_id "Device:C_Small") (at 220.98 25.4 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid da055fd9-4a25-4c77-89bf-e0a81a236eba)
-    (property "Reference" "C59" (at 218.6559 24.1942 0)
+    (property "Reference" "C1027" (at 218.6559 24.1942 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 218.6559 26.6184 0)
@@ -3271,7 +3271,7 @@
     (instances
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "C59") (unit 1)
+          (reference "C1027") (unit 1)
         )
       )
     )
@@ -3308,7 +3308,7 @@
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "R44") (unit 1)
+          (reference "R1016") (unit 1)
         )
       )
       (project "usb_if"
@@ -3322,7 +3322,7 @@
   (symbol (lib_id "power:+3V3") (at 167.64 99.06 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ee2623a8-10ef-45c3-880c-46988f14682b)
-    (property "Reference" "#PWR093" (at 167.64 102.87 0)
+    (property "Reference" "#PWR01025" (at 167.64 102.87 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 167.64 94.9269 0)
@@ -3338,7 +3338,7 @@
     (instances
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "#PWR093") (unit 1)
+          (reference "#PWR01025") (unit 1)
         )
       )
     )
@@ -3347,7 +3347,7 @@
   (symbol (lib_id "power:GND") (at 96.52 144.78 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f7321d63-b15e-4d20-a85d-0310681b0f78)
-    (property "Reference" "#PWR025" (at 96.52 151.13 0)
+    (property "Reference" "#PWR01030" (at 96.52 151.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 96.52 148.9131 0)
@@ -3363,7 +3363,7 @@
     (instances
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "#PWR025") (unit 1)
+          (reference "#PWR01030") (unit 1)
         )
       )
     )
@@ -3418,7 +3418,7 @@
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "J4") (unit 1)
+          (reference "J1002") (unit 1)
         )
       )
       (project "usb_if"
