@@ -498,7 +498,7 @@
   (symbol (lib_id "power:GND") (at 101.6 86.36 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 19285bec-8e40-4687-b790-e90c37128577)
-    (property "Reference" "#PWR033" (at 101.6 92.71 0)
+    (property "Reference" "#PWR066" (at 101.6 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 101.727 90.7542 0)
@@ -513,15 +513,6 @@
     (pin "1" (uuid bb450f7c-4d90-47e4-b249-430f7aa150a2))
     (instances
       (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
-          (reference "#PWR033") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/73f3d429-a0b7-4265-ba46-4445bae0de3d"
           (reference "#PWR066") (unit 1)
         )
@@ -532,7 +523,7 @@
   (symbol (lib_id "fmc:+1V8_analog") (at 111.76 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3a871918-3e9e-4696-8a72-716b3704c452)
-    (property "Reference" "#PWR034" (at 111.76 80.01 0)
+    (property "Reference" "#PWR067" (at 111.76 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+1V8_analog" (at 112.141 71.8058 0)
@@ -547,9 +538,6 @@
     (pin "1" (uuid 9b06d50a-2d62-4a39-90d6-99103bfe4e7c))
     (instances
       (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
-          (reference "#PWR034") (unit 1)
-        )
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/73f3d429-a0b7-4265-ba46-4445bae0de3d"
           (reference "#PWR067") (unit 1)
         )
@@ -601,7 +589,7 @@
   (symbol (lib_id "fmc:+5V_switched") (at 125.73 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9d465ff6-4e2a-4639-b4ad-43068030d0a2)
-    (property "Reference" "#PWR09" (at 125.73 80.01 0)
+    (property "Reference" "#PWR033" (at 125.73 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V_switched" (at 125.73 71.755 0)
@@ -616,9 +604,6 @@
     (pin "1" (uuid 505f6f86-55fe-47fe-b35c-c087edd6f048))
     (instances
       (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "#PWR09") (unit 1)
-        )
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/73f3d429-a0b7-4265-ba46-4445bae0de3d"
           (reference "#PWR033") (unit 1)
         )
@@ -629,7 +614,7 @@
   (symbol (lib_id "Device:R_Small") (at 111.76 88.9 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d1a5aa5f-213f-47ed-b949-ab4a12ee827e)
-    (property "Reference" "R23" (at 106.68 88.9 90)
+    (property "Reference" "R60" (at 106.68 88.9 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 109.22 88.9 90)
@@ -651,9 +636,6 @@
     (pin "2" (uuid 53db9bd9-385c-46a9-82da-b4d9174b0d4e))
     (instances
       (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "R23") (unit 1)
-        )
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/73f3d429-a0b7-4265-ba46-4445bae0de3d"
           (reference "R60") (unit 1)
         )
@@ -664,7 +646,7 @@
   (symbol (lib_id "power:GND") (at 123.19 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid dfb1d88d-ed11-48c4-8998-e0f0e85710b2)
-    (property "Reference" "#PWR033" (at 123.19 127 0)
+    (property "Reference" "#PWR068" (at 123.19 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 123.317 125.0442 0)
@@ -679,15 +661,6 @@
     (pin "1" (uuid 363db677-daa8-4fda-b207-13ed24733660))
     (instances
       (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
-          (reference "#PWR033") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/73f3d429-a0b7-4265-ba46-4445bae0de3d"
           (reference "#PWR068") (unit 1)
         )

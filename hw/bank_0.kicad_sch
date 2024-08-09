@@ -2200,9 +2200,6 @@
     (pin "T6" (uuid af24fc3b-b32e-4872-b447-8f48f9bbf4aa))
     (instances
       (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/27cc8612-21b5-4a6c-80ae-cd0836a5c2c4"
-          (reference "U24") (unit 3)
-        )
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/27cc8612-21b5-4a6c-80ae-cd0836a5c2c4/ae1ba68b-adb9-4154-bc4b-8f2e629720c6"
           (reference "U24") (unit 3)
         )

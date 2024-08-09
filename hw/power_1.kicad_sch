@@ -740,6 +740,9 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "R72") (unit 1)
         )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
+          (reference "R72") (unit 1)
+        )
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/156952d1-5d11-4286-b02e-ddefbba25fea"
@@ -770,6 +773,9 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "#PWR0155") (unit 1)
         )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
+          (reference "#PWR0155") (unit 1)
+        )
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/156952d1-5d11-4286-b02e-ddefbba25fea"
@@ -796,6 +802,11 @@
     )
     (pin "1" (uuid 926393a6-e942-4818-9f27-cfcc43f56de6))
     (instances
+      (project "usbadc"
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
+          (reference "#PWR01080") (unit 1)
+        )
+      )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/156952d1-5d11-4286-b02e-ddefbba25fea"
           (reference "#PWR01080") (unit 1)
@@ -830,6 +841,9 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
+          (reference "C3") (unit 1)
+        )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
           (reference "C3") (unit 1)
         )
       )
@@ -869,6 +883,9 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "C16") (unit 1)
         )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
+          (reference "C16") (unit 1)
+        )
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/156952d1-5d11-4286-b02e-ddefbba25fea"
@@ -904,6 +921,9 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
+          (reference "R72") (unit 1)
+        )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
           (reference "R72") (unit 1)
         )
       )
@@ -943,6 +963,9 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "C16") (unit 1)
         )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
+          (reference "C16") (unit 1)
+        )
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/156952d1-5d11-4286-b02e-ddefbba25fea"
@@ -978,6 +1001,9 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
+          (reference "R4") (unit 1)
+        )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
           (reference "R4") (unit 1)
         )
       )
@@ -1021,6 +1047,9 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "U3") (unit 1)
         )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
+          (reference "U3") (unit 1)
+        )
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/156952d1-5d11-4286-b02e-ddefbba25fea"
@@ -1049,6 +1078,9 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
+          (reference "#PWR0156") (unit 1)
+        )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
           (reference "#PWR0156") (unit 1)
         )
       )
@@ -1081,6 +1113,9 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "#PWR0155") (unit 1)
         )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
+          (reference "#PWR0155") (unit 1)
+        )
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/156952d1-5d11-4286-b02e-ddefbba25fea"
@@ -1109,6 +1144,9 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
+          (reference "#PWR0155") (unit 1)
+        )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
           (reference "#PWR0155") (unit 1)
         )
       )
@@ -1141,6 +1179,9 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "#FLG0105") (unit 1)
         )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
+          (reference "#FLG0105") (unit 1)
+        )
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/156952d1-5d11-4286-b02e-ddefbba25fea"
@@ -1169,6 +1210,9 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
+          (reference "#FLG0105") (unit 1)
+        )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
           (reference "#FLG0105") (unit 1)
         )
       )
@@ -1206,6 +1250,9 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
+          (reference "L3") (unit 1)
+        )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
           (reference "L3") (unit 1)
         )
       )
@@ -1249,6 +1296,9 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "U3") (unit 1)
         )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
+          (reference "U3") (unit 1)
+        )
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/156952d1-5d11-4286-b02e-ddefbba25fea"
@@ -1277,6 +1327,9 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
+          (reference "#FLG0105") (unit 1)
+        )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
           (reference "#FLG0105") (unit 1)
         )
       )
@@ -1316,6 +1369,9 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "R8") (unit 1)
         )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
+          (reference "R8") (unit 1)
+        )
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/156952d1-5d11-4286-b02e-ddefbba25fea"
@@ -1342,6 +1398,11 @@
     )
     (pin "1" (uuid d65a2fb8-b4c1-4d12-a8a6-82a671ee2f4c))
     (instances
+      (project "usbadc"
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
+          (reference "#PWR01076") (unit 1)
+        )
+      )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/156952d1-5d11-4286-b02e-ddefbba25fea"
           (reference "#PWR01076") (unit 1)
@@ -1376,6 +1437,9 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
+          (reference "R8") (unit 1)
+        )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
           (reference "R8") (unit 1)
         )
       )
@@ -1415,6 +1479,9 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "R1") (unit 1)
         )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
+          (reference "R1") (unit 1)
+        )
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/156952d1-5d11-4286-b02e-ddefbba25fea"
@@ -1450,6 +1517,9 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
+          (reference "C16") (unit 1)
+        )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
           (reference "C16") (unit 1)
         )
       )
@@ -1489,6 +1559,9 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "R4") (unit 1)
         )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
+          (reference "R4") (unit 1)
+        )
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/156952d1-5d11-4286-b02e-ddefbba25fea"
@@ -1524,6 +1597,9 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
+          (reference "C3") (unit 1)
+        )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
           (reference "C3") (unit 1)
         )
       )
@@ -1563,6 +1639,9 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "L3") (unit 1)
         )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
+          (reference "L3") (unit 1)
+        )
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/156952d1-5d11-4286-b02e-ddefbba25fea"
@@ -1591,6 +1670,9 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
+          (reference "#FLG0105") (unit 1)
+        )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
           (reference "#FLG0105") (unit 1)
         )
       )
@@ -1623,6 +1705,9 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "#PWR0156") (unit 1)
         )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
+          (reference "#PWR0156") (unit 1)
+        )
       )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/156952d1-5d11-4286-b02e-ddefbba25fea"
@@ -1651,6 +1736,9 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
+          (reference "#PWR0156") (unit 1)
+        )
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/156952d1-5d11-4286-b02e-ddefbba25fea"
           (reference "#PWR0156") (unit 1)
         )
       )

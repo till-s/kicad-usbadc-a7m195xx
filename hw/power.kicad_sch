@@ -3284,9 +3284,6 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "#PWR0165") (unit 1)
         )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
-          (reference "#PWR?") (unit 1)
-        )
       )
     )
   )
@@ -3311,9 +3308,6 @@
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "#PWR0168") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
-          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -3560,9 +3554,6 @@
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "#PWR0170") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
-          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -3841,9 +3832,6 @@
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "#PWR040") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
-          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -4501,9 +4489,6 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "#PWR0183") (unit 1)
         )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
-          (reference "#PWR?") (unit 1)
-        )
       )
     )
   )
@@ -4635,7 +4620,7 @@
   (symbol (lib_id "power:GND") (at 66.04 146.05 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid eddb69c7-3b43-4f2f-870a-70522b68b64f)
-    (property "Reference" "#PWR?" (at 66.04 152.4 0)
+    (property "Reference" "#PWR039" (at 66.04 152.4 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 66.167 150.4442 0)
@@ -4650,9 +4635,6 @@
     (pin "1" (uuid 06534b50-a754-4fa1-a9f6-8183f6eff173))
     (instances
       (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "#PWR039") (unit 1)
         )

@@ -2130,12 +2130,6 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
           (reference "#PWR0145") (unit 1)
         )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "#PWR?") (unit 1)
-        )
       )
     )
   )
@@ -2678,9 +2672,6 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
           (reference "C96") (unit 1)
         )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "C?") (unit 1)
-        )
       )
     )
   )
@@ -2817,9 +2808,6 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
           (reference "C97") (unit 1)
         )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "C?") (unit 1)
-        )
       )
     )
   )
@@ -2844,12 +2832,6 @@
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
           (reference "#PWR0148") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -2876,12 +2858,6 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
           (reference "#PWR0139") (unit 1)
         )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "#PWR?") (unit 1)
-        )
       )
     )
   )
@@ -2906,12 +2882,6 @@
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
           (reference "#PWR0122") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -3528,7 +3498,7 @@
   (symbol (lib_id "fmc:100nF_603") (at 143.51 76.2 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-0000613294b6)
-    (property "Reference" "C?" (at 138.43 76.2 0)
+    (property "Reference" "C52" (at 138.43 76.2 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100n" (at 138.43 78.74 0)
@@ -3550,12 +3520,6 @@
     (pin "2" (uuid ff2daa7b-d3ef-4d7c-92d5-8c398e0ff23f))
     (instances
       (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "C?") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "C?") (unit 1)
-        )
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
           (reference "C52") (unit 1)
         )
@@ -3591,7 +3555,7 @@
   (symbol (lib_id "fmc:100nF_603") (at 143.51 120.65 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00006132a47d)
-    (property "Reference" "C?" (at 138.43 120.65 0)
+    (property "Reference" "C53" (at 138.43 120.65 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100n" (at 138.43 123.19 0)
@@ -3613,12 +3577,6 @@
     (pin "2" (uuid 0716e5d5-c8a2-4a64-ae95-21428c057e38))
     (instances
       (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "C?") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "C?") (unit 1)
-        )
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
           (reference "C53") (unit 1)
         )
@@ -3672,12 +3630,6 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
           (reference "#PWR0136") (unit 1)
         )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "#PWR?") (unit 1)
-        )
       )
     )
   )
@@ -3703,12 +3655,6 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
           (reference "#PWR0137") (unit 1)
         )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "#PWR?") (unit 1)
-        )
       )
     )
   )
@@ -3733,12 +3679,6 @@
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
           (reference "#PWR0135") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -3797,9 +3737,6 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
           (reference "C62") (unit 1)
         )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "C?") (unit 1)
-        )
       )
     )
   )
@@ -3832,9 +3769,6 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
           (reference "C61") (unit 1)
         )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "C?") (unit 1)
-        )
       )
     )
   )
@@ -3860,12 +3794,6 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
           (reference "#PWR0140") (unit 1)
         )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "#PWR?") (unit 1)
-        )
       )
     )
   )
@@ -3890,12 +3818,6 @@
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
           (reference "#PWR0141") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -3972,12 +3894,6 @@
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
           (reference "#PWR0142") (unit 1)
         )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "#PWR?") (unit 1)
-        )
       )
     )
   )
@@ -3985,7 +3901,7 @@
   (symbol (lib_id "fmc:100nF_603") (at 189.23 105.41 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00006136aa0d)
-    (property "Reference" "C?" (at 186.69 102.87 0)
+    (property "Reference" "C56" (at 186.69 102.87 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100n" (at 186.69 107.95 0)
@@ -4007,12 +3923,6 @@
     (pin "2" (uuid 49f2a159-7145-4334-9372-1cbd3c64df73))
     (instances
       (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "C?") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "C?") (unit 1)
-        )
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-0000612b1274"
           (reference "C56") (unit 1)
         )

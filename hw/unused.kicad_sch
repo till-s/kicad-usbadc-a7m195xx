@@ -978,6 +978,11 @@
     )
     (pin "1" (uuid 9fabe9a4-e457-42b1-a94c-97e1708182a4))
     (instances
+      (project "usbadc"
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/b37c57e6-fd28-4b13-a567-f707971d2f60"
+          (reference "#PWR01037") (unit 1)
+        )
+      )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/b37c57e6-fd28-4b13-a567-f707971d2f60"
           (reference "#PWR01037") (unit 1)
@@ -1003,6 +1008,11 @@
     )
     (pin "1" (uuid e7174a62-25ca-4029-8736-5538b3d2ddf3))
     (instances
+      (project "usbadc"
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/b37c57e6-fd28-4b13-a567-f707971d2f60"
+          (reference "#PWR01041") (unit 1)
+        )
+      )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/b37c57e6-fd28-4b13-a567-f707971d2f60"
           (reference "#PWR01041") (unit 1)
@@ -1028,6 +1038,11 @@
     )
     (pin "1" (uuid 35d3c31d-7c01-4400-b4e9-d066caf83bc6))
     (instances
+      (project "usbadc"
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/b37c57e6-fd28-4b13-a567-f707971d2f60"
+          (reference "#PWR01044") (unit 1)
+        )
+      )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/b37c57e6-fd28-4b13-a567-f707971d2f60"
           (reference "#PWR01044") (unit 1)
@@ -1060,6 +1075,11 @@
     (pin "1" (uuid 59973eab-72e2-4ea7-adb1-dae5fdfb43d9))
     (pin "2" (uuid 5993abba-91b0-4351-92c4-dfac1ece42eb))
     (instances
+      (project "usbadc"
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/b37c57e6-fd28-4b13-a567-f707971d2f60"
+          (reference "C1035") (unit 1)
+        )
+      )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/b37c57e6-fd28-4b13-a567-f707971d2f60"
           (reference "C1035") (unit 1)
@@ -1085,6 +1105,11 @@
     )
     (pin "1" (uuid e84eebf1-6d63-4c3d-87ea-d3f2728fe06b))
     (instances
+      (project "usbadc"
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/b37c57e6-fd28-4b13-a567-f707971d2f60"
+          (reference "#PWR01039") (unit 1)
+        )
+      )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/b37c57e6-fd28-4b13-a567-f707971d2f60"
           (reference "#PWR01039") (unit 1)
@@ -1259,6 +1284,11 @@
     (pin "3" (uuid de889fbd-c22b-4f81-83fc-d2bcf466da2a))
     (pin "4" (uuid bc1aef62-ffb3-4b09-95c7-cb334459fd80))
     (instances
+      (project "usbadc"
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/b37c57e6-fd28-4b13-a567-f707971d2f60"
+          (reference "U1002") (unit 10)
+        )
+      )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/b37c57e6-fd28-4b13-a567-f707971d2f60"
           (reference "U1002") (unit 10)
@@ -1284,6 +1314,11 @@
     )
     (pin "1" (uuid 896585c5-1ba8-459b-9798-537c036795e2))
     (instances
+      (project "usbadc"
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/b37c57e6-fd28-4b13-a567-f707971d2f60"
+          (reference "#PWR01038") (unit 1)
+        )
+      )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/b37c57e6-fd28-4b13-a567-f707971d2f60"
           (reference "#PWR01038") (unit 1)
@@ -1309,6 +1344,11 @@
     )
     (pin "1" (uuid cc7c54d0-f97a-4053-b6fb-8e745bd889aa))
     (instances
+      (project "usbadc"
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/b37c57e6-fd28-4b13-a567-f707971d2f60"
+          (reference "#PWR01040") (unit 1)
+        )
+      )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/b37c57e6-fd28-4b13-a567-f707971d2f60"
           (reference "#PWR01040") (unit 1)
@@ -1334,6 +1374,11 @@
     )
     (pin "1" (uuid b0b2026e-32e9-4ca5-9e4d-a9b678b7cb94))
     (instances
+      (project "usbadc"
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/b37c57e6-fd28-4b13-a567-f707971d2f60"
+          (reference "#PWR01043") (unit 1)
+        )
+      )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/b37c57e6-fd28-4b13-a567-f707971d2f60"
           (reference "#PWR01043") (unit 1)
@@ -1359,6 +1404,11 @@
     )
     (pin "1" (uuid 97ec9fca-80c1-49ae-b892-843cb849b425))
     (instances
+      (project "usbadc"
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/b37c57e6-fd28-4b13-a567-f707971d2f60"
+          (reference "#PWR01042") (unit 1)
+        )
+      )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/b37c57e6-fd28-4b13-a567-f707971d2f60"
           (reference "#PWR01042") (unit 1)
@@ -1533,6 +1583,11 @@
     (pin "3" (uuid de889fbd-c22b-4f81-83fc-d2bcf466da27))
     (pin "4" (uuid bc1aef62-ffb3-4b09-95c7-cb334459fd7d))
     (instances
+      (project "usbadc"
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/b37c57e6-fd28-4b13-a567-f707971d2f60"
+          (reference "U1002") (unit 9)
+        )
+      )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/b37c57e6-fd28-4b13-a567-f707971d2f60"
           (reference "U1002") (unit 9)
@@ -1565,6 +1620,11 @@
     (pin "1" (uuid 5a1b7994-f5cb-4dda-80e8-ef5ae15c2ee9))
     (pin "2" (uuid 6ac39072-359c-4f6a-aea2-e301232bfcf0))
     (instances
+      (project "usbadc"
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/b37c57e6-fd28-4b13-a567-f707971d2f60"
+          (reference "C1036") (unit 1)
+        )
+      )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/b37c57e6-fd28-4b13-a567-f707971d2f60"
           (reference "C1036") (unit 1)
@@ -1597,6 +1657,11 @@
     (pin "1" (uuid d3f8f0ec-07d8-4ee2-96ea-ee56686c7b3d))
     (pin "2" (uuid 1b45fb59-33ee-4b31-91cc-9cd6c5bc051e))
     (instances
+      (project "usbadc"
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/b37c57e6-fd28-4b13-a567-f707971d2f60"
+          (reference "C1037") (unit 1)
+        )
+      )
       (project "trion-8-test"
         (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169/b37c57e6-fd28-4b13-a567-f707971d2f60"
           (reference "C1037") (unit 1)

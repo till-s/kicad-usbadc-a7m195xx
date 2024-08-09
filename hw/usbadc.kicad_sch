@@ -1125,7 +1125,7 @@
   (symbol (lib_id "Device:R_Small") (at 90.17 182.88 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 51d52127-db57-4c0d-8921-55801189108b)
-    (property "Reference" "R24" (at 95.25 182.88 90)
+    (property "Reference" "R14" (at 95.25 182.88 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 92.71 182.88 90)
@@ -1147,9 +1147,6 @@
     (pin "2" (uuid 4c1b4321-ab61-4909-ab11-1cb0fce7ecd8))
     (instances
       (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "R24") (unit 1)
-        )
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1"
           (reference "R14") (unit 1)
         )
@@ -1160,7 +1157,7 @@
   (symbol (lib_id "Device:R_Small") (at 86.36 182.88 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5ca23526-cf41-43a1-b1f6-b008fd0e8db4)
-    (property "Reference" "R23" (at 80.01 182.88 90)
+    (property "Reference" "R13" (at 80.01 182.88 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 83.82 182.88 90)
@@ -1182,9 +1179,6 @@
     (pin "2" (uuid e8dbd2ee-c7d9-498f-ba89-6b9fcdb66d64))
     (instances
       (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-000060b16d71"
-          (reference "R23") (unit 1)
-        )
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1"
           (reference "R13") (unit 1)
         )
@@ -1258,7 +1252,7 @@
   (symbol (lib_id "power:GND") (at 265.43 36.195 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bfcefca5-cb05-40aa-98fa-9bad6d28a0a9)
-    (property "Reference" "#PWR0101" (at 265.43 42.545 0)
+    (property "Reference" "#PWR0114" (at 265.43 42.545 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 265.557 40.5892 0)
@@ -1273,12 +1267,6 @@
     (pin "1" (uuid 7d80a355-6190-4587-89cb-ef96be60763d))
     (instances
       (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "#PWR0101") (unit 1)
-        )
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/27cc8612-21b5-4a6c-80ae-cd0836a5c2c4"
-          (reference "#PWR0104") (unit 1)
-        )
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1"
           (reference "#PWR0114") (unit 1)
         )
@@ -1720,6 +1708,23 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1" (page "12"))
+      )
+    )
+  )
+
+  (sheet (at 132.08 27.94) (size 22.86 27.94) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid d9cd2a48-41b0-4b01-a978-0843576735ad)
+    (property "Sheetname" "FPGA Trion" (at 132.08 27.2284 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "trion-8-test.kicad_sch" (at 132.08 56.4646 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "usbadc"
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1" (page "18"))
       )
     )
   )
