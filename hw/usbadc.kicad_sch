@@ -1729,23 +1729,6 @@
     )
   )
 
-  (sheet (at 171.45 29.21) (size 33.02 27.94) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid e22d5406-defa-48de-847a-ffb7eaee11c9)
-    (property "Sheetname" "Unused Pins" (at 171.45 28.4984 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "unused_pins.kicad_sch" (at 171.45 57.7346 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1" (page "17"))
-      )
-    )
-  )
-
   (sheet_instances
     (path "/" (page "1"))
   )
