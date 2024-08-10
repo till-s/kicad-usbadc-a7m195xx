@@ -1,110 +1,152 @@
-(kicad_sch (version 20230121) (generator eeschema)
 
+(kicad_sch
+  (version 20230121)
+  (generator eeschema)
   (uuid 8c6e15e3-1804-4f03-8a4f-3cb8420d9169)
-
   (paper "A4")
-
-  (lib_symbols
-  )
-
-
-  (sheet (at 96.52 108.585) (size 31.75 34.925) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
+  (lib_symbols)
+  (sheet
+    (at 96.52 108.585)
+    (size 31.75 34.925)
+    (fields_autoplaced)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0.0))
     (uuid 156952d1-5d11-4286-b02e-ddefbba25fea)
-    (property "Sheetname" "Power" (at 96.52 107.8734 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "power_1.kicad_sch" (at 96.52 144.0946 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
+    (property "Sheetname" "Power"
+      (at 96.52 107.8734 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "power_1.kicad_sch"
+      (at 96.52 144.0946 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
     (instances
       (project "trion-8-test"
-        (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169" (page "7"))
-      )
+        (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169"
+          (page "7")))
       (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad" (page "21"))
-      )
-    )
-  )
-
-  (sheet (at 31.75 161.29) (size 30.48 24.13) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad"
+          (page "21")))))
+  (sheet
+    (at 31.75 161.29)
+    (size 30.48 24.13)
+    (fields_autoplaced)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0.0))
     (uuid 1b523d49-ff11-41b3-8609-dd0dd8346ed0)
-    (property "Sheetname" "sdram" (at 31.75 160.5784 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "sdram.kicad_sch" (at 31.75 186.0046 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
+    (property "Sheetname" "sdram"
+      (at 31.75 160.5784 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "sdram.kicad_sch"
+      (at 31.75 186.0046 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
     (instances
       (project "trion-8-test"
-        (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169" (page "7"))
-      )
+        (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169"
+          (page "7")))
       (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad" (page "18"))
-      )
-    )
-  )
-
-  (sheet (at 31.115 118.745) (size 30.48 19.05) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad"
+          (page "18")))))
+  (sheet
+    (at 31.115 118.745)
+    (size 30.48 19.05)
+    (fields_autoplaced)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0.0))
     (uuid 945e4dbc-067e-402b-ba9d-38126a9e21c9)
-    (property "Sheetname" "ulpi" (at 31.115 118.0334 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "ulpi.kicad_sch" (at 31.115 138.3796 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
+    (property "Sheetname" "ulpi"
+      (at 31.115 118.0334 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "ulpi.kicad_sch"
+      (at 31.115 138.3796 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
     (instances
       (project "trion-8-test"
-        (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169" (page "4"))
-      )
+        (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169"
+          (page "4")))
       (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad" (page "8"))
-      )
-    )
-  )
-
-  (sheet (at 92.075 161.925) (size 30.48 26.67) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad"
+          (page "8")))))
+  (sheet
+    (at 92.075 161.925)
+    (size 30.48 26.67)
+    (fields_autoplaced)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0.0))
     (uuid b37c57e6-fd28-4b13-a567-f707971d2f60)
-    (property "Sheetname" "GPIO" (at 92.075 161.2134 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "unused.kicad_sch" (at 92.075 189.1796 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
+    (property "Sheetname" "GPIO"
+      (at 92.075 161.2134 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "unused.kicad_sch"
+      (at 92.075 189.1796 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
     (instances
       (project "trion-8-test"
-        (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169" (page "6"))
-      )
+        (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169"
+          (page "6")))
       (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad" (page "20"))
-      )
-    )
-  )
-
-  (sheet (at 32.385 80.772) (size 27.94 19.558) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad"
+          (page "20")))))
+  (sheet
+    (at 32.385 80.772)
+    (size 27.94 19.558)
+    (fields_autoplaced)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0.0))
     (uuid f706ede1-c100-479f-a87e-df6f74047868)
-    (property "Sheetname" "bank_1a_cfg" (at 32.385 80.0604 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "bank_1a_cfg.kicad_sch" (at 32.385 100.9146 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
+    (property "Sheetname" "bank_1a_cfg"
+      (at 32.385 80.0604 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "bank_1a_cfg.kicad_sch"
+      (at 32.385 100.9146 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
     (instances
       (project "trion-8-test"
-        (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169" (page "3"))
-      )
+        (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169"
+          (page "3")))
       (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad" (page "19"))
-      )
-    )
-  )
-)
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad"
+          (page "19"))))))
