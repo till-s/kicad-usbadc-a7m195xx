@@ -920,11 +920,11 @@
         )
       )
     )
-    (symbol "power:+1V8" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+    (symbol "power:+3V3" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -3.81 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Value" "+1V8" (at 0 3.556 0)
+      (property "Value" "+3V3" (at 0 3.556 0)
         (effects (font (size 1.27 1.27)))
       )
       (property "Footprint" "" (at 0 0 0)
@@ -936,10 +936,10 @@
       (property "ki_keywords" "global power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Power symbol creates a global label with name \"+1V8\"" (at 0 0 0)
+      (property "ki_description" "Power symbol creates a global label with name \"+3V3\"" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "+1V8_0_1"
+      (symbol "+3V3_0_1"
         (polyline
           (pts
             (xy -0.762 1.27)
@@ -965,9 +965,9 @@
           (fill (type none))
         )
       )
-      (symbol "+1V8_1_1"
+      (symbol "+3V3_1_1"
         (pin power_in line (at 0 0 90) (length 0) hide
-          (name "+1V8" (effects (font (size 1.27 1.27))))
+          (name "+3V3" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
       )
@@ -2395,31 +2395,6 @@
     )
   )
 
-  (symbol (lib_id "power:+1V8") (at 124.46 68.58 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 00000000-0000-0000-0000-000060879304)
-    (property "Reference" "#PWR0154" (at 124.46 72.39 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+1V8" (at 124.46 65.024 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 124.46 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 124.46 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 34014241-cb9c-481c-ba77-71c0d8b823fd))
-    (instances
-      (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "#PWR0154") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Regulator_Switching:TLV62569DDC") (at 69.85 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00006088c246)
@@ -3464,31 +3439,6 @@
     )
   )
 
-  (symbol (lib_id "power:+1V8") (at 184.15 119.38 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 00000000-0000-0000-0000-000061289696)
-    (property "Reference" "#PWR0159" (at 184.15 123.19 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+1V8" (at 183.515 113.665 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 184.15 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 184.15 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 98271368-5923-424c-9019-fb0c4b82a7a0))
-    (instances
-      (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "#PWR0159") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:GND") (at 181.61 153.67 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-0000612bf64b)
@@ -3566,6 +3516,31 @@
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "J9") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 124.46 68.58 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 01fd43a8-d26b-4000-b895-5a5c8c62bdee)
+    (property "Reference" "#PWR096" (at 124.46 72.39 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 124.46 64.4469 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 124.46 68.58 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 124.46 68.58 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 40b51c4d-77a5-4105-9e87-073408c2f9a9))
+    (instances
+      (project "usbadc"
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
+          (reference "#PWR096") (unit 1)
         )
       )
     )
@@ -4255,6 +4230,31 @@
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "#FLG05") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 184.15 119.38 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid acfd7e02-58b4-48f9-8734-030c534e191a)
+    (property "Reference" "#PWR097" (at 184.15 123.19 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 184.15 113.665 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 184.15 119.38 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 184.15 119.38 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid d4220ba6-7ba6-40b6-8640-18c0b4186e99))
+    (instances
+      (project "usbadc"
+        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
+          (reference "#PWR097") (unit 1)
         )
       )
     )
