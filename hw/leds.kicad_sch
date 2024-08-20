@@ -973,7 +973,7 @@
     (uuid fa5cd4c0-93b0-4504-941f-2112cdbfe04d)
   )
 
-  (text "RED" (at 118.745 40.64 0)
+  (text "GRN" (at 118.745 40.64 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 5edd8fb6-b230-40fb-99bc-c7b28b01d412)
   )

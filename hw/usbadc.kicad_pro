@@ -81,11 +81,11 @@
         "item_on_disabled_layer": "error",
         "items_not_allowed": "error",
         "length_out_of_range": "error",
-        "lib_footprint_issues": "ignore",
-        "lib_footprint_mismatch": "ignore",
+        "lib_footprint_issues": "warning",
+        "lib_footprint_mismatch": "warning",
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
-        "missing_courtyard": "ignore",
+        "missing_courtyard": "error",
         "missing_footprint": "warning",
         "net_conflict": "warning",
         "npth_inside_courtyard": "ignore",
@@ -491,6 +491,40 @@
       {
         "bus_width": 12,
         "clearance": 0.1,
+        "diff_pair_gap": 0.1397,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.1016,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "jlc3313_50_100",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.1565,
+        "via_diameter": 0.45,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.1,
+        "diff_pair_gap": 0.127,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.1275,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "jlc3313_50_90",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.1565,
+        "via_diameter": 0.45,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.1,
         "diff_pair_gap": 0.127,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.1524,
@@ -521,40 +555,6 @@
         "via_diameter": 0.45,
         "via_drill": 0.3,
         "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.1,
-        "diff_pair_gap": 0.127,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.102,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "jlc_diff100",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.102,
-        "via_diameter": 0.4,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.1,
-        "diff_pair_gap": 0.127,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.102,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "jlc_se50",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.147,
-        "via_diameter": 0.4,
-        "via_drill": 0.3,
-        "wire_width": 6
       }
     ],
     "meta": {
@@ -564,32 +564,48 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "jlc7628_50_90",
+        "netclass": "jlc3313_50_90",
         "pattern": "*USB_REF_CLK"
       },
       {
-        "netclass": "jlc7628_50_90",
+        "netclass": "jlc3313_50_90",
         "pattern": "*USBin_*"
       },
       {
-        "netclass": "jlc7628_50_100",
+        "netclass": "jlc3313_50_100",
         "pattern": "*CLK_OUT"
       },
       {
-        "netclass": "jlc7628_50_100",
+        "netclass": "jlc3313_50_100",
         "pattern": "*-(U7-OUT*)"
       },
       {
-        "netclass": "jlc7628_50_100",
+        "netclass": "jlc3313_50_100",
         "pattern": "*PLL_O3_*"
       },
       {
-        "netclass": "jlc7628_50_100",
+        "netclass": "jlc3313_50_100",
         "pattern": "*ADC_CLK_*"
       },
       {
-        "netclass": "jlc7628_50_100",
-        "pattern": "*L11P_*SRCC_15"
+        "netclass": "jlc3313_50_100",
+        "pattern": "*ADC_D*"
+      },
+      {
+        "netclass": "jlc3313_50_100",
+        "pattern": "*FPGA_CLK"
+      },
+      {
+        "netclass": "jlc3313_50_100",
+        "pattern": "/ADC+Driver/IN*"
+      },
+      {
+        "netclass": "jlc3313_50_100",
+        "pattern": "*/ADC_CH?_IN_*"
+      },
+      {
+        "netclass": "jlc3313_50_100",
+        "pattern": "*ULPI_REFCLK"
       }
     ]
   },
@@ -706,10 +722,6 @@
     [
       "b37c57e6-fd28-4b13-a567-f707971d2f60",
       "GPIO"
-    ],
-    [
-      "156952d1-5d11-4286-b02e-ddefbba25fea",
-      "Power"
     ]
   ],
   "text_variables": {}

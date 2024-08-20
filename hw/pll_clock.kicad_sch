@@ -1115,7 +1115,7 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid fe0b2178-b2f0-4d84-9cc5-fa2175a26d95)
   )
-  (hierarchical_label "USB_REF_CLK" (shape output) (at 223.52 104.14 0) (fields_autoplaced)
+  (hierarchical_label "PLL_REFOUT" (shape output) (at 223.52 104.14 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid ff6eb33e-0765-4bf1-a8ba-3c528aefc099)
   )
