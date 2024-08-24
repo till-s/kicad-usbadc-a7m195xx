@@ -5,12 +5,12 @@
   (paper "A4")
 
   (lib_symbols
-    (symbol "Connector:USB_C_Receptacle_USB2.0" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
-      (property "Reference" "J" (at -10.16 19.05 0)
-        (effects (font (size 1.27 1.27)) (justify left))
+    (symbol "Connector:USB_C_Receptacle_USB2.0_16P" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+      (property "Reference" "J" (at 0 22.225 0)
+        (effects (font (size 1.27 1.27)))
       )
-      (property "Value" "USB_C_Receptacle_USB2.0" (at 19.05 19.05 0)
-        (effects (font (size 1.27 1.27)) (justify right))
+      (property "Value" "USB_C_Receptacle_USB2.0_16P" (at 0 19.685 0)
+        (effects (font (size 1.27 1.27)))
       )
       (property "Footprint" "" (at 3.81 0 0)
         (effects (font (size 1.27 1.27)) hide)
@@ -21,13 +21,13 @@
       (property "ki_keywords" "usb universal serial bus type-C USB2.0" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "USB 2.0-only Type-C Receptacle connector" (at 0 0 0)
+      (property "ki_description" "USB 2.0-only 16P Type-C Receptacle connector" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_fp_filters" "USB*C*Receptacle*" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "USB_C_Receptacle_USB2.0_0_0"
+      (symbol "USB_C_Receptacle_USB2.0_16P_0_0"
         (rectangle (start -0.254 -17.78) (end 0.254 -16.764)
           (stroke (width 0) (type default))
           (fill (type none))
@@ -69,7 +69,7 @@
           (fill (type none))
         )
       )
-      (symbol "USB_C_Receptacle_USB2.0_0_1"
+      (symbol "USB_C_Receptacle_USB2.0_16P_0_1"
         (rectangle (start -10.16 17.78) (end 10.16 -17.78)
           (stroke (width 0.254) (type default))
           (fill (type background))
@@ -167,7 +167,7 @@
           (fill (type outline))
         )
       )
-      (symbol "USB_C_Receptacle_USB2.0_1_1"
+      (symbol "USB_C_Receptacle_USB2.0_16P_1_1"
         (pin passive line (at 0 -22.86 90) (length 5.08)
           (name "GND" (effects (font (size 1.27 1.27))))
           (number "A1" (effects (font (size 1.27 1.27))))
@@ -1501,7 +1501,7 @@
     )
   )
 
-  (symbol (lib_id "Connector:USB_C_Receptacle_USB2.0") (at 53.34 73.66 0) (unit 1)
+  (symbol (lib_id "Connector:USB_C_Receptacle_USB2.0_16P") (at 53.34 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d142f746-516a-49fe-81ad-39dacac45aa7)
     (property "Reference" "J1" (at 56.0578 51.6382 0)
