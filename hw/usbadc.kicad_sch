@@ -2522,7 +2522,7 @@
     (property "Sheetname" "FPGA Trion" (at 204.47 30.4034 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Sheetfile" "trion-8-test.kicad_sch" (at 204.47 59.6396 0)
+    (property "Sheetfile" "trion-fpga.kicad_sch" (at 204.47 59.6396 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
     (pin "CDONb" output (at 227.33 54.61 0)
