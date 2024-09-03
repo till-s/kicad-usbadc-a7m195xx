@@ -1805,10 +1805,6 @@
     (stroke (width 0) (type default))
     (uuid 501b1c53-bd9b-49c6-983a-e2209c53dfa9)
   )
-  (wire (pts (xy 232.41 142.875) (xy 232.41 144.78))
-    (stroke (width 0) (type default))
-    (uuid 5039ef07-b615-484e-95c8-841d5155ae34)
-  )
   (wire (pts (xy 241.3 50.8) (xy 252.73 50.8))
     (stroke (width 0) (type default))
     (uuid 509458fd-dd90-4ccd-ae8a-2a5efa0ba00e)
@@ -4256,7 +4252,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 238.76 142.875 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 86d317da-7d6c-4cf3-812b-e4f5e1d6eadc)
-    (property "Reference" "TP5" (at 240.157 138.3609 0)
+    (property "Reference" "TP4" (at 240.157 139.573 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 240.157 140.7851 0)
@@ -4272,7 +4268,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "TP5") (unit 1)
+          (reference "TP4") (unit 1)
         )
       )
     )
@@ -4443,31 +4439,6 @@
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
           (reference "L2") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 232.41 144.78 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid a61d86b3-87a0-45b5-876d-13b5d4ffe8ca)
-    (property "Reference" "#PWR0121" (at 232.41 151.13 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 232.537 149.1742 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 232.41 144.78 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 232.41 144.78 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid f91b1b35-a672-43e1-aba0-cce1fed64e7f))
-    (instances
-      (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "#PWR0121") (unit 1)
         )
       )
     )
@@ -4804,31 +4775,6 @@
       (project "fe_test"
         (path "/8e1d7ad6-88c6-4e44-a627-49696d6c409b"
           (reference "C6") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Connector:TestPoint") (at 232.41 142.875 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid e631109c-2bdb-4337-8e5f-35f5c654e326)
-    (property "Reference" "TP4" (at 233.807 138.3609 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "TestPoint" (at 233.807 140.7851 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" (at 237.49 142.875 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 237.49 142.875 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 5a527c3f-d576-4369-9209-0d83e6816ecc))
-    (instances
-      (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-          (reference "TP4") (unit 1)
         )
       )
     )
