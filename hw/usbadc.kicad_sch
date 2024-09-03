@@ -2286,10 +2286,6 @@
     (property "Sheetfile" "leds.kicad_sch" (at 259.08 111.7096 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
-    (pin "LED_DONb" input (at 259.08 54.61 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 3aa48b46-7afa-4131-bbd6-2300d6f93e5a)
-    )
     (pin "LED_CHB_B" input (at 259.08 94.615 180)
       (effects (font (size 1.27 1.27)) (justify left))
       (uuid 72344c37-2c31-4f07-9cc9-3d671c6714e7)
@@ -2341,6 +2337,10 @@
     (pin "LED_FL_R" input (at 259.08 99.06 180)
       (effects (font (size 1.27 1.27)) (justify left))
       (uuid 2b24c1e7-b9fb-4e76-a9c8-15c289cdc799)
+    )
+    (pin "LED_CDON" input (at 259.08 54.61 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 572f4fee-6374-4aa3-b3df-690a43a1861f)
     )
     (instances
       (project "usbadc"
@@ -2525,9 +2525,9 @@
     (property "Sheetfile" "trion-fpga.kicad_sch" (at 204.47 59.6396 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
-    (pin "CDONb" output (at 227.33 54.61 0)
+    (pin "CDON" output (at 227.33 54.61 0)
       (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 13180f8e-10e4-4efb-8e6c-f03708e6f9ad)
+      (uuid c6b9c8e8-eb59-4699-9bf4-90036870eab5)
     )
     (instances
       (project "usbadc"

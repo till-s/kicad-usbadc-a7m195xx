@@ -13,7 +13,7 @@
     (uuid a2f359f0-1a01-42f4-8905-fff22501a311)
   )
 
-  (hierarchical_label "CDONb" (shape output) (at 62.865 87.63 0) (fields_autoplaced)
+  (hierarchical_label "CDON" (shape output) (at 62.865 87.63 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 00c7d070-9bab-4c79-aea4-cdbc29be80d9)
   )
@@ -88,9 +88,9 @@
     (property "Sheetfile" "bank_1a_cfg.kicad_sch" (at 32.385 100.9146 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
-    (pin "CDONb" output (at 60.325 87.63 0)
+    (pin "CDON" output (at 60.325 87.63 0)
       (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 5baf0bb6-7ecf-480f-8da1-435bf069e4a6)
+      (uuid afcccc09-ad0a-4fad-a1a5-c4004d457a54)
     )
     (instances
       (project "trion-8-test"

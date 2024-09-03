@@ -2262,7 +2262,7 @@
     )
   )
 
-  (hierarchical_label "CDONb" (shape output) (at 85.09 90.805 270) (fields_autoplaced)
+  (hierarchical_label "CDON" (shape output) (at 85.09 90.805 270) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 3fa3e391-f870-45ab-bdc4-aef757d041c3)
   )
