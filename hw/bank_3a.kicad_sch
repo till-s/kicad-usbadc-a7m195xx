@@ -973,7 +973,7 @@
   (symbol (lib_id "FPGA_Efinix_Trion:T8Q144xx") (at 146.05 95.885 0) (unit 5)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 75296b0e-de53-404e-ae64-5a334a2a1336)
-    (property "Reference" "U1002" (at 146.05 107.7651 0)
+    (property "Reference" "U15" (at 146.05 107.7651 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "T20Q144xx" (at 146.05 110.1893 0)
@@ -1138,7 +1138,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "U1002") (unit 5)
+          (reference "U15") (unit 5)
         )
       )
       (project "trion-8-test"
@@ -1212,7 +1212,7 @@
   (symbol (lib_id "Device:C_Small") (at 134.62 73.025 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid da055fd9-4a25-4c77-89bf-e0a81a236eba)
-    (property "Reference" "C1027" (at 132.2959 71.8192 0)
+    (property "Reference" "C36" (at 132.2959 71.8192 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 132.2959 74.2434 0)
@@ -1235,7 +1235,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/945e4dbc-067e-402b-ba9d-38126a9e21c9"
-          (reference "C1027") (unit 1)
+          (reference "C36") (unit 1)
         )
       )
       (project "trion-8-test"

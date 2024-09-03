@@ -2270,7 +2270,7 @@
   (symbol (lib_id "Device:R_Small") (at 134.62 34.29 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 02cb64d7-3b3d-4c7f-9ed5-881eac46f6fc)
-    (property "Reference" "R1001" (at 134.62 29.21 90)
+    (property "Reference" "R103" (at 134.62 29.21 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 134.62 23.495 90)
@@ -2287,7 +2287,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "R1001") (unit 1)
+          (reference "R103") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -2301,7 +2301,7 @@
   (symbol (lib_id "Device:R_Small") (at 54.61 36.83 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0c26de26-db32-4618-8d0d-9e8d7762f856)
-    (property "Reference" "R1004" (at 54.61 31.75 90)
+    (property "Reference" "R106" (at 54.61 31.75 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 54.61 26.035 90)
@@ -2318,7 +2318,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "R1004") (unit 1)
+          (reference "R106") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -2332,7 +2332,7 @@
   (symbol (lib_id "Device:C_Small") (at 45.72 172.72 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1345d698-038d-4207-80ce-0b8b333814e5)
-    (property "Reference" "C1018" (at 45.72 167.005 90)
+    (property "Reference" "C128" (at 45.72 167.005 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 45.72 161.29 90)
@@ -2355,7 +2355,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1018") (unit 1)
+          (reference "C128") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -2369,7 +2369,7 @@
   (symbol (lib_id "Device:L_Ferrite_Small") (at 151.13 151.13 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 13c1d021-9a63-4208-9897-13ab03ef9f99)
-    (property "Reference" "L1002" (at 151.13 156.1633 90)
+    (property "Reference" "L7" (at 151.13 156.1633 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "600Ohm@100MHz" (at 154.94 153.67 90)
@@ -2392,7 +2392,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "L1002") (unit 1)
+          (reference "L7") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -2406,7 +2406,7 @@
   (symbol (lib_id "Device:C_Small") (at 53.34 172.72 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 172e3870-5b60-4e66-bae7-9edea40b9025)
-    (property "Reference" "C1020" (at 53.34 167.005 90)
+    (property "Reference" "C130" (at 53.34 167.005 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 53.34 161.29 90)
@@ -2429,7 +2429,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1020") (unit 1)
+          (reference "C130") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -2443,7 +2443,7 @@
   (symbol (lib_id "Device:R_Small") (at 138.43 34.29 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1968fc68-d602-4bb3-8766-1605bfcd195d)
-    (property "Reference" "R1002" (at 138.43 29.21 90)
+    (property "Reference" "R104" (at 138.43 29.21 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 138.43 23.495 90)
@@ -2460,7 +2460,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "R1002") (unit 1)
+          (reference "R104") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -2504,7 +2504,7 @@
   (symbol (lib_id "Device:C_Small") (at 67.31 172.72 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1dce2736-59d4-4b5b-a9d2-0c7b6f16d1dc)
-    (property "Reference" "C1023" (at 67.31 167.005 90)
+    (property "Reference" "C133" (at 67.31 167.005 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1u" (at 67.31 161.29 90)
@@ -2527,7 +2527,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1023") (unit 1)
+          (reference "C133") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -2541,7 +2541,7 @@
   (symbol (lib_id "Device:L_Ferrite_Small") (at 151.13 139.7 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1eafd156-66c3-418c-ab14-d8d0cfd86792)
-    (property "Reference" "L1001" (at 151.13 144.7333 90)
+    (property "Reference" "L6" (at 151.13 144.7333 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "600Ohm@100MHz" (at 154.94 142.24 90)
@@ -2564,7 +2564,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "L1001") (unit 1)
+          (reference "L6") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -2578,7 +2578,7 @@
   (symbol (lib_id "Device:C_Small") (at 226.06 123.19 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 231e2226-2cd2-41d3-8a7c-aa7580cfb433)
-    (property "Reference" "C1006" (at 226.06 117.475 90)
+    (property "Reference" "C114" (at 226.06 117.475 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1u" (at 226.06 111.76 90)
@@ -2601,7 +2601,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1006") (unit 1)
+          (reference "C114") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -2645,7 +2645,7 @@
   (symbol (lib_id "Device:C_Small") (at 217.17 123.19 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 256416c9-377b-410e-b9fd-30025c27712b)
-    (property "Reference" "C1004" (at 217.17 117.475 90)
+    (property "Reference" "C103" (at 217.17 117.475 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1u" (at 217.17 111.76 90)
@@ -2668,7 +2668,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1004") (unit 1)
+          (reference "C103") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -2712,7 +2712,7 @@
   (symbol (lib_id "Device:C_Small") (at 49.53 172.72 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 28d7ccbc-a333-4d60-88f9-888f177f737d)
-    (property "Reference" "C1019" (at 49.53 167.005 90)
+    (property "Reference" "C129" (at 49.53 167.005 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 49.53 161.29 90)
@@ -2735,7 +2735,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1019") (unit 1)
+          (reference "C129") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -2809,7 +2809,7 @@
   (symbol (lib_id "Device:C_Small") (at 220.98 123.19 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 36aca3c7-0955-43ab-ac84-d61639c98da1)
-    (property "Reference" "C1005" (at 220.98 117.475 90)
+    (property "Reference" "C104" (at 220.98 117.475 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1u" (at 220.98 111.76 90)
@@ -2832,7 +2832,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1005") (unit 1)
+          (reference "C104") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -2876,7 +2876,7 @@
   (symbol (lib_id "Device:C_Small") (at 188.595 33.02 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 44ed417d-0f4b-4063-abc4-e86f3ff1e979)
-    (property "Reference" "C1002" (at 190.9191 31.8142 0)
+    (property "Reference" "C96" (at 190.9191 31.8142 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 190.9191 34.2384 0)
@@ -2899,7 +2899,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1002") (unit 1)
+          (reference "C96") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -3003,7 +3003,7 @@
   (symbol (lib_id "Device:R_Small") (at 59.69 36.83 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 53d2fab1-7688-46b4-ba99-1e1d1ea07c12)
-    (property "Reference" "R1006" (at 59.69 31.75 90)
+    (property "Reference" "R108" (at 59.69 31.75 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 59.69 26.035 90)
@@ -3020,7 +3020,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "R1006") (unit 1)
+          (reference "R108") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -3034,7 +3034,7 @@
   (symbol (lib_id "Device:C_Small") (at 135.89 165.1 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 540f0991-ea2a-4eba-8f3b-1c8a05e39313)
-    (property "Reference" "C1012" (at 133.5659 163.8942 0)
+    (property "Reference" "C122" (at 133.5659 163.8942 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 133.5659 166.3184 0)
@@ -3057,7 +3057,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1012") (unit 1)
+          (reference "C122") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -3071,7 +3071,7 @@
   (symbol (lib_id "Device:C_Small") (at 41.91 172.72 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 54cd5188-1e65-4e02-9e6c-bcc54ba28e1c)
-    (property "Reference" "C1017" (at 41.91 167.005 90)
+    (property "Reference" "C127" (at 41.91 167.005 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 41.91 161.29 90)
@@ -3094,7 +3094,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1017") (unit 1)
+          (reference "C127") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -3108,7 +3108,7 @@
   (symbol (lib_id "FPGA_Efinix_Trion:T8Q144xx") (at 105.41 175.26 0) (unit 11)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 581dc149-64ae-47c5-8f5c-ceea01baf088)
-    (property "Reference" "U1002" (at 123.952 174.0479 0)
+    (property "Reference" "U15" (at 123.952 174.0479 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "T20Q144xx" (at 123.952 176.4721 0)
@@ -3273,7 +3273,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "U1002") (unit 11)
+          (reference "U15") (unit 11)
         )
       )
       (project "trion-8-test"
@@ -3287,7 +3287,7 @@
   (symbol (lib_id "Device:C_Small") (at 60.96 172.72 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5959dea8-332e-46d6-88de-4b776d1a4d3a)
-    (property "Reference" "C1022" (at 60.96 167.005 90)
+    (property "Reference" "C132" (at 60.96 167.005 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 60.96 161.29 90)
@@ -3310,7 +3310,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1022") (unit 1)
+          (reference "C132") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -3354,7 +3354,7 @@
   (symbol (lib_id "fmc:SW_Push_Shielded") (at 48.895 74.295 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5e06c2d2-c5ef-45e7-b72a-fd070a7b044d)
-    (property "Reference" "SW1001" (at 45.2121 73.0829 90)
+    (property "Reference" "SW1" (at 45.2121 73.0829 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Reconfig" (at 45.2121 75.5071 90)
@@ -3378,7 +3378,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "SW1001") (unit 1)
+          (reference "SW1") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -3392,7 +3392,7 @@
   (symbol (lib_id "Device:R_Small") (at 169.545 41.91 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5f124b19-498c-4c75-b9e4-cc577b0034fe)
-    (property "Reference" "R1011" (at 169.545 35.56 90)
+    (property "Reference" "R113" (at 169.545 35.56 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 169.545 31.115 90)
@@ -3409,7 +3409,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "R1011") (unit 1)
+          (reference "R113") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -3483,7 +3483,7 @@
   (symbol (lib_id "Connector_Generic:Conn_02x07_Odd_Even") (at 30.48 58.42 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 679f4414-55fd-45ae-a8c5-219124cd3f9e)
-    (property "Reference" "J1001" (at 29.21 45.3857 0)
+    (property "Reference" "J4" (at 29.21 45.3857 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "T8_JTAG" (at 29.21 47.8099 0)
@@ -3518,7 +3518,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "J1001") (unit 1)
+          (reference "J4") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -3562,7 +3562,7 @@
   (symbol (lib_id "Device:C_Small") (at 38.1 172.72 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 69017e32-f544-402f-84eb-5bbe6b726e5a)
-    (property "Reference" "C1016" (at 38.1 167.005 90)
+    (property "Reference" "C126" (at 38.1 167.005 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 38.1 161.29 90)
@@ -3585,7 +3585,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1016") (unit 1)
+          (reference "C126") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -3599,7 +3599,7 @@
   (symbol (lib_id "Device:C_Small") (at 76.2 172.72 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 69dae4de-e4fb-4e3b-842e-2a00542ae3d7)
-    (property "Reference" "C1025" (at 76.2 167.005 90)
+    (property "Reference" "C135" (at 76.2 167.005 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1u" (at 76.2 161.29 90)
@@ -3622,7 +3622,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1025") (unit 1)
+          (reference "C135") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -3636,7 +3636,7 @@
   (symbol (lib_id "Device:C_Small") (at 231.14 123.19 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6c444e92-b1a3-4cf9-883f-b03ab7c4b651)
-    (property "Reference" "C1007" (at 231.14 117.475 90)
+    (property "Reference" "C117" (at 231.14 117.475 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10u" (at 231.14 111.76 90)
@@ -3659,7 +3659,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1007") (unit 1)
+          (reference "C117") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -3673,7 +3673,7 @@
   (symbol (lib_id "Device:C_Small") (at 64.77 73.66 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 77bf5865-5a80-4189-aff9-6a85398b409d)
-    (property "Reference" "C1003" (at 62.4459 72.4542 0)
+    (property "Reference" "C101" (at 62.4459 72.4542 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10u" (at 62.4459 74.8784 0)
@@ -3696,7 +3696,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1003") (unit 1)
+          (reference "C101") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -3710,7 +3710,7 @@
   (symbol (lib_id "Device:C_Small") (at 139.7 165.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7d3a0eeb-9c5b-4cfd-ad0e-862492c2cae3)
-    (property "Reference" "C1013" (at 142.0241 163.8942 0)
+    (property "Reference" "C123" (at 142.0241 163.8942 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4u7" (at 142.0241 166.3184 0)
@@ -3733,7 +3733,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1013") (unit 1)
+          (reference "C123") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -3747,7 +3747,7 @@
   (symbol (lib_id "Device:L_Ferrite_Small") (at 151.13 162.56 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8058a709-6c55-4ba2-b224-7849c3026937)
-    (property "Reference" "L1003" (at 151.13 167.5933 90)
+    (property "Reference" "L8" (at 151.13 167.5933 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "600Ohm@100MHz" (at 154.94 165.1 90)
@@ -3770,7 +3770,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "L1003") (unit 1)
+          (reference "L8") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -3784,7 +3784,7 @@
   (symbol (lib_id "Memory_Flash:AT25SF081-SSHD-X") (at 180.975 55.88 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 825dc0b0-6ed0-45a7-9e44-1d242909a8e1)
-    (property "Reference" "U1001" (at 189.357 54.6679 0)
+    (property "Reference" "U24" (at 189.357 54.6679 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "AT25FF081A-SSHN-B" (at 189.357 57.0921 0)
@@ -3813,7 +3813,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "U1001") (unit 1)
+          (reference "U24") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -3827,7 +3827,7 @@
   (symbol (lib_id "Device:R_Small") (at 62.23 36.83 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 89d853c2-66f7-40b4-9174-61642c3ae6b1)
-    (property "Reference" "R1007" (at 62.23 31.75 90)
+    (property "Reference" "R109" (at 62.23 31.75 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 62.23 26.035 90)
@@ -3844,7 +3844,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "R1007") (unit 1)
+          (reference "R109") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -3888,7 +3888,7 @@
   (symbol (lib_id "Device:C_Small") (at 139.7 153.67 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 90f817a3-41e9-4d82-a25d-3cef01767278)
-    (property "Reference" "C1011" (at 142.0241 152.4642 0)
+    (property "Reference" "C121" (at 142.0241 152.4642 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4u7" (at 142.0241 154.8884 0)
@@ -3911,7 +3911,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1011") (unit 1)
+          (reference "C121") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -3925,7 +3925,7 @@
   (symbol (lib_id "Device:C_Small") (at 57.15 172.72 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 942eae8a-f548-4c25-af24-a9af4316707c)
-    (property "Reference" "C1021" (at 57.15 167.005 90)
+    (property "Reference" "C131" (at 57.15 167.005 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 57.15 161.29 90)
@@ -3948,7 +3948,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1021") (unit 1)
+          (reference "C131") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -3962,7 +3962,7 @@
   (symbol (lib_id "Device:C_Small") (at 30.48 172.72 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 95ca692c-4717-4fe6-9e10-f858256f5b8a)
-    (property "Reference" "C1014" (at 30.48 167.005 90)
+    (property "Reference" "C124" (at 30.48 167.005 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 30.48 161.29 90)
@@ -3985,7 +3985,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1014") (unit 1)
+          (reference "C124") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -4059,7 +4059,7 @@
   (symbol (lib_id "Device:C_Small") (at 95.25 30.48 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a3d22f4f-a007-42d0-b988-1b3fab74b39f)
-    (property "Reference" "C1001" (at 92.9259 29.2742 0)
+    (property "Reference" "C95" (at 92.9259 29.2742 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 92.9259 31.6984 0)
@@ -4082,7 +4082,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1001") (unit 1)
+          (reference "C95") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -4096,7 +4096,7 @@
   (symbol (lib_id "Device:R_Small") (at 167.005 41.91 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid acac02e2-3cd6-4004-a30f-fb4770bb8329)
-    (property "Reference" "R1010" (at 167.005 35.56 90)
+    (property "Reference" "R112" (at 167.005 35.56 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 167.005 31.115 90)
@@ -4113,7 +4113,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "R1010") (unit 1)
+          (reference "R112") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -4157,7 +4157,7 @@
   (symbol (lib_id "Device:R_Small") (at 43.18 36.83 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b1652fc5-ebac-4e0e-a787-7996fad3f36c)
-    (property "Reference" "R1003" (at 43.18 31.75 90)
+    (property "Reference" "R105" (at 43.18 31.75 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 43.18 26.035 90)
@@ -4174,7 +4174,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "R1003") (unit 1)
+          (reference "R105") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -4218,7 +4218,7 @@
   (symbol (lib_id "Device:R_Small") (at 64.77 36.83 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d560a663-00a0-4860-8ffe-de8951dc791b)
-    (property "Reference" "R1008" (at 64.77 31.75 90)
+    (property "Reference" "R110" (at 64.77 31.75 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100k" (at 64.77 26.035 90)
@@ -4235,7 +4235,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "R1008") (unit 1)
+          (reference "R110") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -4249,7 +4249,7 @@
   (symbol (lib_id "FPGA_Efinix_Trion:T8Q144xx") (at 109.22 58.42 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid dad0c72d-8089-4718-8679-2e3c6fa00271)
-    (property "Reference" "U1002" (at 109.22 72.8401 0)
+    (property "Reference" "U15" (at 109.22 72.8401 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "T20Q144xx" (at 109.22 75.2643 0)
@@ -4414,7 +4414,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "U1002") (unit 1)
+          (reference "U15") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -4458,7 +4458,7 @@
   (symbol (lib_id "Device:R_Small") (at 67.31 36.83 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e5634c8f-c1cc-4a1b-ad7a-b62eb7b7b743)
-    (property "Reference" "R1009" (at 67.31 31.75 90)
+    (property "Reference" "R111" (at 67.31 31.75 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 67.31 26.035 90)
@@ -4475,7 +4475,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "R1009") (unit 1)
+          (reference "R111") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -4489,7 +4489,7 @@
   (symbol (lib_id "Device:C_Small") (at 34.29 172.72 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e78bca2e-e591-45e4-896e-5a889c622393)
-    (property "Reference" "C1015" (at 34.29 167.005 90)
+    (property "Reference" "C125" (at 34.29 167.005 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 34.29 161.29 90)
@@ -4512,7 +4512,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1015") (unit 1)
+          (reference "C125") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -4526,7 +4526,7 @@
   (symbol (lib_id "Device:R_Small") (at 57.15 36.83 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e84176fc-bb8b-422c-a520-5bed11a010b1)
-    (property "Reference" "R1005" (at 57.15 31.75 90)
+    (property "Reference" "R107" (at 57.15 31.75 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 57.15 26.035 90)
@@ -4543,7 +4543,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "R1005") (unit 1)
+          (reference "R107") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -4617,7 +4617,7 @@
   (symbol (lib_id "Device:C_Small") (at 81.28 172.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ec58cbf2-956f-4c96-9147-6b2210e4aece)
-    (property "Reference" "C1026" (at 81.28 167.005 90)
+    (property "Reference" "C136" (at 81.28 167.005 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10u" (at 81.28 161.29 90)
@@ -4640,7 +4640,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1026") (unit 1)
+          (reference "C136") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -4654,7 +4654,7 @@
   (symbol (lib_id "Device:C_Small") (at 135.89 153.67 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f0e9d913-5b74-439a-aa65-be962ed47872)
-    (property "Reference" "C1010" (at 133.5659 152.4642 0)
+    (property "Reference" "C120" (at 133.5659 152.4642 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 133.5659 154.8884 0)
@@ -4677,7 +4677,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1010") (unit 1)
+          (reference "C120") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -4691,7 +4691,7 @@
   (symbol (lib_id "Device:C_Small") (at 135.89 142.24 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fc6e911d-4073-4263-bea3-0808ddc31f04)
-    (property "Reference" "C1008" (at 133.5659 141.0342 0)
+    (property "Reference" "C118" (at 133.5659 141.0342 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 133.5659 143.4584 0)
@@ -4714,7 +4714,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1008") (unit 1)
+          (reference "C118") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -4728,7 +4728,7 @@
   (symbol (lib_id "Device:C_Small") (at 139.7 142.24 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fed5c443-8839-4b27-b985-eb548d816181)
-    (property "Reference" "C1009" (at 142.0241 141.0342 0)
+    (property "Reference" "C119" (at 142.0241 141.0342 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4u7" (at 142.0241 143.4584 0)
@@ -4751,7 +4751,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1009") (unit 1)
+          (reference "C119") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -4765,7 +4765,7 @@
   (symbol (lib_id "Device:C_Small") (at 72.39 172.72 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ffbcd984-78c8-40a5-b0c3-77d70181e8f1)
-    (property "Reference" "C1024" (at 72.39 167.005 90)
+    (property "Reference" "C134" (at 72.39 167.005 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1u" (at 72.39 161.29 90)
@@ -4788,7 +4788,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "C1024") (unit 1)
+          (reference "C134") (unit 1)
         )
       )
       (project "trion-8-test"
