@@ -206,6 +206,10 @@ architecture rtl of ScopeADCTop is
 
 
    signal extTrg               : std_logic := '0';
+   signal extTrgOut            : std_logic := '0';
+   signal extTrgOutEn          : std_logic := '0';
+   signal extTrgOutEnLst       : std_logic := '0';
+   signal gpioIsOutput         : std_logic := '0';
 
    signal pgaCSbLocIb          : std_logic;
    signal pgaCSbLocOb          : std_logic_vector(pgaCSb'range) := (others => '1');
@@ -389,6 +393,7 @@ begin
          isTriggeredA,
          isTriggeredB,
          isTriggeredE,
+         gpioIsOutput,
          regs
       ) is
          variable v : std_logic_vector(led'range);
@@ -396,7 +401,7 @@ begin
          v     := (others => '0');
          v( 0) := '0';                          -- front-right, Red
          v( 1) := isTriggeredE;                 -- front-right, Green
-         v( 2) := '0';                          -- front-right, Blue
+         v( 2) := gpioIsOutput;                 -- front-right, Blue
 
          v( 3) := adcStatus(ACQ_STA_OVR_A_C);   -- CHA,         Red
          v( 4) := isTriggeredA;                 -- CHA,         Green
@@ -744,7 +749,9 @@ begin
          adcClk                   => smplClk,
          adcDataA                 => adcDataA,
          adcDataB                 => adcDataB,
-         extTrg                   => extTrg
+         extTrg                   => extTrg,
+         extTrgOut                => extTrgOut,
+         extTrgOutEn              => extTrgOutEn
       );
 
    -- must drive usrCClk for a few cycles to switch STARTUPE2 so that
@@ -797,7 +804,7 @@ begin
 
    U_BUF_CFGCLK : BUFG port map ( I => cfgMClk,  O => cfgMClkBuf );
 
-   P_SMP_CNT : process ( smplClk ) is
+   P_SMP_CLK : process ( smplClk ) is
    begin
       if ( rising_edge( smplClk ) ) then
          if ( smplClkCnt < 0 ) then
@@ -806,7 +813,15 @@ begin
          else
             smplClkCnt <= smplClkCnt - 1;
          end if;
+         extTrgOutEnLst <= extTrgOutEn;
       end if;
-   end process P_SMP_CNT;
+   end process P_SMP_CLK;
+
+   -- switch direction of external buffer before/after
+   -- switching direction of internal buffer
+   gpioIsOutput <= (extTrigOutEn or extTrigOutEnLst);
+   gpioDir      <= 
+   gpioDat      <= 'Z' when ( (extTrgOutEn and extTrgOutEnLst) = '0' ) else extTrgOut;
+   extTrg       <= gpioDat;
 
 end architecture rtl;
