@@ -819,8 +819,8 @@ begin
 
    -- switch direction of external buffer before/after
    -- switching direction of internal buffer
-   gpioIsOutput <= (extTrigOutEn or extTrigOutEnLst);
-   gpioDir      <= 
+   gpioIsOutput <= (extTrgOutEn or extTrgOutEnLst);
+   gpioDir      <= gpioIsOutput;
    gpioDat      <= 'Z' when ( (extTrgOutEn and extTrgOutEnLst) = '0' ) else extTrgOut;
    extTrg       <= gpioDat;
 
