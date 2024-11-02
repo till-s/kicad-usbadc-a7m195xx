@@ -26,6 +26,8 @@ create_clock -period 10 -name cfgMClk [get_pins *U_STARTUP/CFGMCLK]
 
 # 130MHz
 #set adcPeriod   7.69
+# 125MHz
+# set adcPeriod    8.000
 # 120MHz
 set adcPeriod   8.333
 # min guaranteed by datasheet
@@ -69,18 +71,3 @@ set_input_delay -add_delay -min -clock [get_clocks adcDClkHiDC]             ${ad
 set_input_delay -add_delay -min -clock [get_clocks adcDClkHiDC] -clock_fall ${adcHold}                      [get_ports adc*DDR*]
 set_input_delay -add_delay -min -clock [get_clocks adcDClk    ]             ${adcHold}                      [get_ports adc*DDR*]
 set_input_delay -add_delay -min -clock [get_clocks adcDClk    ] -clock_fall ${adcHold}                      [get_ports adc*DDR*]
-
-set_false_path -setup -rise_from [get_clocks adcDClkLoDC] -rise_to [get_clocks adcDClkLoDC]
-set_false_path -setup -fall_from [get_clocks adcDClkLoDC] -fall_to [get_clocks adcDClkLoDC]
-set_false_path -hold  -rise_from [get_clocks adcDClkLoDC] -fall_to [get_clocks adcDClkLoDC]
-set_false_path -hold  -fall_from [get_clocks adcDClkLoDC] -rise_to [get_clocks adcDClkLoDC]
-
-set_false_path -setup -rise_from [get_clocks adcDClkHiDC] -rise_to [get_clocks adcDClkHiDC]
-set_false_path -setup -fall_from [get_clocks adcDClkHiDC] -fall_to [get_clocks adcDClkHiDC]
-set_false_path -hold  -rise_from [get_clocks adcDClkHiDC] -fall_to [get_clocks adcDClkHiDC]
-set_false_path -hold  -fall_from [get_clocks adcDClkHiDC] -rise_to [get_clocks adcDClkHiDC]
-
-set_false_path -setup -rise_from [get_clocks adcDClk] -rise_to [get_clocks adcDClk]
-set_false_path -setup -fall_from [get_clocks adcDClk] -fall_to [get_clocks adcDClk]
-set_false_path -hold  -rise_from [get_clocks adcDClk] -fall_to [get_clocks adcDClk]
-set_false_path -hold  -fall_from [get_clocks adcDClk] -rise_to [get_clocks adcDClk]
