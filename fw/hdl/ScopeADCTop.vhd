@@ -551,8 +551,12 @@ begin
             spiCSbLoc         := bbo(BB_SPI_CSb_C) and spiCSbCtl;
             bbi(BB_SPI_MSI_C) <= spiMISO;
          end if;
-         spiCSb <= spiCSbLoc;
+         spiCSb         <= spiCSbLoc;
       end process P_CS_MUX;
+
+      gpioDir           <= gpioIsOutput;
+      gpioDat           <= 'Z' when ( (extTrgOutEn and extTrgOutEnLst) = '0' ) else extTrgOut;
+      extTrg            <= gpioDat;
 
    end block B_BUFS;
 
@@ -820,8 +824,5 @@ begin
    -- switch direction of external buffer before/after
    -- switching direction of internal buffer
    gpioIsOutput <= (extTrgOutEn or extTrgOutEnLst);
-   gpioDir      <= gpioIsOutput;
-   gpioDat      <= 'Z' when ( (extTrgOutEn and extTrgOutEnLst) = '0' ) else extTrgOut;
-   extTrg       <= gpioDat;
 
 end architecture rtl;
