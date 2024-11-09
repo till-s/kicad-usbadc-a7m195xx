@@ -2180,7 +2180,7 @@
     (property "Reference" "R70" (at 187.96 27.305 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "5k1" (at 187.96 29.845 90)
+    (property "Value" "2k2" (at 187.96 29.845 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 187.96 32.385 0)

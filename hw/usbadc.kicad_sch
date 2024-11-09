@@ -1635,7 +1635,7 @@
     (property "Reference" "U6" (at 79.0291 190.3151 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "PCA9306" (at 79.0291 192.7393 0)
+    (property "Value" "PCA9306DC1" (at 79.0291 192.7393 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Package_SO:VSSOP-8_2.4x2.1mm_P0.5mm" (at 66.675 169.545 0)

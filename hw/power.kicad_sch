@@ -4060,7 +4060,7 @@
     (property "Reference" "C14" (at 115.57 128.27 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "50p" (at 115.57 134.62 90)
+    (property "Value" "47p" (at 115.57 134.62 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 115.57 142.24 0)
