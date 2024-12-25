@@ -197,180 +197,63 @@
         )
       )
     )
-    (symbol "Device:L_Ferrite_Small" (pin_numbers hide) (pin_names (offset 0.254) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "L" (at 1.27 1.016 0)
+    (symbol "Device:FerriteBead_Small" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "FB" (at 1.905 1.27 0)
         (effects (font (size 1.27 1.27)) (justify left))
       )
-      (property "Value" "L_Ferrite_Small" (at 1.27 -1.27 0)
+      (property "Value" "FerriteBead_Small" (at 1.905 -1.27 0)
         (effects (font (size 1.27 1.27)) (justify left))
       )
-      (property "Footprint" "" (at 0 0 0)
+      (property "Footprint" "" (at -1.778 0 90)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "Datasheet" "~" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_keywords" "inductor choke coil reactor magnetic" (at 0 0 0)
+      (property "ki_keywords" "L ferrite bead inductor filter" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Inductor with ferrite core, small symbol" (at 0 0 0)
+      (property "ki_description" "Ferrite bead, small symbol" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*" (at 0 0 0)
+      (property "ki_fp_filters" "Inductor_* L_* *Ferrite*" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "L_Ferrite_Small_0_1"
-        (arc (start 0 -2.032) (mid 0.5058 -1.524) (end 0 -1.016)
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (arc (start 0 -1.016) (mid 0.5058 -0.508) (end 0 0)
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
+      (symbol "FerriteBead_Small_0_1"
         (polyline
           (pts
-            (xy 0.762 -1.905)
-            (xy 0.762 -1.651)
+            (xy 0 -1.27)
+            (xy 0 -0.7874)
           )
           (stroke (width 0) (type default))
           (fill (type none))
         )
         (polyline
           (pts
-            (xy 0.762 -1.397)
-            (xy 0.762 -1.143)
+            (xy 0 0.889)
+            (xy 0 1.2954)
           )
           (stroke (width 0) (type default))
           (fill (type none))
         )
         (polyline
           (pts
-            (xy 0.762 -0.889)
-            (xy 0.762 -0.635)
+            (xy -1.8288 0.2794)
+            (xy -1.1176 1.4986)
+            (xy 1.8288 -0.2032)
+            (xy 1.1176 -1.4224)
+            (xy -1.8288 0.2794)
           )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0.762 -0.381)
-            (xy 0.762 -0.127)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0.762 0.127)
-            (xy 0.762 0.381)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0.762 0.635)
-            (xy 0.762 0.889)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0.762 1.143)
-            (xy 0.762 1.397)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0.762 1.651)
-            (xy 0.762 1.905)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.016 -1.651)
-            (xy 1.016 -1.905)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.016 -1.143)
-            (xy 1.016 -1.397)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.016 -0.635)
-            (xy 1.016 -0.889)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.016 -0.127)
-            (xy 1.016 -0.381)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.016 0.381)
-            (xy 1.016 0.127)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.016 0.889)
-            (xy 1.016 0.635)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.016 1.397)
-            (xy 1.016 1.143)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.016 1.905)
-            (xy 1.016 1.651)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (arc (start 0 0) (mid 0.5058 0.508) (end 0 1.016)
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (arc (start 0 1.016) (mid 0.5058 1.524) (end 0 2.032)
           (stroke (width 0) (type default))
           (fill (type none))
         )
       )
-      (symbol "L_Ferrite_Small_1_1"
-        (pin passive line (at 0 2.54 270) (length 0.508)
+      (symbol "FerriteBead_Small_1_1"
+        (pin passive line (at 0 2.54 270) (length 1.27)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at 0 -2.54 90) (length 0.508)
+        (pin passive line (at 0 -2.54 90) (length 1.27)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
         )
@@ -2366,16 +2249,16 @@
     )
   )
 
-  (symbol (lib_id "Device:L_Ferrite_Small") (at 151.13 151.13 270) (unit 1)
+  (symbol (lib_id "Device:FerriteBead_Small") (at 151.13 151.13 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 13c1d021-9a63-4208-9897-13ab03ef9f99)
-    (property "Reference" "L7" (at 151.13 156.1633 90)
+    (property "Reference" "FB7" (at 151.13 156.1633 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "600Ohm@100MHz" (at 154.94 153.67 90)
+    (property "Value" "600Ohm@100MHz" (at 169.545 151.13 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Inductor_SMD:L_0603_1608Metric" (at 151.13 151.13 0)
+    (property "Footprint" "Inductor_SMD:L_0603_1608Metric" (at 151.13 149.352 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 151.13 151.13 0)
@@ -2392,7 +2275,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "L7") (unit 1)
+          (reference "FB7") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -2538,16 +2421,16 @@
     )
   )
 
-  (symbol (lib_id "Device:L_Ferrite_Small") (at 151.13 139.7 270) (unit 1)
+  (symbol (lib_id "Device:FerriteBead_Small") (at 151.13 139.7 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1eafd156-66c3-418c-ab14-d8d0cfd86792)
-    (property "Reference" "L6" (at 151.13 144.7333 90)
+    (property "Reference" "FB6" (at 151.13 144.7333 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "600Ohm@100MHz" (at 154.94 142.24 90)
+    (property "Value" "600Ohm@100MHz" (at 169.545 139.7 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Inductor_SMD:L_0603_1608Metric" (at 151.13 139.7 0)
+    (property "Footprint" "Inductor_SMD:L_0603_1608Metric" (at 151.13 137.922 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 151.13 139.7 0)
@@ -2564,7 +2447,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "L6") (unit 1)
+          (reference "FB6") (unit 1)
         )
       )
       (project "trion-8-test"
@@ -3744,16 +3627,16 @@
     )
   )
 
-  (symbol (lib_id "Device:L_Ferrite_Small") (at 151.13 162.56 270) (unit 1)
+  (symbol (lib_id "Device:FerriteBead_Small") (at 151.13 162.56 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8058a709-6c55-4ba2-b224-7849c3026937)
-    (property "Reference" "L8" (at 151.13 167.5933 90)
+    (property "Reference" "FB8" (at 151.13 167.5933 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "600Ohm@100MHz" (at 154.94 165.1 90)
+    (property "Value" "600Ohm@100MHz" (at 169.545 161.925 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Inductor_SMD:L_0603_1608Metric" (at 151.13 162.56 0)
+    (property "Footprint" "Inductor_SMD:L_0603_1608Metric" (at 151.13 160.782 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 151.13 162.56 0)
@@ -3770,7 +3653,7 @@
     (instances
       (project "usbadc"
         (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad/f706ede1-c100-479f-a87e-df6f74047868"
-          (reference "L8") (unit 1)
+          (reference "FB8") (unit 1)
         )
       )
       (project "trion-8-test"
