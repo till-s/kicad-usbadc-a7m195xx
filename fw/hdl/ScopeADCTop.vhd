@@ -316,7 +316,7 @@ begin
 
    B_REGS : block is
    begin
-      P_COMB : process (regs, regVld, regRdnw, regAddr, regWDat) is
+      P_COMB : process (regs, regVld, regRdnw, regAddr, regWDat, adcStatus, adcDcmLocked) is
          variable v : RegType;
       begin
          v              := regs;
@@ -347,6 +347,10 @@ begin
                   isTriggeredLoc <= '0';
                end if;
             end if;
+         elsif  ( regAddr = 3 ) then
+            regRDat    <= adcStatus;
+         elsif  ( regAddr = 4 ) then
+            regRDat(0) <= adcDcmLocked;
          else
             regErr <= '1';
          end if;
