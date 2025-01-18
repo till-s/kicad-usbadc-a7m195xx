@@ -20426,7 +20426,7 @@
   (gr_text "GPIO" (at 63.8 66.15 270) (layer "F.SilkS") (tstamp 8c42b94c-7f97-4772-a7f9-98f4daec2d6b)
     (effects (font (size 0.8 0.8) (thickness 0.153) bold) (justify left bottom))
   )
-  (gr_text "USBADC-v3.1" (at 133.8 29.8) (layer "F.SilkS") (tstamp d4ace86f-b1d8-4536-9bae-0d8dc6e026e0)
+  (gr_text "USBADC-v3.2" (at 133.8 29.8) (layer "F.SilkS") (tstamp d4ace86f-b1d8-4536-9bae-0d8dc6e026e0)
     (effects (font (size 1.8 1.8) (thickness 0.3) bold) (justify left bottom))
   )
   (gr_text "CHA" (at 162 80.41 90) (layer "F.SilkS") (tstamp d76b352d-2b8e-4b87-a710-6c537341ca1c)
