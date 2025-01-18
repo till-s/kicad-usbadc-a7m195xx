@@ -1,0 +1,27 @@
+Hardware notes.
+
+LEDs:
+APFA2507QBDSEEZGKC: R/G/B brightness looks fine on 3.0 board
+Which used +5V
+
+Vcc: 5.061V; Vf measured...
+
+        R    Vf      If         R@3V3
+   R : 1k    1.787V  3.274mA    462
+   G : 8k1   2.294V  0.341mA    2945
+   B : 2k2   2.645V  1.098mA    596
+
+150060RS75000: (single red LED) @5V was using 2k2 but could be brighter -> use same
+as for APFA!
+
+        R    Vf      If         R@3V3
+   R : 2k2  1.766    1.50mA
+
+155124RV73200: dual LED @3V3, used 1k for R/G but seems too weak; red could be
+a bit brighter and green even more.
+
+   Vcc: 3.307
+        R    Vf      If
+   R : 1k0   1.789V  1.518mA
+   G : 1k0   1.889V  1.418mA            
+
