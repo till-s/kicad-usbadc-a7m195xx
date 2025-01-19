@@ -25,3 +25,12 @@ a bit brighter and green even more.
    R : 1k0   1.789V  1.518mA
    G : 1k0   1.889V  1.418mA            
 
+CRESET_N:
+   LVCMOS 3V3 Vlo-max: 0.8V, internal pullup min. 27k 
+   TLV809E: Vo-max: 0.3V
+   => when driving with a resistor (to decouple from JTAG connector)
+      Vccmax/(Rpu_min + R) * R < (0.8 - .3)V  (neglect Vo_max on LHS)
+
+      Vcc/(Vlo-max - Vo-max) - 1 < Rpu_min/R
+
+      R < Rpu_min / (Vcc/(Vlo-max - Vo-max) - 1)

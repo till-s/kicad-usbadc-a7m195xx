@@ -12,10 +12,18 @@
     (stroke (width 0) (type default))
     (uuid a2f359f0-1a01-42f4-8905-fff22501a311)
   )
+  (wire (pts (xy 60.325 90.805) (xy 62.865 90.805))
+    (stroke (width 0) (type default))
+    (uuid c45ff39d-1baf-482c-8623-a5f27bbb14f9)
+  )
 
   (hierarchical_label "CDON" (shape output) (at 62.865 87.63 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 00c7d070-9bab-4c79-aea4-cdbc29be80d9)
+  )
+  (hierarchical_label "RECONF_N" (shape input) (at 62.865 90.805 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 329676f9-815d-47c0-8e57-eee4c6e85173)
   )
 
   (sheet (at 31.75 161.29) (size 30.48 24.13) (fields_autoplaced)
@@ -91,6 +99,10 @@
     (pin "CDON" output (at 60.325 87.63 0)
       (effects (font (size 1.27 1.27)) (justify right))
       (uuid afcccc09-ad0a-4fad-a1a5-c4004d457a54)
+    )
+    (pin "RECONF_N" input (at 60.325 90.805 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid 04df726d-7ed3-42e9-a9be-346679e59944)
     )
     (instances
       (project "trion-8-test"
