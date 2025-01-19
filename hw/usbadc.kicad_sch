@@ -2259,7 +2259,7 @@
   )
 
   (symbol (lib_id "fmc:24AA0x") (at 215.265 128.905 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom yes) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid b59b6a96-0e44-4048-ad20-44d13be14f3b)
     (property "Reference" "U8" (at 206.883 127.6929 0)
       (effects (font (size 1.27 1.27)) (justify right))
