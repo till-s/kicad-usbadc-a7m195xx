@@ -820,7 +820,6 @@
 
 
   (no_connect (at 168.275 135.89) (uuid 964efc86-bf57-4d51-9ebf-64b3e2863194))
-  (no_connect (at 220.98 128.27) (uuid cfb94b23-dd98-4980-b16d-ee68a90d436e))
 
   (wire (pts (xy 217.17 120.65) (xy 220.98 120.65))
     (stroke (width 0) (type default))
@@ -1043,6 +1042,13 @@
     (uuid b75bfc0c-ccf3-478d-9dea-abc3ab6f0b2a)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 157.2506 120.65 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
+    )
+  )
+  (global_label "ADC_SHDN" (shape bidirectional) (at 220.98 128.27 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid b9b6dff3-a5ca-4508-98f9-31e7b90d2a83)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 234.0002 128.27 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
   (global_label "PGA_LATCH_CHA" (shape bidirectional) (at 225.425 73.66 0) (fields_autoplaced)
