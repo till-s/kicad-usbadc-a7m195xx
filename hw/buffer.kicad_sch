@@ -3114,7 +3114,7 @@
     (property "Reference" "C78" (at 62.23 102.87 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "100n" (at 67.31 105.41 90)
+    (property "Value" "10n" (at 67.31 105.41 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 66.04 101.6 0)
