@@ -1,8 +1,7 @@
 Hardware notes.
 
 LEDs:
-APFA2507QBDSEEZGKC: R/G/B brightness looks fine on 3.0 board
-Which used +5V
+APFA2507QBDSEEZGKC: R/G/B brightness looks fine on 3.0 board which used +5V
 
 Vcc: 5.061V; Vf measured...
 
