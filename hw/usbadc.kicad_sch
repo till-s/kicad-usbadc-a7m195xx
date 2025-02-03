@@ -1115,12 +1115,17 @@
     (uuid fe54449e-4641-47aa-93d4-9abe147208a7)
   )
 
+  (text "Optional EEPROM. Nonvolatile\ndata may as well be stored in\nunused flash area."
+    (at 248.92 130.81 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 4a4a04b8-8346-4103-b601-eeca0b506ef5)
+  )
   (text "When generating the ULPI refclk\nwith the VersaClock then remove\nX1 and load R117."
     (at 184.15 73.025 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 72cd65b1-e98c-42d8-91ef-3d75a2b18ad0)
   )
-  (text "Populate either R115 or R114\ndepending on desired I/O voltage\nlevel.\nEven for 3V3, the *input* should\nbe 5V tolerant."
+  (text "Populate either R123 or R124\ndepending on desired I/O voltage\nlevel.\nEven for 3V3, the *input* should\nbe 5V tolerant."
     (at 76.2 54.61 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid f7537b24-3143-4507-912f-2feb7ed367cc)
@@ -2461,7 +2466,7 @@
     (stroke (width 0) (type solid))
     (fill (color 0 0 0 0.0000))
     (uuid 00000000-0000-0000-0000-0000612b1274)
-    (property "Sheetname" "ADC+Driver" (at 131.445 110.4134 0)
+    (property "Sheetname" "ADC" (at 131.445 110.4134 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
     (property "Sheetfile" "max19507.kicad_sch" (at 131.445 161.8746 0)

@@ -2005,8 +2005,8 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 4fd981e9-7ede-490c-a20b-f56cfc7e9010)
   )
-  (text "Populate 1-2 or 2-3 with\n50Ohm Termination Resistor"
-    (at 53.086 125.476 0)
+  (text "Populate 1-2 or 2-3 with\n50Ohm termination resistor\ndepending on whether you\nlike the termination to be\nAC- or DC-coupled."
+    (at 53.34 128.905 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid f0d2913e-50a8-4f41-bdc1-f46c9e8bb3f1)
   )
