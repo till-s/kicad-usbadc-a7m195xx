@@ -1,116 +1,242 @@
-(kicad_sch (version 20230121) (generator eeschema)
-
-  (uuid 8c6e15e3-1804-4f03-8a4f-3cb8420d9169)
-
-  (paper "A4")
-
-  (lib_symbols
-  )
-
-
-  (wire (pts (xy 60.325 87.63) (xy 62.865 87.63))
-    (stroke (width 0) (type default))
-    (uuid a2f359f0-1a01-42f4-8905-fff22501a311)
-  )
-  (wire (pts (xy 60.325 90.805) (xy 62.865 90.805))
-    (stroke (width 0) (type default))
-    (uuid c45ff39d-1baf-482c-8623-a5f27bbb14f9)
-  )
-
-  (hierarchical_label "CDON" (shape output) (at 62.865 87.63 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 00c7d070-9bab-4c79-aea4-cdbc29be80d9)
-  )
-  (hierarchical_label "RECONF_N" (shape input) (at 62.865 90.805 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 329676f9-815d-47c0-8e57-eee4c6e85173)
-  )
-
-  (sheet (at 31.75 161.29) (size 30.48 24.13) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 1b523d49-ff11-41b3-8609-dd0dd8346ed0)
-    (property "Sheetname" "sdram" (at 31.75 160.5784 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "sdram.kicad_sch" (at 31.75 186.0046 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "trion-8-test"
-        (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169" (page "7"))
-      )
-      (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad" (page "18"))
-      )
-    )
-  )
-
-  (sheet (at 31.115 118.745) (size 30.48 19.05) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 945e4dbc-067e-402b-ba9d-38126a9e21c9)
-    (property "Sheetname" "bank_3a" (at 31.115 118.0334 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "bank_3a.kicad_sch" (at 31.115 138.3796 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "trion-8-test"
-        (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169" (page "4"))
-      )
-      (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad" (page "8"))
-      )
-    )
-  )
-
-  (sheet (at 92.075 161.925) (size 30.48 26.67) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid b37c57e6-fd28-4b13-a567-f707971d2f60)
-    (property "Sheetname" "bank_4a_4b" (at 92.075 161.2134 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "bank_4a_4b.kicad_sch" (at 92.075 189.1796 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "trion-8-test"
-        (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169" (page "6"))
-      )
-      (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad" (page "20"))
-      )
-    )
-  )
-
-  (sheet (at 32.385 80.772) (size 27.94 19.558) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid f706ede1-c100-479f-a87e-df6f74047868)
-    (property "Sheetname" "bank_1a_cfg" (at 32.385 80.0604 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "bank_1a_cfg.kicad_sch" (at 32.385 100.9146 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (pin "CDON" output (at 60.325 87.63 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid afcccc09-ad0a-4fad-a1a5-c4004d457a54)
-    )
-    (pin "RECONF_N" input (at 60.325 90.805 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 04df726d-7ed3-42e9-a9be-346679e59944)
-    )
-    (instances
-      (project "trion-8-test"
-        (path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169" (page "3"))
-      )
-      (project "usbadc"
-        (path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad" (page "19"))
-      )
-    )
-  )
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "8c6e15e3-1804-4f03-8a4f-3cb8420d9169")
+	(paper "A4")
+	(lib_symbols)
+	(wire
+		(pts
+			(xy 60.325 87.63) (xy 62.865 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2f359f0-1a01-42f4-8905-fff22501a311")
+	)
+	(wire
+		(pts
+			(xy 60.325 90.805) (xy 62.865 90.805)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c45ff39d-1baf-482c-8623-a5f27bbb14f9")
+	)
+	(hierarchical_label "CDON"
+		(shape output)
+		(at 62.865 87.63 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "00c7d070-9bab-4c79-aea4-cdbc29be80d9")
+	)
+	(hierarchical_label "RECONF_N"
+		(shape input)
+		(at 62.865 90.805 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "329676f9-815d-47c0-8e57-eee4c6e85173")
+	)
+	(sheet
+		(at 31.75 161.29)
+		(size 30.48 24.13)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "1b523d49-ff11-41b3-8609-dd0dd8346ed0")
+		(property "Sheetname" "sdram"
+			(at 31.75 160.5784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sdram.kicad_sch"
+			(at 31.75 186.0046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "trion-8-test"
+				(path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169"
+					(page "7")
+				)
+			)
+			(project "usbadc"
+				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad"
+					(page "18")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 31.115 118.745)
+		(size 30.48 19.05)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "945e4dbc-067e-402b-ba9d-38126a9e21c9")
+		(property "Sheetname" "bank_3a"
+			(at 31.115 118.0334 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "bank_3a.kicad_sch"
+			(at 31.115 138.3796 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "trion-8-test"
+				(path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169"
+					(page "4")
+				)
+			)
+			(project "usbadc"
+				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 92.075 161.925)
+		(size 30.48 26.67)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b37c57e6-fd28-4b13-a567-f707971d2f60")
+		(property "Sheetname" "bank_4a_4b"
+			(at 92.075 161.2134 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "bank_4a_4b.kicad_sch"
+			(at 92.075 189.1796 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "trion-8-test"
+				(path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169"
+					(page "6")
+				)
+			)
+			(project "usbadc"
+				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad"
+					(page "20")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 32.385 80.772)
+		(size 27.94 19.558)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f706ede1-c100-479f-a87e-df6f74047868")
+		(property "Sheetname" "bank_1a_cfg"
+			(at 32.385 80.0604 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "bank_1a_cfg.kicad_sch"
+			(at 32.385 100.9146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CDON" output
+			(at 60.325 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "afcccc09-ad0a-4fad-a1a5-c4004d457a54")
+		)
+		(pin "RECONF_N" input
+			(at 60.325 90.805 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "04df726d-7ed3-42e9-a9be-346679e59944")
+		)
+		(instances
+			(project "trion-8-test"
+				(path "/8c6e15e3-1804-4f03-8a4f-3cb8420d9169"
+					(page "3")
+				)
+			)
+			(project "usbadc"
+				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/d9cd2a48-41b0-4b01-a978-0843576735ad"
+					(page "19")
+				)
+			)
+		)
+	)
 )
