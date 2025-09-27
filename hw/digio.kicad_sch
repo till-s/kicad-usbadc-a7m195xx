@@ -1655,7 +1655,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "01c1bda6-96a4-4077-b9c4-f921e612efd7")
-		(property "Reference" "C2052"
+		(property "Reference" "C103"
 			(at 79.5782 80.7466 0)
 			(effects
 				(font
@@ -1954,7 +1954,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "409da385-8fd9-4620-8c80-873a812dd8bc")
-		(property "Reference" "C2052"
+		(property "Reference" "C103"
 			(at 79.5782 56.6166 0)
 			(effects
 				(font

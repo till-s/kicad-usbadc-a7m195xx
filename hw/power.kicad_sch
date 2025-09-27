@@ -3953,7 +3953,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 29.21) (xy 224.79 38.1)
+			(xy 180.34 26.67) (xy 180.34 35.56)
 		)
 		(stroke
 			(width 0)
@@ -4303,7 +4303,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 38.1) (xy 248.92 38.1)
+			(xy 180.34 35.56) (xy 204.47 35.56)
 		)
 		(stroke
 			(width 0)
@@ -5301,6 +5301,28 @@
 			(justify left bottom)
 		)
 		(uuid "1850d83e-cd1d-4efe-be58-202d72757fae")
+	)
+	(text "R126 was originally a ferrite-bead.\nDue to the very small load (analog-\nswitches only) this resulted in an\nunder-damped network (with decoupling\ncapacitors) and noise peaking in the\n10kHz-100kHz region, depending on\ntotal capacitance."
+		(exclude_from_sim no)
+		(at 226.06 35.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6e4c34e7-2610-47d4-8915-17c037ec5dfa")
+	)
+	(text "DNL C12! Creates a bypass from 5V -> -2V5,\nsupply was much noisier with C12 installed"
+		(exclude_from_sim no)
+		(at 43.434 160.528 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b0eb9988-cdd3-4c80-9407-11f0761fbcfb")
 	)
 	(text "Caution! AP6220x and AP6230x have *different* pinouts;\nfurthermore, different packages have different pinouts :-("
 		(exclude_from_sim no)
@@ -6946,7 +6968,7 @@
 	)
 	(symbol
 		(lib_id "power:VBUS")
-		(at 224.79 29.21 0)
+		(at 180.34 26.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6954,7 +6976,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00006094dbb9")
 		(property "Reference" "#PWR0162"
-			(at 224.79 33.02 0)
+			(at 180.34 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6963,7 +6985,7 @@
 			)
 		)
 		(property "Value" "VBUS"
-			(at 225.171 24.8158 0)
+			(at 180.721 22.2758 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6971,7 +6993,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 224.79 29.21 0)
+			(at 180.34 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6980,7 +7002,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 224.79 29.21 0)
+			(at 180.34 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6989,7 +7011,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 224.79 29.21 0)
+			(at 180.34 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7011,7 +7033,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 248.92 38.1 270)
+		(at 204.47 35.56 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7020,7 +7042,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00006096e465")
 		(property "Reference" "#PWR0163"
-			(at 245.11 38.1 0)
+			(at 200.66 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7029,7 +7051,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 252.1712 37.719 90)
+			(at 207.7212 35.179 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7038,7 +7060,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 248.92 38.1 0)
+			(at 204.47 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7047,7 +7069,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 248.92 38.1 0)
+			(at 204.47 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7056,7 +7078,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 248.92 38.1 0)
+			(at 204.47 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8253,92 +8275,6 @@
 	)
 	(symbol
 		(lib_id "Device:FerriteBead_Small")
-		(at 233.68 58.42 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-000060e94355")
-		(property "Reference" "FB1"
-			(at 233.68 54.61 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "600Ohm@100MHz"
-			(at 233.68 64.77 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
-			(at 233.68 60.198 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 233.68 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 233.68 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Part" "MI0603J601R-10"
-			(at 233.68 58.42 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Laird"
-			(at 233.68 58.42 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3cf4a4fe-60f0-4eaa-a4ff-732086295615")
-		)
-		(pin "2"
-			(uuid "65005ab7-02df-4938-a012-37d04f251af3")
-		)
-		(instances
-			(project "usbadc"
-				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
-					(reference "FB1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:FerriteBead_Small")
 		(at 111.76 106.68 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9028,6 +8964,75 @@
 			(project "usbadc"
 				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
 					(reference "#PWR096")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 233.68 58.42 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "03def258-aa30-4b65-8d8e-870fb3738f9b")
+		(property "Reference" "R126"
+			(at 232.41 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 234.95 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 233.68 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 233.68 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 233.68 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dca3a529-21a3-4c04-9aef-67eaa6b5a728")
+		)
+		(pin "2"
+			(uuid "faab76f2-71f9-40ff-9100-a51112b1c1b2")
+		)
+		(instances
+			(project "usbadc"
+				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/00000000-0000-0000-0000-00006086f2e3"
+					(reference "R126")
 					(unit 1)
 				)
 			)
@@ -9976,9 +9981,9 @@
 		(at 115.57 142.24 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "37d520d4-5731-40c8-b516-45733d20cf5b")
 		(property "Reference" "C14"
 			(at 115.57 128.27 90)
@@ -12196,9 +12201,9 @@
 		(at 249.555 64.77 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "cf0e64eb-8900-4918-bdf8-cb34e7e93bac")
 		(property "Reference" "C145"
 			(at 252.476 63.6016 0)
@@ -12283,9 +12288,9 @@
 		(at 71.12 140.97 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "d280b557-1433-48d8-801c-f74c5a1f3a88")
 		(property "Reference" "C12"
 			(at 74.93 147.32 90)
