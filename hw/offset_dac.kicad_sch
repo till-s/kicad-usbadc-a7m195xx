@@ -1634,6 +1634,24 @@
 		(uuid "7d5c052e-f499-4c74-bf7d-6323e683bd19")
 	)
 	(junction
+		(at 143.51 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "816f1a34-0db5-4803-aba0-a68660068ac5")
+	)
+	(junction
+		(at 143.51 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "85fff3d9-d170-4a59-9c94-d39d549c3f3a")
+	)
+	(junction
+		(at 143.51 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8ab69be3-cabb-451a-9dff-449dd922d1b5")
+	)
+	(junction
 		(at 138.43 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1686,6 +1704,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cd3d5f4b-c61b-45bd-bea0-e8f3a47144f1")
+	)
+	(junction
+		(at 143.51 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d3fbaa46-91f2-4d9a-8e77-02208ee42d63")
 	)
 	(junction
 		(at 102.87 165.1)
@@ -1917,6 +1941,16 @@
 	)
 	(wire
 		(pts
+			(xy 143.51 54.61) (xy 138.43 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28d787f8-4050-4d4c-8a5d-88182bd49250")
+	)
+	(wire
+		(pts
 			(xy 226.06 54.61) (xy 226.06 55.88)
 		)
 		(stroke
@@ -2007,6 +2041,16 @@
 	)
 	(wire
 		(pts
+			(xy 143.51 45.72) (xy 146.05 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42c89365-2def-4776-ac48-6a4564950a1c")
+	)
+	(wire
+		(pts
 			(xy 125.73 104.14) (xy 128.27 104.14)
 		)
 		(stroke
@@ -2037,7 +2081,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 45.72) (xy 146.05 45.72)
+			(xy 132.08 45.72) (xy 143.51 45.72)
 		)
 		(stroke
 			(width 0)
@@ -2074,6 +2118,16 @@
 			(type default)
 		)
 		(uuid "509b4273-11c5-49b8-87cf-dc681ec3acfd")
+	)
+	(wire
+		(pts
+			(xy 143.51 45.72) (xy 143.51 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57a130ff-257b-4629-8f29-deb8b84e732c")
 	)
 	(wire
 		(pts
@@ -2374,6 +2428,16 @@
 			(type default)
 		)
 		(uuid "8a989e15-d023-45dc-a6d5-bb36cc5f9d82")
+	)
+	(wire
+		(pts
+			(xy 143.51 104.14) (xy 146.685 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8bd46ac0-ca80-47dc-a3d2-cac841d23bbd")
 	)
 	(wire
 		(pts
@@ -2747,7 +2811,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 104.14) (xy 146.685 104.14)
+			(xy 138.43 104.14) (xy 143.51 104.14)
 		)
 		(stroke
 			(width 0)
@@ -2797,7 +2861,7 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 54.61) (xy 138.43 54.61)
+			(xy 146.05 54.61) (xy 143.51 54.61)
 		)
 		(stroke
 			(width 0)
@@ -2837,13 +2901,23 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 95.25) (xy 146.685 95.25)
+			(xy 132.08 95.25) (xy 143.51 95.25)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "d3d14828-874a-4af9-8a14-7bef42df4ec4")
+	)
+	(wire
+		(pts
+			(xy 143.51 95.25) (xy 146.685 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d428c7f7-e208-45cc-89fd-8dbc25af9d36")
 	)
 	(wire
 		(pts
@@ -2937,6 +3011,16 @@
 	)
 	(wire
 		(pts
+			(xy 143.51 95.25) (xy 143.51 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5da6afd-9d59-4bf2-9683-92c7e5535e02")
+	)
+	(wire
+		(pts
 			(xy 85.09 62.23) (xy 85.09 63.5)
 		)
 		(stroke
@@ -2944,6 +3028,16 @@
 			(type default)
 		)
 		(uuid "e5ec3da5-958e-441c-9237-a28050d52f0d")
+	)
+	(wire
+		(pts
+			(xy 143.51 102.87) (xy 143.51 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6815743-f71b-46d1-bad8-98130c0b330f")
 	)
 	(wire
 		(pts
@@ -2987,6 +3081,16 @@
 	)
 	(wire
 		(pts
+			(xy 143.51 53.34) (xy 143.51 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2b51379-9b63-4d0c-86b2-655cac0009d5")
+	)
+	(wire
+		(pts
 			(xy 133.35 62.23) (xy 133.35 63.5)
 		)
 		(stroke
@@ -3014,16 +3118,6 @@
 			(type default)
 		)
 		(uuid "fb2d0b65-4f48-43a5-b238-ebb7efbdca61")
-	)
-	(text "40k2 resistors can be 2x80k6 parallel"
-		(exclude_from_sim no)
-		(at 147.32 32.004 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "47a42b15-989c-481b-9f27-56a53475fc9e")
 	)
 	(text "I2C Address 0x61"
 		(exclude_from_sim no)
@@ -6070,6 +6164,73 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
+		(at 143.51 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "638c863a-be9c-43c7-a1d7-470a2224cf42")
+		(property "Reference" "R91"
+			(at 138.5316 100.33 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "80k6"
+			(at 140.843 100.33 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 143.51 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 143.51 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 143.51 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d10e208f-6023-44fa-b7b5-fca322a3fa19")
+		)
+		(pin "2"
+			(uuid "8f11840c-1e60-4d49-a1e4-f3846c0b70a9")
+		)
+		(instances
+			(project "usbadc"
+				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/413eeb87-85d0-4a61-9245-920a92a97234"
+					(reference "R91")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
 		(at 129.54 95.25 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6152,7 +6313,7 @@
 				)
 			)
 		)
-		(property "Value" "40k2"
+		(property "Value" "80k6"
 			(at 148.717 50.8 90)
 			(effects
 				(font
@@ -6569,7 +6730,7 @@
 				)
 			)
 		)
-		(property "Value" "40k2"
+		(property "Value" "80k6"
 			(at 149.352 100.33 90)
 			(effects
 				(font
@@ -7091,6 +7252,73 @@
 			(project "usbadc"
 				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/413eeb87-85d0-4a61-9245-920a92a97234"
 					(reference "#PWR070")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 143.51 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f146bb9e-e62d-4329-84c0-4f508646d6ff")
+		(property "Reference" "R90"
+			(at 138.5316 50.8 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "80k6"
+			(at 140.843 50.8 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 143.51 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 143.51 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 143.51 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7fde176f-f54d-49e2-9d84-43d51c4c05d4")
+		)
+		(pin "2"
+			(uuid "23b18859-c38c-4d8f-8d33-142d17a01a9d")
+		)
+		(instances
+			(project "usbadc"
+				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/413eeb87-85d0-4a61-9245-920a92a97234"
+					(reference "R90")
 					(unit 1)
 				)
 			)
