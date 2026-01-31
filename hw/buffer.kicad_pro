@@ -465,7 +465,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "usbadc.kicad_pro",
+    "filename": "buffer.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -657,7 +657,7 @@
     "page_layout_descr_file": ""
   },
   "schematic": {
-    "annotate_start_num": 0,
+    "annotate_start_num": 1000,
     "bom_export_filename": "",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
@@ -757,72 +757,8 @@
   },
   "sheets": [
     [
-      "7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1",
+      "6fd86d2f-a184-497b-92a6-ac81563afbb6",
       "Root"
-    ],
-    [
-      "00000000-0000-0000-0000-000060b16d71",
-      "Clock"
-    ],
-    [
-      "00000000-0000-0000-0000-0000612b1274",
-      "ADC"
-    ],
-    [
-      "2d0efa78-153a-4cb7-91b5-dea78ecb841c",
-      "FE_CHA"
-    ],
-    [
-      "48d00771-072a-4471-832b-aaf429246191",
-      "FE_CHB"
-    ],
-    [
-      "73f3d429-a0b7-4265-ba46-4445bae0de3d",
-      "fe_ctl"
-    ],
-    [
-      "39acc7d1-a995-4616-8037-aaf3c117cf9c",
-      "Trigger IO"
-    ],
-    [
-      "945e4dbc-067e-402b-ba9d-38126a9e21c9",
-      "bank_3a"
-    ],
-    [
-      "00000000-0000-0000-0000-00006086f2e3",
-      "Power"
-    ],
-    [
-      "413eeb87-85d0-4a61-9245-920a92a97234",
-      "offset_dac"
-    ],
-    [
-      "5598a6a2-be47-454c-8f97-749ceb56c3dc",
-      "USB"
-    ],
-    [
-      "c969de1a-32a7-4770-b1aa-e527a627ef90",
-      "Front End"
-    ],
-    [
-      "33541e06-1943-44ac-875f-55941863f921",
-      "LEDs"
-    ],
-    [
-      "d9cd2a48-41b0-4b01-a978-0843576735ad",
-      "FPGA Trion"
-    ],
-    [
-      "1b523d49-ff11-41b3-8609-dd0dd8346ed0",
-      "sdram"
-    ],
-    [
-      "f706ede1-c100-479f-a87e-df6f74047868",
-      "bank_1a_cfg"
-    ],
-    [
-      "b37c57e6-fd28-4b13-a567-f707971d2f60",
-      "bank_4a_4b"
     ]
   ],
   "text_variables": {}
