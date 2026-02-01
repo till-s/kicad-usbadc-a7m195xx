@@ -73418,18 +73418,6 @@
 		)
 	)
 	(gr_rect
-		(start 139.4 52.35)
-		(end 141.55 55)
-		(stroke
-			(width 0.2)
-			(type default)
-		)
-		(fill none)
-		(layer "F.Cu")
-		(net 1)
-		(uuid "174530d6-1208-40bf-a7cc-67e622e45291")
-	)
-	(gr_rect
 		(start 81.2 58.2625)
 		(end 81.675 60.9375)
 		(stroke
