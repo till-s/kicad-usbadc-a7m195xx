@@ -716,6 +716,12 @@
 		)
 	)
 	(junction
+		(at 98.552 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "00fd8877-6b51-406c-b983-ceb79c38e45b")
+	)
+	(junction
 		(at 59.69 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -728,16 +734,16 @@
 		(uuid "18ee9bcb-e563-4063-8d5a-e0458bb27569")
 	)
 	(junction
+		(at 96.012 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2cddfa90-ab17-4167-a96c-c08167105f87")
+	)
+	(junction
 		(at 86.36 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2eebc1d9-317d-4794-a402-42c9994c1453")
-	)
-	(junction
-		(at 98.425 106.68)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "309b60d2-fbd8-486e-b06c-a46ab55ff403")
 	)
 	(junction
 		(at 63.5 149.86)
@@ -776,12 +782,6 @@
 		(uuid "9d53dc7e-3501-41e1-b711-548daf48eac2")
 	)
 	(junction
-		(at 95.885 109.22)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e797eb31-5619-448e-8f31-a6ea5aae63af")
-	)
-	(junction
 		(at 67.31 149.86)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -799,7 +799,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.965 97.79) (xy 100.965 93.98)
+			(xy 101.092 97.79) (xy 101.092 93.98)
 		)
 		(stroke
 			(width 0)
@@ -809,7 +809,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.045 93.98) (xy 106.045 101.6)
+			(xy 105.918 93.98) (xy 105.918 101.6)
 		)
 		(stroke
 			(width 0)
@@ -859,16 +859,6 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 85.09) (xy 132.08 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1339d8da-b8fd-41d7-a026-ee2b62b333a9")
-	)
-	(wire
-		(pts
 			(xy 102.87 62.23) (xy 102.87 50.8)
 		)
 		(stroke
@@ -889,16 +879,6 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 135.255) (xy 132.08 135.255)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1d80adbd-7ed8-499d-971a-d7ef6de42908")
-	)
-	(wire
-		(pts
 			(xy 85.09 49.53) (xy 95.25 49.53)
 		)
 		(stroke
@@ -906,6 +886,16 @@
 			(type default)
 		)
 		(uuid "22147295-732d-4af6-91a5-68a7d35433a0")
+	)
+	(wire
+		(pts
+			(xy 101.092 100.33) (xy 101.092 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24eaef29-bbc0-4226-b339-023e619f8321")
 	)
 	(wire
 		(pts
@@ -919,7 +909,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 86.995) (xy 128.27 153.67)
+			(xy 128.27 87.122) (xy 128.27 153.67)
 		)
 		(stroke
 			(width 0)
@@ -929,7 +919,7 @@
 	)
 	(wire
 		(pts
-			(xy 98.425 93.98) (xy 98.425 106.68)
+			(xy 98.552 93.98) (xy 98.552 106.68)
 		)
 		(stroke
 			(width 0)
@@ -939,7 +929,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 106.68) (xy 98.425 106.68)
+			(xy 63.5 106.68) (xy 98.552 106.68)
 		)
 		(stroke
 			(width 0)
@@ -949,7 +939,7 @@
 	)
 	(wire
 		(pts
-			(xy 126.365 130.175) (xy 123.19 130.175)
+			(xy 126.365 130.048) (xy 123.19 130.048)
 		)
 		(stroke
 			(width 0)
@@ -989,7 +979,7 @@
 	)
 	(wire
 		(pts
-			(xy 98.425 106.68) (xy 98.425 121.92)
+			(xy 98.552 106.68) (xy 98.552 121.92)
 		)
 		(stroke
 			(width 0)
@@ -999,7 +989,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.045 113.03) (xy 106.045 121.92)
+			(xy 106.172 113.03) (xy 106.172 121.92)
 		)
 		(stroke
 			(width 0)
@@ -1019,17 +1009,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 90.17) (xy 123.19 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4798aac7-8854-4ae2-b973-8d60dc8dc350")
-	)
-	(wire
-		(pts
-			(xy 123.19 86.995) (xy 128.27 86.995)
+			(xy 123.19 87.122) (xy 128.27 87.122)
 		)
 		(stroke
 			(width 0)
@@ -1069,7 +1049,7 @@
 	)
 	(wire
 		(pts
-			(xy 108.585 113.03) (xy 108.585 121.92)
+			(xy 108.712 113.03) (xy 108.712 121.92)
 		)
 		(stroke
 			(width 0)
@@ -1139,16 +1119,6 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 135.255) (xy 132.08 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6bfe8f16-dfd8-49b8-93f4-ff9c550d5039")
-	)
-	(wire
-		(pts
 			(xy 140.335 176.53) (xy 123.19 176.53)
 		)
 		(stroke
@@ -1159,7 +1129,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 97.79) (xy 100.965 97.79)
+			(xy 71.12 97.79) (xy 101.092 97.79)
 		)
 		(stroke
 			(width 0)
@@ -1169,7 +1139,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 80.645) (xy 148.59 80.645)
+			(xy 123.19 80.772) (xy 148.59 80.772)
 		)
 		(stroke
 			(width 0)
@@ -1219,7 +1189,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.125 93.98) (xy 111.125 101.6)
+			(xy 111.252 93.98) (xy 111.252 101.6)
 		)
 		(stroke
 			(width 0)
@@ -1229,7 +1199,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.885 109.22) (xy 95.885 121.92)
+			(xy 96.012 109.22) (xy 96.012 121.92)
 		)
 		(stroke
 			(width 0)
@@ -1249,7 +1219,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 123.825) (xy 148.59 123.825)
+			(xy 123.19 123.698) (xy 148.59 123.698)
 		)
 		(stroke
 			(width 0)
@@ -1279,7 +1249,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 109.22) (xy 95.885 109.22)
+			(xy 59.69 109.22) (xy 96.012 109.22)
 		)
 		(stroke
 			(width 0)
@@ -1329,16 +1299,6 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 85.09) (xy 132.08 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9f0831e4-5161-4585-8261-4b6fd32b0ec7")
-	)
-	(wire
-		(pts
 			(xy 59.69 149.86) (xy 63.5 149.86)
 		)
 		(stroke
@@ -1349,7 +1309,7 @@
 	)
 	(wire
 		(pts
-			(xy 108.585 93.98) (xy 108.585 101.6)
+			(xy 108.712 93.98) (xy 108.712 101.6)
 		)
 		(stroke
 			(width 0)
@@ -1366,26 +1326,6 @@
 			(type default)
 		)
 		(uuid "a5fcde49-a0d4-4060-a6ff-7dca2d09c5c4")
-	)
-	(wire
-		(pts
-			(xy 123.19 132.08) (xy 132.08 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a99e87ff-c407-458d-bd94-824b3f2c4e2d")
-	)
-	(wire
-		(pts
-			(xy 100.965 100.33) (xy 100.965 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aa56a41e-882a-4e40-b0d2-30db8c5a41b9")
 	)
 	(wire
 		(pts
@@ -1419,7 +1359,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.125 113.03) (xy 111.125 121.92)
+			(xy 111.252 113.03) (xy 111.252 121.92)
 		)
 		(stroke
 			(width 0)
@@ -1459,7 +1399,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.885 93.98) (xy 95.885 109.22)
+			(xy 96.012 93.98) (xy 96.012 109.22)
 		)
 		(stroke
 			(width 0)
@@ -1499,7 +1439,7 @@
 	)
 	(wire
 		(pts
-			(xy 126.365 130.175) (xy 126.365 156.21)
+			(xy 126.365 130.048) (xy 126.365 156.21)
 		)
 		(stroke
 			(width 0)
@@ -1599,7 +1539,7 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 100.33) (xy 100.965 100.33)
+			(xy 67.31 100.33) (xy 101.092 100.33)
 		)
 		(stroke
 			(width 0)
@@ -1663,7 +1603,7 @@
 	)
 	(hierarchical_label "CHB_OUT_P"
 		(shape output)
-		(at 148.59 123.825 0)
+		(at 148.59 123.698 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1685,7 +1625,7 @@
 	)
 	(hierarchical_label "CHA_OUT_N"
 		(shape output)
-		(at 148.59 80.645 0)
+		(at 148.59 80.772 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2716,8 +2656,135 @@
 		)
 	)
 	(sheet
-		(at 104.775 101.6)
-		(size 18.415 11.43)
+		(at 92.456 121.92)
+		(size 30.734 17.78)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "57fc8086-a14e-4d5c-8bab-6fe2c6bc0f3d")
+		(property "Sheetname" "FE_CHB"
+			(at 105.41 139.192 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "buffer.kicad_sch"
+			(at 102.362 140.462 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "OUTP" input
+			(at 123.19 123.698 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "863a0192-df45-4361-9c6e-edd0f24c474d")
+		)
+		(pin "PGA_INLO" input
+			(at 123.19 130.048 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "0acd1ae6-a86b-47dc-a10e-ba68b836752a")
+		)
+		(pin "OUTN" input
+			(at 123.19 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "a9fbeee3-23e4-4691-9339-97ea1abf2601")
+		)
+		(pin "FE_CTL_AC" input
+			(at 108.712 121.92 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "c7532846-2a54-4a59-9750-b64fce4da7a3")
+		)
+		(pin "PGA_CTL_DATA" input
+			(at 98.552 121.92 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "a52edd06-1af6-4421-bb31-17ca34250aba")
+		)
+		(pin "FE_CTL_TERM" input
+			(at 111.252 121.92 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "8889cdfe-a02d-4ae2-84f7-b751f3a6aa42")
+		)
+		(pin "PGA_CTL_LATCH" input
+			(at 101.092 121.92 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "7a119e60-0aef-4709-bafc-669ec2af18de")
+		)
+		(pin "PGA_CTL_CLK" input
+			(at 96.012 121.92 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "7164c365-da85-4204-b837-d66fda306c46")
+		)
+		(pin "FE_CTL_ATT" input
+			(at 106.172 121.92 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "8ced6c3b-777f-4e02-a88c-082beca63040")
+		)
+		(instances
+			(project "usbadc"
+				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90"
+					(page "17")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 104.14 101.6)
+		(size 19.05 11.43)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -2727,7 +2794,7 @@
 		)
 		(uuid "73f3d429-a0b7-4265-ba46-4445bae0de3d")
 		(property "Sheetname" "fe_ctl"
-			(at 116.205 112.395 0)
+			(at 115.57 112.395 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2736,7 +2803,7 @@
 			)
 		)
 		(property "Sheetfile" "fe_ctl.kicad_sch"
-			(at 102.235 118.11 90)
+			(at 101.6 118.11 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2745,7 +2812,7 @@
 			)
 		)
 		(pin "P7" output
-			(at 108.585 101.6 90)
+			(at 108.712 101.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2765,7 +2832,7 @@
 			(uuid "eae9a328-aabc-4826-b251-b46d6924ca25")
 		)
 		(pin "P6" output
-			(at 106.045 101.6 90)
+			(at 105.918 101.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2775,7 +2842,7 @@
 			(uuid "89a91a3b-5cb0-42d2-a9d3-42b48f3b5116")
 		)
 		(pin "P5" output
-			(at 111.125 101.6 90)
+			(at 111.252 101.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2785,7 +2852,7 @@
 			(uuid "d1f49f2e-19f5-44ea-b7d9-5a57d29f7be6")
 		)
 		(pin "P4" output
-			(at 111.125 113.03 270)
+			(at 111.252 113.03 270)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2805,7 +2872,7 @@
 			(uuid "91a6228f-ba7c-4d1e-99af-f1095cd4a60d")
 		)
 		(pin "P2" output
-			(at 106.045 113.03 270)
+			(at 106.172 113.03 270)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2815,7 +2882,7 @@
 			(uuid "29d7da02-4b18-4642-8223-5b64acdb65ae")
 		)
 		(pin "P3" output
-			(at 108.585 113.03 270)
+			(at 108.712 113.03 270)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2848,6 +2915,133 @@
 			(project "usbadc"
 				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90"
 					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 92.456 76.2)
+		(size 30.734 17.78)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "fa4ea737-6753-474f-97ec-1f4e5a32987c")
+		(property "Sheetname" "FE_CHA"
+			(at 104.902 78.232 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "buffer.kicad_sch"
+			(at 102.362 74.168 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "OUTP" input
+			(at 123.19 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "fcfe6b87-1c08-4fd5-850b-2ba1e3878b00")
+		)
+		(pin "PGA_INLO" input
+			(at 123.19 87.122 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "59089016-bc3f-4c32-bd31-10f0b6beb167")
+		)
+		(pin "OUTN" input
+			(at 123.19 80.772 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "779017ea-668e-48ec-9297-670c20104ade")
+		)
+		(pin "FE_CTL_AC" input
+			(at 108.712 93.98 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "f5088fe0-0787-4a90-9048-aa839a9a3123")
+		)
+		(pin "PGA_CTL_DATA" input
+			(at 98.552 93.98 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "013a2131-e188-46b3-88ea-d70cb83330f3")
+		)
+		(pin "FE_CTL_TERM" input
+			(at 111.252 93.98 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "a3b1cc24-4845-4569-9e28-720a5867475d")
+		)
+		(pin "PGA_CTL_LATCH" input
+			(at 101.092 93.98 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "e4efd80a-6a6c-47ac-8621-1ebffe9ddff4")
+		)
+		(pin "PGA_CTL_CLK" input
+			(at 96.012 93.98 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "e5d7a44f-1305-4c5e-bb88-c7ed484ea1d1")
+		)
+		(pin "FE_CTL_ATT" input
+			(at 105.918 93.98 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "14c938d3-14f6-44c1-9b8d-eccea3c1fbb5")
+		)
+		(instances
+			(project "usbadc"
+				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90"
+					(page "16")
 				)
 			)
 		)
