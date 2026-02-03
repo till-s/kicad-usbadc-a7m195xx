@@ -8578,6 +8578,16 @@
 					(unit 1)
 				)
 			)
+			(project "usbadc"
+				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/57fc8086-a14e-4d5c-8bab-6fe2c6bc0f3d"
+					(reference "R18")
+					(unit 1)
+				)
+				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/fa4ea737-6753-474f-97ec-1f4e5a32987c"
+					(reference "R17")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
