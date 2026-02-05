@@ -5695,7 +5695,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-0000611d1de7")
 		(property "Reference" "C2010"
-			(at 184.15 142.24 0)
+			(at 175.514 146.304 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5867,7 +5867,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-0000611d4aad")
 		(property "Reference" "C2011"
-			(at 189.23 142.24 0)
+			(at 191.516 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5964,7 +5964,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-0000611d5312")
 		(property "Reference" "C2008"
-			(at 158.75 142.24 0)
+			(at 150.368 150.876 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6061,7 +6061,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-0000611d532f")
 		(property "Reference" "C2009"
-			(at 163.83 142.24 0)
+			(at 165.862 151.384 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7290,7 +7290,7 @@
 		(dnp no)
 		(uuid "27bbfc1d-aa3a-437a-9fdd-9f9d2d579e97")
 		(property "Reference" "C2004"
-			(at 162.306 87.884 90)
+			(at 162.306 89.662 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7592,7 +7592,7 @@
 		(dnp no)
 		(uuid "346d5f5e-cf7a-451f-a5b4-2e642df32d2a")
 		(property "Reference" "C2013"
-			(at 217.17 142.24 0)
+			(at 217.932 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8286,7 +8286,7 @@
 		(dnp no)
 		(uuid "5990c93b-1a37-422a-9150-b8eb3144a3f2")
 		(property "Reference" "C2015"
-			(at 241.3 142.24 0)
+			(at 242.062 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8600,7 +8600,7 @@
 		(dnp no)
 		(uuid "7b739aac-99b7-493c-835e-042a0df00f10")
 		(property "Reference" "C2005"
-			(at 62.23 102.87 90)
+			(at 65.786 98.044 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9013,7 +9013,7 @@
 		(dnp no)
 		(uuid "99e9bdc1-feed-4604-9754-ed4a32b635e3")
 		(property "Reference" "C2014"
-			(at 234.95 142.24 0)
+			(at 227.838 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9527,7 +9527,7 @@
 		(dnp no)
 		(uuid "a7720866-aa91-4c92-a6b0-5e7b51f8c4bc")
 		(property "Reference" "C2012"
-			(at 209.55 142.24 0)
+			(at 202.438 150.876 0)
 			(effects
 				(font
 					(size 1.27 1.27)
