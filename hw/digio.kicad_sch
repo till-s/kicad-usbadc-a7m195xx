@@ -1044,6 +1044,12 @@
 		)
 	)
 	(junction
+		(at 100.838 103.505)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4531ca44-b3f0-4345-b26e-a4d4b71b6c8a")
+	)
+	(junction
 		(at 109.855 95.758)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1066,12 +1072,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7d8fd653-4a93-4115-8b46-6d6f7df6fdd5")
-	)
-	(junction
-		(at 100.965 103.505)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8dee5185-a796-482c-9771-337c9feb3ce2")
 	)
 	(junction
 		(at 118.745 81.915)
@@ -1187,16 +1187,6 @@
 	)
 	(wire
 		(pts
-			(xy 100.838 113.538) (xy 100.965 113.538)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1555c14b-ee47-4461-af65-d57b31e79ffe")
-	)
-	(wire
-		(pts
 			(xy 173.355 107.315) (xy 173.355 113.665)
 		)
 		(stroke
@@ -1257,7 +1247,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.965 113.538) (xy 100.965 111.125)
+			(xy 100.838 111.252) (xy 100.838 113.792)
 		)
 		(stroke
 			(width 0)
@@ -1337,23 +1327,13 @@
 	)
 	(wire
 		(pts
-			(xy 70.612 103.378) (xy 100.965 103.378)
+			(xy 70.485 103.378) (xy 100.838 103.378)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "866e2566-6640-4278-8f69-0b0b95190ed9")
-	)
-	(wire
-		(pts
-			(xy 100.838 113.538) (xy 100.838 113.792)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "89c304b5-bd43-4c33-828f-b7821fc1d769")
 	)
 	(wire
 		(pts
@@ -1364,6 +1344,16 @@
 			(type default)
 		)
 		(uuid "89f3e1fb-4ab6-4f55-bd3c-95e762e1fe6f")
+	)
+	(wire
+		(pts
+			(xy 100.838 103.505) (xy 111.125 103.505)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ce7d3f8-e55b-42c2-8e11-098695c716cc")
 	)
 	(wire
 		(pts
@@ -1417,16 +1407,6 @@
 	)
 	(wire
 		(pts
-			(xy 100.965 103.505) (xy 111.125 103.505)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a148d3aa-84cb-4376-8a6b-ef300259de3c")
-	)
-	(wire
-		(pts
 			(xy 91.948 113.792) (xy 100.838 113.792)
 		)
 		(stroke
@@ -1467,7 +1447,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.965 103.378) (xy 100.965 103.505)
+			(xy 100.838 103.378) (xy 100.838 103.505)
 		)
 		(stroke
 			(width 0)
@@ -1577,7 +1557,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.965 103.505) (xy 100.965 106.045)
+			(xy 100.838 103.505) (xy 100.838 106.172)
 		)
 		(stroke
 			(width 0)
@@ -1655,16 +1635,6 @@
 		)
 		(uuid "fc182707-f11a-4e14-a044-967d17f13808")
 	)
-	(text "Board version 3.2 populated R20;\nR42 can be used to distinguish\nboard versions."
-		(exclude_from_sim no)
-		(at 70.612 110.236 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "5219397c-e350-4e70-ad95-4cb08ca4db49")
-	)
 	(text "(LVCMOS18) min pullup: 8.4k; max. pulldown: 3.3k\n2t45 VLmax: 0.35Vcc -> pulldown < 4.5k"
 		(exclude_from_sim no)
 		(at 84.455 127.635 0)
@@ -1699,7 +1669,7 @@
 	)
 	(hierarchical_label "DIR"
 		(shape input)
-		(at 70.612 103.378 180)
+		(at 70.485 103.378 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2576,7 +2546,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "a5cf11b5-b997-445c-bc1b-48c19a869a26")
 		(property "Reference" "R42"
 			(at 93.4466 107.2896 0)
@@ -2932,7 +2902,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 100.965 108.585 0)
+		(at 100.838 108.712 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2940,7 +2910,7 @@
 		(dnp no)
 		(uuid "e76a2b0f-4bcf-4680-849e-e7cf499c531c")
 		(property "Reference" "R?"
-			(at 102.4636 107.4166 0)
+			(at 102.3366 107.5436 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2949,7 +2919,7 @@
 			)
 		)
 		(property "Value" "2k94"
-			(at 102.4636 109.728 0)
+			(at 102.3366 109.855 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2958,7 +2928,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 100.965 108.585 0)
+			(at 100.838 108.712 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2967,7 +2937,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 100.965 108.585 0)
+			(at 100.838 108.712 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2976,7 +2946,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 100.965 108.585 0)
+			(at 100.838 108.712 0)
 			(effects
 				(font
 					(size 1.27 1.27)
