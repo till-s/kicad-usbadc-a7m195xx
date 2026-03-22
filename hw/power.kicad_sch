@@ -5452,7 +5452,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" "RT8096B"
+		(property "Part" "RT8096BHGE"
 			(at 69.85 72.39 0)
 			(effects
 				(font
@@ -5775,7 +5775,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "BDCD002520121R5MS1"
 			(at 85.09 69.85 90)
 			(effects
 				(font
@@ -5784,7 +5784,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Pulse"
 			(at 85.09 69.85 90)
 			(effects
 				(font
@@ -5949,7 +5949,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "RMCF0603FT10K0"
 			(at 81.28 77.47 0)
 			(effects
 				(font
@@ -5958,7 +5958,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 81.28 77.47 0)
 			(effects
 				(font
@@ -6034,7 +6034,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "RMCF0603FT45K3"
 			(at 90.17 72.39 90)
 			(effects
 				(font
@@ -6043,7 +6043,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 90.17 72.39 90)
 			(effects
 				(font
@@ -6119,7 +6119,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "0603N470J101CT"
 			(at 90.17 76.2 90)
 			(effects
 				(font
@@ -6128,7 +6128,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Walsin"
 			(at 90.17 76.2 90)
 			(effects
 				(font
@@ -6206,7 +6206,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" "RT8096B"
+		(property "Part" "RT8096BHGE"
 			(at 69.85 109.22 0)
 			(effects
 				(font
@@ -6617,7 +6617,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "RMCF0603FT31K6"
 			(at 90.17 109.22 90)
 			(effects
 				(font
@@ -6626,7 +6626,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 90.17 109.22 90)
 			(effects
 				(font
@@ -6704,7 +6704,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" "RT8096B"
+		(property "Part" "RT8096BHGE"
 			(at 69.85 34.29 0)
 			(effects
 				(font
@@ -7150,7 +7150,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "BDCD002520121R5MS1"
 			(at 85.09 31.75 90)
 			(effects
 				(font
@@ -7159,7 +7159,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Pulse"
 			(at 85.09 31.75 90)
 			(effects
 				(font
@@ -7676,7 +7676,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "RMCF0603FT10K0"
 			(at 81.28 114.3 0)
 			(effects
 				(font
@@ -7685,7 +7685,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 81.28 114.3 0)
 			(effects
 				(font
@@ -7763,7 +7763,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "RMCF0603FT10K0"
 			(at 81.28 39.37 0)
 			(effects
 				(font
@@ -7772,7 +7772,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 81.28 39.37 0)
 			(effects
 				(font
@@ -7850,7 +7850,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "RMCF0603FT10K0"
 			(at 90.17 34.29 0)
 			(effects
 				(font
@@ -7859,7 +7859,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 90.17 34.29 0)
 			(effects
 				(font
@@ -7937,7 +7937,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "RMCF0603FT100K"
 			(at 58.42 87.63 0)
 			(effects
 				(font
@@ -7946,7 +7946,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 58.42 87.63 0)
 			(effects
 				(font
@@ -8024,7 +8024,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "RMCF0603FT100K"
 			(at 58.42 50.8 0)
 			(effects
 				(font
@@ -8033,7 +8033,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 58.42 50.8 0)
 			(effects
 				(font
@@ -8823,7 +8823,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-0000613f2449")
 		(property "Reference" "J9"
 			(at 191.262 134.7216 90)
@@ -9023,6 +9023,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Stackpole"
+			(at 233.68 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT10K0"
+			(at 233.68 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "dca3a529-21a3-4c04-9aef-67eaa6b5a728")
 		)
@@ -9184,6 +9202,24 @@
 			)
 		)
 		(property "Field4" ""
+			(at 88.9 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 88.9 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "TPS563249DDCR"
 			(at 88.9 140.97 0)
 			(effects
 				(font
@@ -9403,7 +9439,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "  RMCF0603ZT0R00"
 			(at 116.84 31.75 0)
 			(effects
 				(font
@@ -9412,7 +9448,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 116.84 31.75 0)
 			(effects
 				(font
@@ -9482,6 +9518,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 203.2 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 203.2 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT5K10"
 			(at 203.2 67.31 0)
 			(effects
 				(font
@@ -9688,9 +9742,9 @@
 		(at 218.44 142.875 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "2936b370-2412-4624-ada4-8ef4dc1b1024")
 		(property "Reference" "TP2"
@@ -10028,6 +10082,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Walsin"
+			(at 115.57 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "0603N470J101CT"
+			(at 115.57 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "71e6180b-92b6-4e8b-9ee6-68ef50ea8a7b")
 		)
@@ -10254,7 +10326,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "BDCD002520121R5MS1"
 			(at 110.49 138.43 90)
 			(effects
 				(font
@@ -10263,7 +10335,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Pulse"
 			(at 110.49 138.43 90)
 			(effects
 				(font
@@ -10458,7 +10530,7 @@
 				)
 			)
 		)
-		(property "Value" "TLV75801PDBV"
+		(property "Value" "TLV75801PDBVR"
 			(at 194.31 54.1599 0)
 			(effects
 				(font
@@ -10486,6 +10558,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 194.31 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 194.31 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "TLV75801PDBVR"
 			(at 194.31 60.96 0)
 			(effects
 				(font
@@ -10805,9 +10895,9 @@
 		(at 238.76 142.875 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "86d317da-7d6c-4cf3-812b-e4f5e1d6eadc")
 		(property "Reference" "TP4"
@@ -11013,7 +11103,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "  RMCF0603ZT0R00"
 			(at 115.57 69.85 0)
 			(effects
 				(font
@@ -11022,7 +11112,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 115.57 69.85 0)
 			(effects
 				(font
@@ -11051,9 +11141,9 @@
 		(at 225.425 142.875 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "8e8978cf-b52b-4f2d-b7bb-bb4e23f5de16")
 		(property "Reference" "TP3"
@@ -11297,7 +11387,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "BDCD002520121R5MS1"
 			(at 85.09 106.68 90)
 			(effects
 				(font
@@ -11306,7 +11396,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Pulse"
 			(at 85.09 106.68 90)
 			(effects
 				(font
@@ -11384,7 +11474,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "RMCF0603FT100K"
 			(at 158.75 56.515 0)
 			(effects
 				(font
@@ -11393,7 +11483,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 158.75 56.515 0)
 			(effects
 				(font
@@ -11592,6 +11682,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 119.38 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 119.38 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT10K0"
 			(at 119.38 149.86 0)
 			(effects
 				(font
@@ -12090,7 +12198,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "RMCF0603FT31K6"
 			(at 206.375 63.5 90)
 			(effects
 				(font
@@ -12099,7 +12207,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 206.375 63.5 90)
 			(effects
 				(font
@@ -12167,6 +12275,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 119.38 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 119.38 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT31K6"
 			(at 119.38 142.24 0)
 			(effects
 				(font

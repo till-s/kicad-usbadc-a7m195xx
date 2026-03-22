@@ -454,7 +454,7 @@
 				)
 			)
 		)
-		(symbol "Device:RFShield_TwoPieces"
+		(symbol "Device:RFShield_OnePiece"
 			(pin_names
 				(offset 1.016)
 			)
@@ -469,7 +469,7 @@
 					)
 				)
 			)
-			(property "Value" "RFShield_TwoPieces"
+			(property "Value" "RFShield_OnePiece"
 				(at 0 2.54 0)
 				(effects
 					(font
@@ -495,7 +495,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Two-piece EMI RF shielding cabinet"
+			(property "Description" "One-piece EMI RF shielding cabinet"
 				(at 0 0 0)
 				(effects
 					(font
@@ -513,7 +513,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "RFShield_TwoPieces_0_1"
+			(symbol "RFShield_OnePiece_0_1"
 				(polyline
 					(pts
 						(xy -15.24 -5.08) (xy -15.24 -2.54)
@@ -802,20 +802,8 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy -17.78 5.08) (xy -17.78 11.43) (xy 17.78 11.43) (xy 17.78 5.08)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 			)
-			(symbol "RFShield_TwoPieces_1_1"
+			(symbol "RFShield_OnePiece_1_1"
 				(pin passive line
 					(at 0 -10.16 90)
 					(length 2.54)
@@ -2611,6 +2599,80 @@
 				)
 			)
 		)
+		(symbol "fmc:RFShield_Cover"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board no)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "RFShield_Cover"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Two-piece EMI RF shielding cabinet"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "RF EMI shielding cabinet"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "RFShield_Cover_0_1"
+				(polyline
+					(pts
+						(xy -17.78 5.08) (xy -17.78 11.43) (xy 17.78 11.43) (xy 17.78 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+		)
 		(symbol "fmc:Relay_G6L-1F"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3439,6 +3501,18 @@
 		(uuid "0b7c4575-0c77-4120-88d6-e08c0567bf63")
 	)
 	(junction
+		(at 138.43 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0fd934ae-3a17-43f1-a30e-0d686b68e769")
+	)
+	(junction
+		(at 146.05 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "231fefaa-33e9-4435-adb7-bc7fccb64535")
+	)
+	(junction
 		(at 203.2 73.152)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3467,6 +3541,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "46d005dd-6a79-41aa-8739-0e3141aa4716")
+	)
+	(junction
+		(at 127 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "48003592-2ed4-4307-817e-53390ccb3a69")
 	)
 	(junction
 		(at 97.79 65.405)
@@ -3521,6 +3601,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7b4343ee-7a07-4ffd-bd43-7102cc481fc9")
+	)
+	(junction
+		(at 127 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "805c294f-990c-430b-a3e8-8d164028766e")
+	)
+	(junction
+		(at 111.76 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "883a05f6-d612-4b29-b821-3c3f1e61ec68")
 	)
 	(junction
 		(at 156.21 101.6)
@@ -3607,6 +3699,12 @@
 		(uuid "ebf17ff1-5d4e-4b5e-aa6e-a3f4c719523c")
 	)
 	(junction
+		(at 104.14 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ec0a185a-05e6-483b-80fc-30d61aa8ef36")
+	)
+	(junction
 		(at 254 144.78)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3665,6 +3763,16 @@
 			(type default)
 		)
 		(uuid "05bdab1d-7808-4184-b06d-32348dc3b6f2")
+	)
+	(wire
+		(pts
+			(xy 138.43 105.41) (xy 138.43 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0625368b-7732-4bde-a325-aec4e25b16c2")
 	)
 	(wire
 		(pts
@@ -3728,7 +3836,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 71.12) (xy 127 90.17)
+			(xy 127 71.12) (xy 127 88.9)
 		)
 		(stroke
 			(width 0)
@@ -3768,7 +3876,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 101.6) (xy 127 101.6)
+			(xy 110.49 101.6) (xy 111.76 101.6)
 		)
 		(stroke
 			(width 0)
@@ -3785,6 +3893,16 @@
 			(type default)
 		)
 		(uuid "19e1c2e1-d958-4ef0-9036-e935bf47a94e")
+	)
+	(wire
+		(pts
+			(xy 146.05 105.41) (xy 146.05 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d0da997-24c1-4503-afc4-9de7f1c0d0cc")
 	)
 	(wire
 		(pts
@@ -3868,6 +3986,26 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 105.41) (xy 146.05 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "244cad46-abe9-455d-8cda-220e916731fd")
+	)
+	(wire
+		(pts
+			(xy 130.81 95.25) (xy 130.81 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "261f7320-9ab2-4f8a-8408-ed5c40354c83")
+	)
+	(wire
+		(pts
 			(xy 68.58 73.66) (xy 68.58 66.04)
 		)
 		(stroke
@@ -3905,6 +4043,16 @@
 			(type default)
 		)
 		(uuid "33a3a0c5-c2d5-4a88-98cd-ad948cc61f79")
+	)
+	(wire
+		(pts
+			(xy 105.41 105.41) (xy 104.14 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3431e61f-8cd3-4c36-9afb-92fea817153e")
 	)
 	(wire
 		(pts
@@ -4048,6 +4196,16 @@
 	)
 	(wire
 		(pts
+			(xy 104.14 105.41) (xy 104.14 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "552ad9d2-fc50-4f2b-bb24-d2da7aa42647")
+	)
+	(wire
+		(pts
 			(xy 116.84 62.23) (xy 116.84 67.31)
 		)
 		(stroke
@@ -4068,7 +4226,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 101.6) (xy 139.7 101.6)
+			(xy 127 101.6) (xy 138.43 101.6)
 		)
 		(stroke
 			(width 0)
@@ -4208,6 +4366,16 @@
 	)
 	(wire
 		(pts
+			(xy 138.43 101.6) (xy 139.7 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6fca531b-15fa-4806-ab9e-fb8b695ac9de")
+	)
+	(wire
+		(pts
 			(xy 177.8 144.78) (xy 182.88 144.78)
 		)
 		(stroke
@@ -4325,6 +4493,16 @@
 			(type default)
 		)
 		(uuid "7c0b87b8-d9ae-44fd-8389-552f708a2b65")
+	)
+	(wire
+		(pts
+			(xy 127 96.52) (xy 127 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c74c602-3abb-4f9e-b623-166ea59c6793")
 	)
 	(wire
 		(pts
@@ -4568,6 +4746,26 @@
 	)
 	(wire
 		(pts
+			(xy 130.81 88.9) (xy 127 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a04960c9-663f-45a6-ac00-7753e32f9a0b")
+	)
+	(wire
+		(pts
+			(xy 146.05 101.6) (xy 156.21 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1e025ea-eb5f-4cb5-8ed6-5479aceb0ac5")
+	)
+	(wire
+		(pts
 			(xy 101.6 116.84) (xy 101.6 86.36)
 		)
 		(stroke
@@ -4598,13 +4796,23 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 101.6) (xy 156.21 101.6)
+			(xy 144.78 101.6) (xy 146.05 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "a3adedd7-b18c-4900-b50c-40885cbf7a03")
+	)
+	(wire
+		(pts
+			(xy 111.76 101.6) (xy 127 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6643e36-8385-41b7-bd94-db99a5affdc4")
 	)
 	(wire
 		(pts
@@ -4668,7 +4876,17 @@
 	)
 	(wire
 		(pts
-			(xy 127 95.25) (xy 127 101.6)
+			(xy 130.81 96.52) (xy 127 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0deab41-aedd-4ea1-aad5-24a37d981bf2")
+	)
+	(wire
+		(pts
+			(xy 127 95.25) (xy 127 96.52)
 		)
 		(stroke
 			(width 0)
@@ -4778,6 +4996,16 @@
 	)
 	(wire
 		(pts
+			(xy 104.14 101.6) (xy 105.41 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be0d315d-04a0-4c0b-8216-e99c44877bee")
+	)
+	(wire
+		(pts
 			(xy 209.55 144.78) (xy 217.17 144.78)
 		)
 		(stroke
@@ -4858,13 +5086,23 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 101.6) (xy 105.41 101.6)
+			(xy 72.39 101.6) (xy 104.14 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "c85fc67e-bbcf-4499-afef-1470b313a4c8")
+	)
+	(wire
+		(pts
+			(xy 111.76 105.41) (xy 111.76 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "caa9dfc6-1b0a-4b1c-8f66-714252c95324")
 	)
 	(wire
 		(pts
@@ -4875,6 +5113,16 @@
 			(type default)
 		)
 		(uuid "cad48eb4-be62-4186-9582-7323758e4736")
+	)
+	(wire
+		(pts
+			(xy 139.7 105.41) (xy 138.43 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc41038c-514f-4263-80e7-313808c608f9")
 	)
 	(wire
 		(pts
@@ -4915,6 +5163,16 @@
 			(type default)
 		)
 		(uuid "d5e76bcd-fada-4707-a321-807f9a18c004")
+	)
+	(wire
+		(pts
+			(xy 130.81 90.17) (xy 130.81 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d65d82b3-a0bc-412c-ab3e-4671a2b596d3")
 	)
 	(wire
 		(pts
@@ -5038,6 +5296,16 @@
 	)
 	(wire
 		(pts
+			(xy 110.49 105.41) (xy 111.76 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ede1aa88-25eb-47e9-a4e4-bcc03e8a883b")
+	)
+	(wire
+		(pts
 			(xy 189.23 73.152) (xy 203.2 73.152)
 		)
 		(stroke
@@ -5095,6 +5363,16 @@
 			(type default)
 		)
 		(uuid "f81859d8-cb2a-43e2-841f-80626bac7015")
+	)
+	(wire
+		(pts
+			(xy 127 88.9) (xy 127 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f85504e6-fa21-4080-a714-1ce83f839d91")
 	)
 	(wire
 		(pts
@@ -5166,9 +5444,9 @@
 		)
 		(uuid "fe76fdaf-c718-487d-9eb2-315916ca6f13")
 	)
-	(text "Ideally: 101k//99p but 99p is not available"
+	(text "Ideally: 101k//99p but\n99p is not available"
 		(exclude_from_sim no)
-		(at 104.14 110.49 0)
+		(at 119.38 101.6 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5474,7 +5752,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" " ~"
+		(property "Datasheet" "~"
 			(at 54.61 101.6 0)
 			(effects
 				(font
@@ -6277,6 +6555,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 213.36 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "CC0603KRX7R9BB202"
+			(at 213.36 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "cbcf2ce1-ad9e-49e8-bcca-8cc40458661c")
 		)
@@ -6346,6 +6642,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 127 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 127 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT100K"
 			(at 127 92.71 0)
 			(effects
 				(font
@@ -6499,6 +6813,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 63.5 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 63.5 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT1K00"
 			(at 63.5 55.88 0)
 			(effects
 				(font
@@ -6705,7 +7037,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:RFShield_TwoPieces")
+		(lib_id "Device:RFShield_OnePiece")
 		(at 105.41 151.13 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6715,7 +7047,7 @@
 		(fields_autoplaced yes)
 		(uuid "1da7ca75-99ad-475c-bcc2-219a76c655e3")
 		(property "Reference" "J2003"
-			(at 123.952 148.0128 0)
+			(at 121.412 149.9178 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6724,7 +7056,7 @@
 			)
 		)
 		(property "Value" "RFShield_Back"
-			(at 123.952 150.4371 0)
+			(at 121.412 152.3421 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6750,7 +7082,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Two-piece EMI RF shielding cabinet"
+		(property "Description" "One-piece EMI RF shielding cabinet"
 			(at 105.41 151.13 0)
 			(effects
 				(font
@@ -6768,7 +7100,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" "SMS-202F+C"
+		(property "Part" "SMS-202F"
 			(at 105.41 151.13 0)
 			(effects
 				(font
@@ -6851,6 +7183,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Panasonic"
+			(at 107.95 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "ERJ-3EKF9093V"
+			(at 107.95 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "65b5bf18-45e6-4d91-8f30-795176bb6c4c")
 		)
@@ -6920,6 +7270,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 66.04 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 66.04 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "ERJ-PA3F49R9V"
 			(at 66.04 111.76 0)
 			(effects
 				(font
@@ -7097,6 +7465,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 142.24 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 142.24 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "ERJ-3EKF9093V"
 			(at 142.24 101.6 0)
 			(effects
 				(font
@@ -7324,6 +7710,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 165.1 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 165.1 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "GJM1555C1H100FB01D"
 			(at 165.1 86.36 0)
 			(effects
 				(font
@@ -7636,6 +8040,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 217.17 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "CC0603KRX7R9BB202"
+			(at 217.17 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9ccd0614-ac37-4efa-8e8f-75bb83a3d4d2")
 		)
@@ -7656,6 +8078,96 @@
 				)
 				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/fa4ea737-6753-474f-97ec-1f4e5a32987c"
 					(reference "C1013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 107.95 105.41 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(dnp no)
+		(uuid "3be0714c-293e-47f9-ae49-1e793e78c3bf")
+		(property "Reference" "C27"
+			(at 106.68 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "11p"
+			(at 106.68 109.22 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 107.95 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 107.95 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 107.95 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kyocera"
+			(at 107.95 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "KGQ15ACG2D110FT"
+			(at 107.95 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7895686e-b2ed-4b06-882f-18abfbd040f0")
+		)
+		(pin "2"
+			(uuid "df385e34-343c-4157-9d2c-aae3be95fa8b")
+		)
+		(instances
+			(project "usbadc"
+				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/57fc8086-a14e-4d5c-8bab-6fe2c6bc0f3d"
+					(reference "C27")
+					(unit 1)
+				)
+				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/fa4ea737-6753-474f-97ec-1f4e5a32987c"
+					(reference "C26")
 					(unit 1)
 				)
 			)
@@ -7909,7 +8421,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:RFShield_TwoPieces")
+		(lib_id "Device:RFShield_OnePiece")
 		(at 49.53 151.13 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7919,7 +8431,7 @@
 		(fields_autoplaced yes)
 		(uuid "542936aa-818f-4bf0-b642-655c92a40937")
 		(property "Reference" "J2002"
-			(at 68.072 148.0128 0)
+			(at 65.532 149.9178 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7928,7 +8440,7 @@
 			)
 		)
 		(property "Value" "RFShield_Front"
-			(at 68.072 150.4371 0)
+			(at 65.532 152.3421 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7954,7 +8466,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Two-piece EMI RF shielding cabinet"
+		(property "Description" "One-piece EMI RF shielding cabinet"
 			(at 49.53 151.13 0)
 			(effects
 				(font
@@ -7972,7 +8484,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" "SMS-255F+C"
+		(property "Part" "SMS-255F"
 			(at 49.53 151.13 0)
 			(effects
 				(font
@@ -8330,6 +8842,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 241.3 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "CC0603KRX7R9BB202"
+			(at 241.3 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "84f6efb6-d3db-444a-b0eb-75209a11cc01")
 		)
@@ -8485,6 +9015,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Stackpole"
+			(at 182.372 59.436 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT1M00"
+			(at 182.372 59.436 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9308a685-dca3-4a35-bbe0-dc3904c2642b")
 		)
@@ -8565,6 +9113,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Stackpole"
+			(at 175.768 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT1M00"
+			(at 175.768 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e30ab032-3869-4e15-9aa3-180a055bf8e4")
 		)
@@ -8634,6 +9200,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 66.04 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "GRM21B5C2E103JWAAL"
+			(at 66.04 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
 			(at 66.04 101.6 0)
 			(effects
 				(font
@@ -8897,6 +9481,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Panasonic"
+			(at 66.04 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "AQY280S"
+			(at 66.04 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b6500433-dd96-48ed-833e-391fa760f09f")
 		)
@@ -9152,6 +9754,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "TI"
+			(at 170.18 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "OPA859IDSGR"
+			(at 170.18 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "7"
 			(uuid "66b86bc3-b1e8-4f15-9956-193309d51ba4")
 		)
@@ -9243,6 +9863,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 139.7 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 139.7 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "TS5A63157DCKR"
 			(at 139.7 67.31 0)
 			(effects
 				(font
@@ -9415,6 +10053,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Stackpole"
+			(at 170.18 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT1M00"
+			(at 170.18 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "adc0e167-f42a-4c90-bcc7-f250244526c8")
 		)
@@ -9484,6 +10140,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 165.1 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 165.1 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0402FT1M00"
 			(at 165.1 81.28 0)
 			(effects
 				(font
@@ -9684,6 +10358,90 @@
 				)
 				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/fa4ea737-6753-474f-97ec-1f4e5a32987c"
 					(reference "#PWR01027")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "fmc:RFShield_Cover")
+		(at 49.53 152.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ab4bf55c-0d48-4b2a-bf5b-dbcec6f3e9a5")
+		(property "Reference" "J6"
+			(at 49.53 136.8255 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "RFShield_Back_Front"
+			(at 49.53 139.2498 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 49.53 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 49.53 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Two-piece EMI RF shielding cabinet"
+			(at 49.53 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Leader Tech"
+			(at 49.53 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "SMS-255C"
+			(at 49.53 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "usbadc"
+				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/57fc8086-a14e-4d5c-8bab-6fe2c6bc0f3d"
+					(reference "J8")
+					(unit 1)
+				)
+				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/fa4ea737-6753-474f-97ec-1f4e5a32987c"
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -10143,6 +10901,90 @@
 		)
 	)
 	(symbol
+		(lib_id "fmc:RFShield_Cover")
+		(at 105.41 152.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d0588503-8354-4085-b68b-c31d4381ba8e")
+		(property "Reference" "J2"
+			(at 105.41 136.8255 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "RFShield_Back_Cover"
+			(at 105.41 139.2498 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 105.41 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 105.41 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Two-piece EMI RF shielding cabinet"
+			(at 105.41 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Leader Tech"
+			(at 105.41 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "SMS-202C"
+			(at 105.41 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/57fc8086-a14e-4d5c-8bab-6fe2c6bc0f3d"
+					(reference "J3")
+					(unit 1)
+				)
+				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/fa4ea737-6753-474f-97ec-1f4e5a32987c"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "fmc:AD8370")
 		(at 212.09 91.44 90)
 		(unit 1)
@@ -10189,6 +11031,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 212.09 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "AD"
+			(at 212.09 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "AD8370AREZ"
 			(at 212.09 91.44 0)
 			(effects
 				(font
@@ -10262,6 +11122,186 @@
 				)
 				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/fa4ea737-6753-474f-97ec-1f4e5a32987c"
 					(reference "U1003")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 142.24 105.41 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(dnp no)
+		(uuid "e7f8514d-896e-44d3-854e-279929cd8f25")
+		(property "Reference" "C25"
+			(at 140.97 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "11p"
+			(at 140.97 109.22 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 142.24 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 142.24 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kyocera"
+			(at 142.24 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "KGQ15ACG2D110FT"
+			(at 142.24 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8eac329c-22fa-48b6-9fc1-22c71bc736c4")
+		)
+		(pin "2"
+			(uuid "6684df10-68f8-4a53-8156-d4b8d899d028")
+		)
+		(instances
+			(project "usbadc"
+				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/57fc8086-a14e-4d5c-8bab-6fe2c6bc0f3d"
+					(reference "C25")
+					(unit 1)
+				)
+				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/fa4ea737-6753-474f-97ec-1f4e5a32987c"
+					(reference "C23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 130.81 92.71 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(dnp no)
+		(uuid "f077f637-ffbf-4361-99a7-e78a5edea5fc")
+		(property "Reference" "C21"
+			(at 137.16 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100p"
+			(at 134.62 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 130.81 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 130.81 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 130.81 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 130.81 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "VJ0603A101FXACW1BC"
+			(at 130.81 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2407f5a8-35fc-4da1-ad93-f03b7ba7e388")
+		)
+		(pin "2"
+			(uuid "0ef18835-b1d2-418d-854b-475ffc43d343")
+		)
+		(instances
+			(project "usbadc"
+				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/57fc8086-a14e-4d5c-8bab-6fe2c6bc0f3d"
+					(reference "C21")
+					(unit 1)
+				)
+				(path "/7c8a1f8d-8834-4c9b-aaae-1f231e9b09a1/c969de1a-32a7-4770-b1aa-e527a627ef90/fa4ea737-6753-474f-97ec-1f4e5a32987c"
+					(reference "C20")
 					(unit 1)
 				)
 			)

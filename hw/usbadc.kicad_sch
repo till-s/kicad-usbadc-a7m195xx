@@ -4464,7 +4464,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "RMCF0603FT10K0"
 			(at 53.34 174.625 90)
 			(effects
 				(font
@@ -4473,7 +4473,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 53.34 174.625 90)
 			(effects
 				(font
@@ -4683,7 +4683,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" " RMCF0603ZT0R00"
 			(at 177.165 69.85 0)
 			(effects
 				(font
@@ -4692,7 +4692,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 177.165 69.85 0)
 			(effects
 				(font
@@ -4924,7 +4924,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "  RMCF0603ZT0R00"
 			(at 93.98 36.195 0)
 			(effects
 				(font
@@ -4933,7 +4933,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 93.98 36.195 0)
 			(effects
 				(font
@@ -5004,6 +5004,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 76.835 178.435 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at 76.835 178.435 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "PCA9306TDCURQ1"
 			(at 76.835 178.435 0)
 			(effects
 				(font
@@ -5164,7 +5182,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "RMCF0603FT10K0"
 			(at 109.855 174.625 90)
 			(effects
 				(font
@@ -5173,7 +5191,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 109.855 174.625 90)
 			(effects
 				(font
@@ -5251,7 +5269,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" " RMCF0603ZT0R00"
 			(at 85.725 36.195 0)
 			(effects
 				(font
@@ -5260,7 +5278,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 85.725 36.195 0)
 			(effects
 				(font
@@ -5336,7 +5354,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "RMCF0603FT10K0"
 			(at 106.045 174.625 90)
 			(effects
 				(font
@@ -5345,7 +5363,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 106.045 174.625 90)
 			(effects
 				(font
@@ -5423,7 +5441,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "RMCF0603FT100K"
 			(at 92.075 164.465 0)
 			(effects
 				(font
@@ -5432,7 +5450,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 92.075 164.465 0)
 			(effects
 				(font
@@ -6115,7 +6133,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "RMCF0603FT10K0"
 			(at 57.15 174.625 90)
 			(effects
 				(font
@@ -6124,7 +6142,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 57.15 174.625 90)
 			(effects
 				(font

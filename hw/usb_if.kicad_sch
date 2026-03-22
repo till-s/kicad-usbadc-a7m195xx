@@ -2941,6 +2941,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Samsung"
+			(at 160.02 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "CL10B104KB8NFNC"
+			(at 160.02 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fbff2f37-2b95-4646-b005-dd9e72a6d81f")
 		)
@@ -3168,6 +3186,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "MicroChip"
+			(at 157.48 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "USB3343-CP-TR"
+			(at 157.48 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4aa3f92a-c26b-4beb-9bf5-0061dd1a9a2f")
 		)
@@ -3298,6 +3334,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 86.36 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 86.36 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT5K10"
 			(at 86.36 69.85 0)
 			(effects
 				(font
@@ -3505,6 +3559,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Stackpole"
+			(at 93.98 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT5K10"
+			(at 93.98 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b997f488-86ba-4f4d-8f0b-9ca1a4d51118")
 		)
@@ -3567,6 +3639,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 142.24 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 142.24 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT8K06"
 			(at 142.24 109.22 0)
 			(effects
 				(font
@@ -3767,6 +3857,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 133.35 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 133.35 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT10K0"
 			(at 133.35 77.47 0)
 			(effects
 				(font
@@ -4040,6 +4148,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Stackpole"
+			(at 175.895 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT10K0"
+			(at 175.895 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "36be75fe-4f59-468d-a149-61fcdc5306ff")
 		)
@@ -4232,6 +4358,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 157.48 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Samsung"
+			(at 157.48 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "CL10B104KB8NFNC"
 			(at 157.48 46.99 0)
 			(effects
 				(font
@@ -4438,6 +4582,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 187.325 60.325 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 187.325 60.325 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "  RMCF0603ZT0R00"
 			(at 187.325 60.325 0)
 			(effects
 				(font

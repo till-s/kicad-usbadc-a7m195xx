@@ -2324,7 +2324,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" ""
+		(property "Part" "RMCF0603FT10K0"
 			(at 111.76 88.9 90)
 			(effects
 				(font
@@ -2333,7 +2333,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 111.76 88.9 90)
 			(effects
 				(font

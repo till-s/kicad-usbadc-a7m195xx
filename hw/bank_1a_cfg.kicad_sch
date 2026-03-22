@@ -7177,6 +7177,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Stackpole"
+			(at 134.62 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT10K0"
+			(at 134.62 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "25c80a2b-72c0-4c91-b93d-795b5cea7e38")
 		)
@@ -7244,6 +7262,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 54.61 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 54.61 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT10K0"
 			(at 54.61 36.83 0)
 			(effects
 				(font
@@ -7598,6 +7634,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 138.43 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 138.43 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT10K0"
 			(at 138.43 34.29 0)
 			(effects
 				(font
@@ -8436,6 +8490,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Stackpole"
+			(at 210.058 98.425 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT10K0"
+			(at 210.058 98.425 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "e02f8bd1-1e6a-4c23-90dc-44a7c3a30e79")
 		)
@@ -9045,6 +9117,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 59.69 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 59.69 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT10K0"
 			(at 59.69 36.83 0)
 			(effects
 				(font
@@ -10092,6 +10182,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 169.545 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 169.545 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT10K0"
 			(at 169.545 41.91 0)
 			(effects
 				(font
@@ -11230,6 +11338,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Stackpole"
+			(at 62.23 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT10K0"
+			(at 62.23 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "85365f8e-f84a-4127-948c-f03f8001801b")
 		)
@@ -11803,6 +11929,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Stackpole"
+			(at 210.058 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT10K0"
+			(at 210.058 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "57a4e7c2-6374-4954-a879-6107da48fa2c")
 		)
@@ -11864,6 +12008,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 138.43 66.548 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 138.43 66.548 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT10K0"
 			(at 138.43 66.548 0)
 			(effects
 				(font
@@ -12094,6 +12256,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 167.005 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 167.005 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT10K0"
 			(at 167.005 41.91 0)
 			(effects
 				(font
@@ -12404,6 +12584,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Stackpole"
+			(at 43.18 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT10K0"
+			(at 43.18 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "f00744b5-9b6f-4e0f-b1be-68c62e3a0490")
 		)
@@ -12617,6 +12815,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Stackpole"
+			(at 243.078 109.855 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT1K00"
+			(at 243.078 109.855 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b40f8678-4869-41c2-aed5-dee4f072474d")
 		)
@@ -12678,6 +12894,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 64.77 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 64.77 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT10K0"
 			(at 64.77 36.83 0)
 			(effects
 				(font
@@ -13351,6 +13585,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Stackpole"
+			(at 67.31 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT10K0"
+			(at 67.31 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "90f8545a-d58b-4bc0-98a6-33497d64f47e")
 		)
@@ -13512,6 +13764,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 57.15 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 57.15 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT10K0"
 			(at 57.15 36.83 0)
 			(effects
 				(font
@@ -13919,6 +14189,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 134.62 66.548 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 134.62 66.548 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT10K0"
 			(at 134.62 66.548 0)
 			(effects
 				(font

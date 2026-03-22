@@ -2160,7 +2160,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" " ~"
+		(property "Datasheet" "~"
 			(at 198.755 95.885 0)
 			(effects
 				(font
@@ -2305,6 +2305,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Nexperia"
+			(at 121.285 95.885 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "74LVC2T45DC,125"
+			(at 121.285 95.885 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "91deb5a2-bc50-482e-9f03-2d3f8e6c2cc8")
 		)
@@ -2395,6 +2413,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 77.47 95.758 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 77.47 95.758 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT226R"
 			(at 77.47 95.758 0)
 			(effects
 				(font
@@ -2593,6 +2629,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Stackpole"
+			(at 91.948 108.458 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT100K"
+			(at 91.948 108.458 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "29c9aa30-51bb-4b2d-a27b-499659112525")
 		)
@@ -2654,6 +2708,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 179.705 95.885 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 179.705 95.885 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT33R0"
 			(at 179.705 95.885 0)
 			(effects
 				(font
@@ -2954,6 +3026,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Stackpole"
+			(at 100.838 108.712 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT2K94"
+			(at 100.838 108.712 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e95d5c65-4155-4a29-b87c-a5e794fba668")
 		)
@@ -3061,6 +3151,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Stackpole"
+			(at 173.355 104.775 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT100K"
+			(at 173.355 104.775 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4a481b2d-cee9-4928-835d-e44b72919cb0")
 		)
@@ -3160,6 +3268,24 @@
 			)
 		)
 		(property "Description" ""
+			(at 91.948 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Stackpole"
+			(at 91.948 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "RMCF0603FT100K"
 			(at 91.948 91.44 0)
 			(effects
 				(font
