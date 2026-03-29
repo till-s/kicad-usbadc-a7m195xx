@@ -3169,7 +3169,7 @@
 		)
 		(uuid "fb2d0b65-4f48-43a5-b238-ebb7efbdca61")
 	)
-	(text "I2C Address 0x61"
+	(text "I2C Address 0x61\nMCP47CVB02:  8-bit\nMCP47CVB12: 10-bit\nMCP47CVB22: 12-bit"
 		(exclude_from_sim no)
 		(at 77.47 171.45 0)
 		(effects
@@ -3264,7 +3264,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MCP47CVB02-E_UN"
+		(property "Value" "MCP47CVB12-E_UN"
 			(at 73.66 153.67 90)
 			(effects
 				(font
@@ -3300,7 +3300,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" "MCP47CVB02-E/UN"
+		(property "Part" "MCP47CVB12-E/UN"
 			(at 105.41 152.4 0)
 			(effects
 				(font

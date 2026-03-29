@@ -8568,7 +8568,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" "G6L-1F"
+		(property "Part" "G6L-1F DC4.5"
 			(at 90.17 78.74 90)
 			(effects
 				(font
@@ -10373,7 +10373,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ab4bf55c-0d48-4b2a-bf5b-dbcec6f3e9a5")
-		(property "Reference" "J6"
+		(property "Reference" "J8"
 			(at 49.53 136.8255 0)
 			(effects
 				(font
@@ -10910,7 +10910,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d0588503-8354-4085-b68b-c31d4381ba8e")
-		(property "Reference" "J2"
+		(property "Reference" "J3"
 			(at 105.41 136.8255 0)
 			(effects
 				(font
