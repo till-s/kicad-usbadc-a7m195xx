@@ -1,9 +1,14 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "8c6e15e3-1804-4f03-8a4f-3cb8420d9169")
 	(paper "A4")
+	(title_block
+		(title "FPGA")
+		(rev "3.3b")
+		(company "Till Straumann")
+	)
 	(lib_symbols)
 	(wire
 		(pts
@@ -50,6 +55,10 @@
 	(sheet
 		(at 31.75 161.29)
 		(size 30.48 24.13)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -93,6 +102,10 @@
 	(sheet
 		(at 31.115 118.745)
 		(size 30.48 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -136,6 +149,10 @@
 	(sheet
 		(at 92.075 161.925)
 		(size 30.48 26.67)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -179,6 +196,10 @@
 	(sheet
 		(at 32.385 80.772)
 		(size 27.94 19.558)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -208,23 +229,23 @@
 		)
 		(pin "CDON" output
 			(at 60.325 87.63 0)
+			(uuid "afcccc09-ad0a-4fad-a1a5-c4004d457a54")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "afcccc09-ad0a-4fad-a1a5-c4004d457a54")
 		)
 		(pin "RECONF_N" input
 			(at 60.325 90.805 0)
+			(uuid "04df726d-7ed3-42e9-a9be-346679e59944")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "04df726d-7ed3-42e9-a9be-346679e59944")
 		)
 		(instances
 			(project "trion-8-test"

@@ -1,13 +1,20 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "d099d39a-eb51-429e-9f69-5b069c9cd0df")
 	(paper "A4")
+	(title_block
+		(title "Front End")
+		(rev "3.3b")
+		(company "Till Straumann")
+	)
 	(lib_symbols
 		(symbol "Device:Q_Dual_PMOS_S1G1D2S2G2D1"
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -75,6 +82,18 @@
 			(symbol "Q_Dual_PMOS_S1G1D2S2G2D1_0_1"
 				(polyline
 					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
 						(xy 0.254 0) (xy -2.54 0)
 					)
 					(stroke
@@ -87,7 +106,31 @@
 				)
 				(polyline
 					(pts
-						(xy 0.254 1.905) (xy 0.254 -1.905)
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 1.778) (xy 3.302 1.778) (xy 3.302 -1.778) (xy 0.762 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
 					)
 					(stroke
 						(width 0.254)
@@ -109,60 +152,11 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 0.762 0.508) (xy 0.762 -0.508)
-					)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
 					(stroke
 						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 2.286) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 2.54 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 1.778) (xy 3.302 1.778) (xy 3.302 -1.778) (xy 0.762 -1.778)
-					)
-					(stroke
-						(width 0)
 						(type default)
 					)
 					(fill
@@ -179,6 +173,52 @@
 					)
 					(fill
 						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 				(polyline
@@ -205,59 +245,8 @@
 						(type none)
 					)
 				)
-				(circle
-					(center 1.651 0)
-					(radius 2.794)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.54 -1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 2.54 1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
 			)
 			(symbol "Q_Dual_PMOS_S1G1D2S2G2D1_1_1"
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin input line
 					(at -5.08 0 0)
 					(length 2.54)
@@ -294,8 +283,44 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
 			(symbol "Q_Dual_PMOS_S1G1D2S2G2D1_2_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin passive line
 					(at 2.54 5.08 270)
 					(length 2.54)
@@ -332,30 +357,17 @@
 						)
 					)
 				)
-				(pin input line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "G"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -473,6 +485,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "fmc:+2V5_analog"
 			(power)
@@ -550,7 +563,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -562,7 +575,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -576,7 +589,8 @@
 			(symbol "+2V5_analog_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "+2V5_analog"
 						(effects
 							(font
@@ -593,6 +607,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "fmc:-2V5_analog"
 			(power)
@@ -670,7 +685,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -682,7 +697,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -696,7 +711,8 @@
 			(symbol "-2V5_analog_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "-2V5_analog"
 						(effects
 							(font
@@ -713,6 +729,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+4V"
 			(power)
@@ -790,7 +807,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -802,7 +819,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -816,7 +833,8 @@
 			(symbol "+4V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "+4V"
 						(effects
 							(font
@@ -833,6 +851,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 	)
 	(junction
@@ -3409,6 +3428,10 @@
 	(sheet
 		(at 105.41 151.13)
 		(size 17.78 29.21)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -3438,63 +3461,63 @@
 		)
 		(pin "DAC_0" output
 			(at 123.19 153.67 0)
+			(uuid "63af52b8-81ca-4881-acce-5c6678fc7d81")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "63af52b8-81ca-4881-acce-5c6678fc7d81")
 		)
 		(pin "DAC_1" output
 			(at 123.19 156.21 0)
+			(uuid "ad9cebe7-57de-4216-a1b9-4293e797b8e2")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "ad9cebe7-57de-4216-a1b9-4293e797b8e2")
 		)
 		(pin "ATT_DAC1" input
 			(at 123.19 173.99 0)
+			(uuid "7410d891-67f7-45f1-9fe9-a5315a9a4efc")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "7410d891-67f7-45f1-9fe9-a5315a9a4efc")
 		)
 		(pin "ATT_DAC0" input
 			(at 123.19 176.53 0)
+			(uuid "ee8ada3b-d5b5-47ef-942c-39d76886adf3")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "ee8ada3b-d5b5-47ef-942c-39d76886adf3")
 		)
 		(pin "I2C_SDA" bidirectional
 			(at 123.19 165.1 0)
+			(uuid "4a41e3e2-fc47-45e1-a22e-e74e07ac31bd")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "4a41e3e2-fc47-45e1-a22e-e74e07ac31bd")
 		)
 		(pin "I2C_SCL" bidirectional
 			(at 123.19 163.195 0)
+			(uuid "40ca6f78-44c0-4284-b5f3-65f489befc31")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "40ca6f78-44c0-4284-b5f3-65f489befc31")
 		)
 		(instances
 			(project "usbadc"
@@ -3507,6 +3530,10 @@
 	(sheet
 		(at 92.456 121.92)
 		(size 30.734 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -3535,93 +3562,93 @@
 		)
 		(pin "OUTP" input
 			(at 123.19 123.698 0)
+			(uuid "863a0192-df45-4361-9c6e-edd0f24c474d")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "863a0192-df45-4361-9c6e-edd0f24c474d")
 		)
 		(pin "PGA_INLO" input
 			(at 123.19 130.048 0)
+			(uuid "0acd1ae6-a86b-47dc-a10e-ba68b836752a")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "0acd1ae6-a86b-47dc-a10e-ba68b836752a")
 		)
 		(pin "OUTN" input
 			(at 123.19 125.73 0)
+			(uuid "a9fbeee3-23e4-4691-9339-97ea1abf2601")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "a9fbeee3-23e4-4691-9339-97ea1abf2601")
 		)
 		(pin "FE_CTL_AC" input
 			(at 108.712 121.92 90)
+			(uuid "c7532846-2a54-4a59-9750-b64fce4da7a3")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "c7532846-2a54-4a59-9750-b64fce4da7a3")
 		)
 		(pin "PGA_CTL_DATA" input
 			(at 98.552 121.92 90)
+			(uuid "a52edd06-1af6-4421-bb31-17ca34250aba")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "a52edd06-1af6-4421-bb31-17ca34250aba")
 		)
 		(pin "FE_CTL_TERM" input
 			(at 111.125 121.92 90)
+			(uuid "8889cdfe-a02d-4ae2-84f7-b751f3a6aa42")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "8889cdfe-a02d-4ae2-84f7-b751f3a6aa42")
 		)
 		(pin "PGA_CTL_LATCH" input
 			(at 101.092 121.92 90)
+			(uuid "7a119e60-0aef-4709-bafc-669ec2af18de")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "7a119e60-0aef-4709-bafc-669ec2af18de")
 		)
 		(pin "PGA_CTL_CLK" input
 			(at 96.012 121.92 90)
+			(uuid "7164c365-da85-4204-b837-d66fda306c46")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "7164c365-da85-4204-b837-d66fda306c46")
 		)
 		(pin "FE_CTL_ATT" input
 			(at 106.045 121.92 90)
+			(uuid "8ced6c3b-777f-4e02-a88c-082beca63040")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "8ced6c3b-777f-4e02-a88c-082beca63040")
 		)
 		(instances
 			(project "usbadc"
@@ -3634,6 +3661,10 @@
 	(sheet
 		(at 104.14 101.6)
 		(size 19.05 11.43)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -3662,103 +3693,103 @@
 		)
 		(pin "P7" output
 			(at 111.125 101.6 90)
+			(uuid "4d4804b3-55ee-457f-a449-d679e6acbe45")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "4d4804b3-55ee-457f-a449-d679e6acbe45")
 		)
 		(pin "P0" output
 			(at 113.665 113.03 270)
+			(uuid "eae9a328-aabc-4826-b251-b46d6924ca25")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "eae9a328-aabc-4826-b251-b46d6924ca25")
 		)
 		(pin "P6" output
 			(at 111.125 113.03 270)
+			(uuid "89a91a3b-5cb0-42d2-a9d3-42b48f3b5116")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "89a91a3b-5cb0-42d2-a9d3-42b48f3b5116")
 		)
 		(pin "P5" output
 			(at 108.585 101.6 90)
+			(uuid "d1f49f2e-19f5-44ea-b7d9-5a57d29f7be6")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "d1f49f2e-19f5-44ea-b7d9-5a57d29f7be6")
 		)
 		(pin "P4" output
 			(at 106.045 101.6 90)
+			(uuid "a861deb7-9c75-4983-aaba-e8bc4485d71c")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "a861deb7-9c75-4983-aaba-e8bc4485d71c")
 		)
 		(pin "P1" output
 			(at 113.665 101.6 90)
+			(uuid "91a6228f-ba7c-4d1e-99af-f1095cd4a60d")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "91a6228f-ba7c-4d1e-99af-f1095cd4a60d")
 		)
 		(pin "P2" output
 			(at 106.045 113.03 270)
+			(uuid "29d7da02-4b18-4642-8223-5b64acdb65ae")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "29d7da02-4b18-4642-8223-5b64acdb65ae")
 		)
 		(pin "P3" output
 			(at 108.712 113.03 270)
+			(uuid "66f62161-bdca-4925-8f82-0c6b4d6d3529")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "66f62161-bdca-4925-8f82-0c6b4d6d3529")
 		)
 		(pin "I2C_SCL" bidirectional
 			(at 123.19 106.045 0)
+			(uuid "60ca7729-9494-44d8-9d10-654cf55d3db7")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "60ca7729-9494-44d8-9d10-654cf55d3db7")
 		)
 		(pin "I2C_SDA" bidirectional
 			(at 123.19 107.95 0)
+			(uuid "c290a151-5b4d-4148-96bb-cb5ca48b37b2")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "c290a151-5b4d-4148-96bb-cb5ca48b37b2")
 		)
 		(instances
 			(project "usbadc"
@@ -3771,6 +3802,10 @@
 	(sheet
 		(at 92.456 76.2)
 		(size 30.734 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -3799,93 +3834,93 @@
 		)
 		(pin "OUTP" input
 			(at 123.19 78.74 0)
+			(uuid "fcfe6b87-1c08-4fd5-850b-2ba1e3878b00")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "fcfe6b87-1c08-4fd5-850b-2ba1e3878b00")
 		)
 		(pin "PGA_INLO" input
 			(at 123.19 87.122 0)
+			(uuid "59089016-bc3f-4c32-bd31-10f0b6beb167")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "59089016-bc3f-4c32-bd31-10f0b6beb167")
 		)
 		(pin "OUTN" input
 			(at 123.19 80.772 0)
+			(uuid "779017ea-668e-48ec-9297-670c20104ade")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "779017ea-668e-48ec-9297-670c20104ade")
 		)
 		(pin "FE_CTL_AC" input
 			(at 108.585 93.98 270)
+			(uuid "f5088fe0-0787-4a90-9048-aa839a9a3123")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "f5088fe0-0787-4a90-9048-aa839a9a3123")
 		)
 		(pin "PGA_CTL_DATA" input
 			(at 98.552 93.98 270)
+			(uuid "013a2131-e188-46b3-88ea-d70cb83330f3")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "013a2131-e188-46b3-88ea-d70cb83330f3")
 		)
 		(pin "FE_CTL_TERM" input
 			(at 111.125 93.98 270)
+			(uuid "a3b1cc24-4845-4569-9e28-720a5867475d")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "a3b1cc24-4845-4569-9e28-720a5867475d")
 		)
 		(pin "PGA_CTL_LATCH" input
 			(at 101.092 93.98 270)
+			(uuid "e4efd80a-6a6c-47ac-8621-1ebffe9ddff4")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "e4efd80a-6a6c-47ac-8621-1ebffe9ddff4")
 		)
 		(pin "PGA_CTL_CLK" input
 			(at 96.012 93.98 270)
+			(uuid "e5d7a44f-1305-4c5e-bb88-c7ed484ea1d1")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "e5d7a44f-1305-4c5e-bb88-c7ed484ea1d1")
 		)
 		(pin "FE_CTL_ATT" input
 			(at 106.045 93.98 270)
+			(uuid "14c938d3-14f6-44c1-9b8d-eccea3c1fbb5")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "14c938d3-14f6-44c1-9b8d-eccea3c1fbb5")
 		)
 		(instances
 			(project "usbadc"
