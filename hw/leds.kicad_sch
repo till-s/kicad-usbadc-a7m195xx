@@ -1625,17 +1625,6 @@
 		)
 		(uuid "864fe4ab-3cf1-436f-b591-de6ebabf3531")
 	)
-	(text "RED"
-		(exclude_from_sim no)
-		(at 210.82 33.02 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "ec8e5e14-f8d7-40b4-a93f-cc8e99811a4f")
-	)
 	(junction
 		(at 70.485 67.31)
 		(diameter 0)
@@ -3101,7 +3090,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part" "150060RS75000"
+		(property "Part" "155060GS75300"
 			(at 196.85 32.385 0)
 			(effects
 				(font
@@ -3836,7 +3825,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "2k94"
 			(at 187.96 29.845 90)
 			(effects
 				(font
