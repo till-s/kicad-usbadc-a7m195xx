@@ -7,7 +7,8 @@
 	(title_block
 		(title "Front End")
 		(rev "3.3b")
-		(company "Till Straumann")
+		(company "Copyright Till Straumann, 2025")
+		(comment 1 "License: CERN-OHL-P v2")
 	)
 	(lib_symbols
 		(symbol "Device:Q_Dual_PMOS_S1G1D2S2G2D1"

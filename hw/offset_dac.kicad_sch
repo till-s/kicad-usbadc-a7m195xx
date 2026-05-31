@@ -7,8 +7,8 @@
 	(title_block
 		(title "Calibration DAC")
 		(rev "3.3b")
-		(company "Till Straumann")
-		(comment 1 "Range control with FET switches")
+		(company "Copyright Till Straumann, 2025")
+		(comment 1 "License: CERN-OHL-P v2")
 	)
 	(lib_symbols
 		(symbol "Device:C_Small"

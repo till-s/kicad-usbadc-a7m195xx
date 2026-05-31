@@ -1,0 +1,2 @@
+All design files under this directory are copyright by Till Straumann
+and released under the CERN-OHL-P V2 [license](cern_ohl_p_v2.txt).
