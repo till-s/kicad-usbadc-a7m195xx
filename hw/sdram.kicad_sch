@@ -4644,7 +4644,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "Prevent ADC from driving ADC_D7..D9\nby pulling up ADC_SHDN. Ensures the\nCBUS configuration pins are pulled\nup. Once configured the FPGA can drive\nADC_SHDN low to activate."
+	(text "Prevent ADC from driving ADC_D7..D9\nby pulling up ADC_SHDN. Ensures the\nCBUS configuration pins are pulled\nup. Once configured the FPGA can drive\nADC_SHDN low to activate the ADC."
 		(exclude_from_sim no)
 		(at 40.005 147.955 0)
 		(effects

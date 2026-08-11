@@ -988,6 +988,17 @@
 		)
 		(uuid "50cf320c-6891-4512-b875-e3b450eb6492")
 	)
+	(text "Level shifters for PGA\nserial interface"
+		(exclude_from_sim no)
+		(at 29.21 44.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "77b90ef9-fd18-46e8-93c2-0bbcc1e56518")
+	)
 	(junction
 		(at 98.552 106.68)
 		(diameter 0)

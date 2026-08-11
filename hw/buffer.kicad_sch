@@ -3533,6 +3533,28 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Analog switch controls\n0db/-20db switchable\nbuffer/attenuator"
+		(exclude_from_sim no)
+		(at 125.73 36.83 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "02ad1b9f-84d6-4c33-96e4-361de7b5a3b1")
+	)
+	(text "Mechanical relay\ncontrols 50-ohm\ntermination"
+		(exclude_from_sim no)
+		(at 81.28 36.83 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "20f07fae-532a-4421-8c3c-308a2a79f5eb")
+	)
 	(text "Ideally: 101k//99p but\n99p is not available"
 		(exclude_from_sim no)
 		(at 119.38 101.6 90)
@@ -3543,6 +3565,17 @@
 			(justify left bottom)
 		)
 		(uuid "4fd981e9-7ede-490c-a20b-f56cfc7e9010")
+	)
+	(text "Solid-state relay\ncontrols AC/DC\ncoupling"
+		(exclude_from_sim no)
+		(at 53.34 36.83 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b858c42e-65b5-406b-a2c9-f5c8c5c2642d")
 	)
 	(text "Populate 1-2 or 2-3 with\n50Ohm termination resistor\ndepending on whether you\nlike the termination to be\nAC- or DC-coupled."
 		(exclude_from_sim no)

@@ -1952,6 +1952,16 @@
 		)
 		(uuid "394a7c30-594d-450a-8a03-4e7061bd5ed1")
 	)
+	(text "Input protection diodes"
+		(exclude_from_sim no)
+		(at 130.81 156.21 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "583f3c05-b9aa-4360-9fac-57523b22431f")
+	)
 	(junction
 		(at 130.81 86.36)
 		(diameter 0)

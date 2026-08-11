@@ -1768,6 +1768,17 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "When OUT2 is disabled and CLKSEL switched then\nan external reference can be fed from the BNC\n(e.g., lock this scope to a second/master unit\nfor 4 phase-locked ADC channels)."
+		(exclude_from_sim no)
+		(at 24.13 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "12beb369-c34f-476d-bf3f-4b907305c4ad")
+	)
 	(text "TP1 is located close to C83. A 5P49V5925 chip\ncan be used instead of 5P49V6965; however, the\n5925 has only a single-ended output.\n - replace C63 by zero-ohm resistor\n - remove C83\n - ground ADC_CLK_N via TP1 -> ADC operates in SE\n   clocking mode\n\nAnother alternative is the 5P49V6975 which is a\n6965 with a built-in crystal. DNL Y1 if you load\nsuch a device."
 		(exclude_from_sim no)
 		(at 182.88 128.27 0)
